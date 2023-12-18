@@ -1,0 +1,572 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do Phase3_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -2008 -work work {D:/AUC/ASIC/Project/Phase3_Submission/RAMs/INTER_RAM_2port.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:22:38 on Dec 18,2023
+# vcom -reportprogress 300 -2008 -work work D:/AUC/ASIC/Project/Phase3_Submission/RAMs/INTER_RAM_2port.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package altera_mf_components
+# -- Compiling entity INTER_RAM_2PORT
+# -- Compiling architecture SYN of INTER_RAM_2PORT
+# End time: 20:22:39 on Dec 18,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {D:/AUC/ASIC/Project/Phase3_Submission/RAMs/FEC_RAM_2PORTS.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:22:39 on Dec 18,2023
+# vcom -reportprogress 300 -2008 -work work D:/AUC/ASIC/Project/Phase3_Submission/RAMs/FEC_RAM_2PORTS.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package altera_mf_components
+# -- Compiling entity FEC_RAM_2PORTS
+# -- Compiling architecture SYN of FEC_RAM_2PORTS
+# End time: 20:22:39 on Dec 18,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:22:39 on Dec 18,2023
+# vcom -reportprogress 300 -2008 -work work D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package altera_mf_components
+# -- Compiling entity TopWiMax
+# -- Compiling architecture TopWiMax_RTL of TopWiMax
+# End time: 20:22:39 on Dec 18,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {D:/AUC/ASIC/Project/Phase3_Submission/randi.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:22:39 on Dec 18,2023
+# vcom -reportprogress 300 -2008 -work work D:/AUC/ASIC/Project/Phase3_Submission/randi.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity randi
+# -- Compiling architecture randi_rtl of randi
+# End time: 20:22:39 on Dec 18,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {D:/AUC/ASIC/Project/Phase3_Submission/MODU.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:22:39 on Dec 18,2023
+# vcom -reportprogress 300 -2008 -work work D:/AUC/ASIC/Project/Phase3_Submission/MODU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package altera_mf_components
+# -- Compiling entity MODU
+# -- Compiling architecture MODU_rtl of MODU
+# End time: 20:22:39 on Dec 18,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {D:/AUC/ASIC/Project/Phase3_Submission/INTER.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:22:39 on Dec 18,2023
+# vcom -reportprogress 300 -2008 -work work D:/AUC/ASIC/Project/Phase3_Submission/INTER.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package altera_mf_components
+# -- Compiling entity INTER
+# -- Compiling architecture INTER_RTL of INTER
+# End time: 20:22:39 on Dec 18,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {D:/AUC/ASIC/Project/Phase3_Submission/FEC.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:22:39 on Dec 18,2023
+# vcom -reportprogress 300 -2008 -work work D:/AUC/ASIC/Project/Phase3_Submission/FEC.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package altera_mf_components
+# -- Compiling entity FEC
+# -- Compiling architecture FEC_rtl of FEC
+# End time: 20:22:39 on Dec 18,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -2008 -work work {D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:22:39 on Dec 18,2023
+# vcom -reportprogress 300 -2008 -work work D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package altera_mf_components
+# ** Error: (vcom-11) Could not find work.test_pack.
+# ** Error (suppressible): D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd(6): (vcom-1195) Cannot find expanded name "work.Test_Pack".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd(6): Unknown expanded name.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd(8): VHDL Compiler exiting
+# End time: 20:22:39 on Dec 18,2023, Elapsed time: 0:00:00
+# Errors: 4, Warnings: 0
+# ** Error: C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./Phase3_run_msim_rtl_vhdl.do line 16
+# C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -2008 -work work {D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd}"
+vcom -reportprogress 300 -work work D:/AUC/ASIC/Project/Phase3_Submission/Test_Pack.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:23:04 on Dec 18,2023
+# vcom -reportprogress 300 -work work D:/AUC/ASIC/Project/Phase3_Submission/Test_Pack.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package Test_Pack
+# -- Compiling package body Test_Pack
+# -- Loading package Test_Pack
+# End time: 20:23:04 on Dec 18,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:23:12 on Dec 18,2023
+# vcom -reportprogress 300 -work work D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package altera_mf_components
+# -- Loading package Test_Pack
+# -- Compiling entity TopWiMax_tb
+# -- Compiling architecture TopWiMax_tb_rtl of TopWiMax_tb
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd(143): (vcom-1035) Formal port "CLK_100Mhz" has OPEN or no actual associated with it.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd(613): near "<": syntax error
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd(614): near "<": syntax error
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd(615): near "<": syntax error
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd(616): near "<": syntax error
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd(617): near "<": syntax error
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd(620): near "<": syntax error
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd(621): near "<": syntax error
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd(622): near "<": syntax error
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd(623): near "<": syntax error
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd(624): near "<": syntax error
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd(627): near "<": syntax error
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd(628): near "<": syntax error
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd(629): near "<": syntax error
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd(630): near "<": syntax error
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd(631): near "<": syntax error
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd(634): near "<": syntax error
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd(636): VHDL Compiler exiting
+# End time: 20:23:12 on Dec 18,2023, Elapsed time: 0:00:00
+# Errors: 18, Warnings: 0
+# Modified modelsim.ini
+# Modified modelsim.ini
+vcom -reportprogress 300 -work work D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:23:26 on Dec 18,2023
+# vcom -reportprogress 300 -work work D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package altera_mf_components
+# -- Loading package Test_Pack
+# -- Compiling entity TopWiMax_tb
+# -- Compiling architecture TopWiMax_tb_rtl of TopWiMax_tb
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd(143): (vcom-1035) Formal port "CLK_100Mhz" has OPEN or no actual associated with it.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd(636): VHDL Compiler exiting
+# End time: 20:23:26 on Dec 18,2023, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vcom -reportprogress 300 -work work D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:25:15 on Dec 18,2023
+# vcom -reportprogress 300 -work work D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package altera_mf_components
+# -- Loading package Test_Pack
+# -- Compiling entity TopWiMax_tb
+# -- Compiling architecture TopWiMax_tb_rtl of TopWiMax_tb
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd(124): (vcom-1136) Unknown identifier "clk_100".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd(148): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd(148): (vcom-1136) Unknown identifier "clk_100".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd(148): (vcom-1136) Unknown identifier "clk_100".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd(638): VHDL Compiler exiting
+# End time: 20:25:15 on Dec 18,2023, Elapsed time: 0:00:00
+# Errors: 5, Warnings: 0
+vcom -reportprogress 300 -work work D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:25:42 on Dec 18,2023
+# vcom -reportprogress 300 -work work D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package altera_mf_components
+# -- Loading package Test_Pack
+# -- Compiling entity TopWiMax_tb
+# -- Compiling architecture TopWiMax_tb_rtl of TopWiMax_tb
+# End time: 20:25:42 on Dec 18,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.topwimax_tb
+# vsim work.topwimax_tb 
+# Start time: 20:25:45 on Dec 18,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading altera_mf.altera_mf_components
+# Loading work.test_pack(body)
+# Loading work.topwimax_tb(topwimax_tb_rtl)
+# Loading work.topwimax(topwimax_rtl)
+# Loading work.randi(randi_rtl)
+# Loading work.fec(fec_rtl)
+# Loading work.fec_ram_2ports(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+# Loading work.inter(inter_rtl)
+# Loading work.inter_ram_2port(syn)
+# Loading work.modu(modu_rtl)
+do wave.do
+# Cannot open macro file: wave.do
+add wave -position insertpoint  \
+sim:/topwimax_tb/clk_50 \
+sim:/topwimax_tb/clk_100 \
+sim:/topwimax_tb/reset \
+sim:/topwimax_tb/TopWiMax_in_valid \
+sim:/topwimax_tb/TopWiMax_in_ready \
+sim:/topwimax_tb/load \
+sim:/topwimax_tb/test_in_vector \
+sim:/topwimax_tb/WiInput \
+sim:/topwimax_tb/test_out1_bit \
+sim:/topwimax_tb/test_out2_bit \
+sim:/topwimax_tb/TopWiMax_out_valid \
+sim:/topwimax_tb/TopWiMax_out_ready \
+sim:/topwimax_tb/signal_alias_RANDI_output_data \
+sim:/topwimax_tb/signal_alias_RANDI_output_valid \
+sim:/topwimax_tb/signal_alias_RANDI_input_valid \
+sim:/topwimax_tb/signal_alias_RANDI_output_ready \
+sim:/topwimax_tb/signal_alias_RANDI_input_ready \
+sim:/topwimax_tb/signal_alias_fec_output_data \
+sim:/topwimax_tb/signal_alias_fec_output_valid \
+sim:/topwimax_tb/signal_alias_fec_input_valid \
+sim:/topwimax_tb/signal_alias_fec_output_ready \
+sim:/topwimax_tb/signal_alias_fec_input_ready \
+sim:/topwimax_tb/signal_alias_INTER_Output_data \
+sim:/topwimax_tb/signal_alias_INTER_Output_valid \
+sim:/topwimax_tb/signal_alias_INTER_input_valid \
+sim:/topwimax_tb/signal_alias_INTER_Output_ready \
+sim:/topwimax_tb/signal_alias_INTER_input_ready \
+sim:/topwimax_tb/signal_alias_MODU_Output_ready \
+sim:/topwimax_tb/RANDI_Output_Expected \
+sim:/topwimax_tb/RANDI_Output_Vector \
+sim:/topwimax_tb/test_pass_RANDI \
+sim:/topwimax_tb/test_pass_FEC \
+sim:/topwimax_tb/FEC_Expected_Output \
+sim:/topwimax_tb/FEC_Output_Vector \
+sim:/topwimax_tb/test_pass_INTER \
+sim:/topwimax_tb/INTER_Output_Vector \
+sim:/topwimax_tb/INTER_Expected_Output \
+sim:/topwimax_tb/test_out_vector_Q \
+sim:/topwimax_tb/test_out_vector_I \
+sim:/topwimax_tb/test_out_vector_Q1 \
+sim:/topwimax_tb/test_out_vector_I1 \
+sim:/topwimax_tb/test_out_vector_Q2 \
+sim:/topwimax_tb/test_out_vector_I2 \
+sim:/topwimax_tb/test_out_vector_Q3 \
+sim:/topwimax_tb/test_out_vector_I3 \
+sim:/topwimax_tb/MODU_Expected_Output_Q \
+sim:/topwimax_tb/MODU_Expected_Output_I \
+sim:/topwimax_tb/test_pass_MODU_I \
+sim:/topwimax_tb/test_pass_MODU_Q \
+sim:/topwimax_tb/signal_out_rand_out \
+sim:/topwimax_tb/signal_out_rand_valid \
+sim:/topwimax_tb/signal_out_fec_out \
+sim:/topwimax_tb/signal_out_fec_valid \
+sim:/topwimax_tb/signal_out_int_out \
+sim:/topwimax_tb/signal_out_int_valid
+run 15 us
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /topwimax_tb/twimax/inter1
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /topwimax_tb/twimax/inter1
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /topwimax_tb/twimax/fec1
+# ** Error: (vsim-86) Argument value -2147483552 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /topwimax_tb/twimax/fec1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /topwimax_tb/twimax/fec1
+# ** Note: ===============================================================================================================
+#    Time: 80 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ------------------------------------------ Simulation Started -------------------------------------------------
+#    Time: 80 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 80 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 80 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ------------------------------ Inputting {4} Input Streams --------------------------------
+#    Time: 80 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 80 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ---------------------------- ### Starting Inputting the First stream: 
+#    Time: 80 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 80 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ========================================================================================================
+#    Time: 85 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ------------------------------------- STARTED Blocks SELF CHECKER --------------------------------------
+#    Time: 85 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ========================================================================================================
+#    Time: 85 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ---------------------------- Started self checker for: Randomizer Block --------------------------------
+#    Time: 85 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ========================================================================================================
+#    Time: 85 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ---------------------------------- ### The First Randimoizer Input Stream  
+#    Time: 85 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ========================================================================================================
+#    Time: 1995 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ---------------------------- Started self checker for: FEC Block --------------------------------
+#    Time: 1995 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ========================================================================================================
+#    Time: 1995 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ---------------------------------- ### The First FEC Input Stream  
+#    Time: 1995 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ----------------------------- ### Done Inputting the First stream: 
+#    Time: 2 us  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 2 us  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ----------------------------- ## Starting Inputting the Second stream: 
+#    Time: 2 us  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 2 us  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 2005 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ------------------------- ### Randomizer First Input Stream test passed successfully
+#    Time: 2005 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 2005 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ---------------------------------- ## The Second Randimoizer Input Stream  
+#    Time: 2005 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ========================================================================================================
+#    Time: 3910 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ---------------------------- Started self checker for: INTER Block --------------------------------
+#    Time: 3910 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ========================================================================================================
+#    Time: 3910 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ---------------------------------- ### The First INTER Input Stream  
+#    Time: 3910 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 3915 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ------------------------- ### FEC First Input Stream test passed Successfully
+#    Time: 3915 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 3915 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ---------------------------------- ## The Second FEC Input Stream  
+#    Time: 3915 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ----------------------------- ## Done Inputting the Second stream: 
+#    Time: 3920 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 3920 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ---------------------------- ### Starting Inputting the Third stream: 
+#    Time: 3920 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 3920 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 3925 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ------------------------- ## Randomizer Second Input Stream test passed successfully
+#    Time: 3925 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 3925 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ---------------------------------- ## The Third Randimoizer Input Stream  
+#    Time: 3925 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ========================================================================================================
+#    Time: 3927 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ------------------------------------- STARTED OUTPUT SELF CHECKER --------------------------------------
+#    Time: 3927 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ========================================================================================================
+#    Time: 3927 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ----------------------------- Checking (Demodulating) (4) output streams ---------------
+#    Time: 3927 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 3927 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ------------------------ ### Started Checking First MODU Output stream: 
+#    Time: 3927 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 5830 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ------------------------- ### INTER First Input Stream test passed Successfully
+#    Time: 5830 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 5830 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ---------------------------------- ## The Second INTER Input Stream  
+#    Time: 5830 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 5835 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ------------------------- ## FEC Second Input Stream test passed Successfully
+#    Time: 5835 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 5835 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ---------------------------------- ## The Third FEC Input Stream  
+#    Time: 5835 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ----------------------------- ### Done Inputting the Third stream: 
+#    Time: 5840 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 5840 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ---------------------------- ### Starting Inputting the Fourth stream: 
+#    Time: 5840 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 5840 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 5845 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ------------------------- ## Randomizer Third Input Stream test passed successfully
+#    Time: 5845 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 5845 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ---------------------------------- ## The Fourth Randimoizer Input Stream  
+#    Time: 5845 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ------------------------ ### First MODU Output Stream: 1536 Q Values Successed
+#    Time: 5848536 ps  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 5848536 ps  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ------------------------ ### First MODU Output Stream: 1536 I Values Successed
+#    Time: 5848536 ps  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 5848536 ps  Iteration: 0  Instance: /topwimax_tb
+# ** Note: --------------------------- ### Ended Checking MODU First Output stream 
+#    Time: 5848536 ps  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 5848536 ps  Iteration: 0  Instance: /topwimax_tb
+# ** Note: -------------------------- ### Started Checking MODU Second Output stream: 
+#    Time: 5848536 ps  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 7750 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ------------------------- ## INTER Second Input Stream test passed Successfully
+#    Time: 7750 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 7750 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ---------------------------------- ## The Third INTER Input Stream  
+#    Time: 7750 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 7755 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ------------------------- ## FEC Third Input Stream test passed Successfully
+#    Time: 7755 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 7755 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ---------------------------------- ## The Fourth FEC Input Stream  
+#    Time: 7755 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ----------------------------- ### Done Inputting the Fourth stream: 
+#    Time: 7760 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 7760 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ------------------------------ Finishehd Inputting {4} Input Streams --------------------------
+#    Time: 7760 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 7760 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 7765 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ------------------------- ## Randomizer Fourth Input Stream test passed successfully
+#    Time: 7765 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ========================================================================================================
+#    Time: 7765 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: -------------------Finished self checker for: RANDI Block--------------------------
+#    Time: 7765 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ========================================================================================================
+#    Time: 7765 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ------------------------ ### Second MODU Output Stream: 1536 Q Values Successed
+#    Time: 7770072 ps  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 7770072 ps  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ------------------------ ### Second MODU Output Stream: 1536 I Values Successed
+#    Time: 7770072 ps  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 7770072 ps  Iteration: 0  Instance: /topwimax_tb
+# ** Note: --------------------------- ### Ended Checking MODU Second Output stream 
+#    Time: 7770072 ps  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 7770072 ps  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ------------------------ ### Started Checking Third MODU Output stream: 
+#    Time: 7770072 ps  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 9670 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ------------------------- ## INTER Third Input Stream test passed Successfully
+#    Time: 9670 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 9670 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ---------------------------------- ## The Fourth INTER Input Stream  
+#    Time: 9670 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 9675 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ------------------------- ## FEC Fourth Input Stream test passed Successfully
+#    Time: 9675 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ========================================================================================================
+#    Time: 9675 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: -------------------Finished self checker for: FEC Block--------------------------
+#    Time: 9675 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ========================================================================================================
+#    Time: 9675 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ------------------------ ### Third MODU Output Stream: 1536 Q Values Successed
+#    Time: 9691608 ps  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 9691608 ps  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ------------------------ ### Third MODU Output Stream: 1536 I Values Successed
+#    Time: 9691608 ps  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 9691608 ps  Iteration: 0  Instance: /topwimax_tb
+# ** Note: --------------------------- ### Ended Checking MODU Third Output stream 
+#    Time: 9691608 ps  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 9691608 ps  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ------------------------ ### Started Checking Fourth MODU Output stream: 
+#    Time: 9691608 ps  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 11590 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ------------------------- ## INTER Fourth Input Stream test passed Successfully
+#    Time: 11590 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ========================================================================================================
+#    Time: 11590 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: -------------------Finished self checker for: INTER Block--------------------------
+#    Time: 11590 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ========================================================================================================
+#    Time: 11590 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ------------------------------------FINISHED SELF CHECKER--------------------------
+#    Time: 11590 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ========================================================================================================
+#    Time: 11590 ns  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ------------------------ ### Fourth MODU Output Stream: 1536 Q Values Successed
+#    Time: 11613144 ps  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 11613144 ps  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ------------------------ ### Fourth MODU Output Stream: 1536 I Values Successed
+#    Time: 11613144 ps  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 11613144 ps  Iteration: 0  Instance: /topwimax_tb
+# ** Note: --------------------------- ### Ended Checking MODU Fourth Output stream 
+#    Time: 11613144 ps  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 11613144 ps  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ----------------------------- Ended Checking (Demodulating) (4) output streams ---------------
+#    Time: 11613144 ps  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 11613144 ps  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 11613144 ps  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ---------------------------- Stimualtion of All Blocks Passed Successfully!! ----------------------------
+#    Time: 11613144 ps  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 11613144 ps  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 11613144 ps  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ----------------------------------------- Simulation Finished -------------------------------------------------
+#    Time: 11613144 ps  Iteration: 0  Instance: /topwimax_tb
+# ** Note: ===============================================================================================================
+#    Time: 11613144 ps  Iteration: 0  Instance: /topwimax_tb

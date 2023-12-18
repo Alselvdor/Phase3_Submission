@@ -7,16 +7,26 @@ USE altera_mf.altera_mf_components.all;
 entity TopWiMax is 
     port(
         CLK_50Mhz                            	  : in    std_logic; 
-        reset                 	                 : in    std_logic; 
-        load               	                    : in    std_logic; 
+        CLK_100Mhz                            	  : in    std_logic; 
+        reset                 	                  : in    std_logic; 
+        load               	                      : in    std_logic; 
 
-        TopWiMax_in_valid                 	     : in    std_logic; 
-        TopWiMax_in_ready                	        : in    std_logic; 
+        TopWiMax_in_valid                 	      : in    std_logic; 
+        TopWiMax_in_ready                	      : in    std_logic; 
         WiInput                               	  : in    std_logic; 
         
+        RANDI_output_valid                        : out std_logic;
+        Randi_output_data                         : out std_logic;
+
+        FEC_output_valid                          : out std_logic;
+        FEC_output_data                           : out std_logic;
+
+        INTER_output_valid                        : out std_logic;
+        INTER_output_data                         : out std_logic;
+
         TopWiMax_out_valid                        : out   std_logic;
         TopWiMax_out_ready                        : out   std_logic;
-
+        
         WiOutput1                              	  : out   std_logic_vector(15 downto 0);  -- Q
         WiOutput2                              	  : out   std_logic_vector(15 downto 0)   -- I
     );
@@ -25,15 +35,15 @@ end TopWiMax;
 architecture TopWiMax_RTL of TopWiMax is
 
     --components 
-    component PLL_main is 
-        port (
-            refclk                                  : in  std_logic := 'X'; --  refclk.clk
-            rst                                     : in  std_logic := 'X'; --   reset.reset
-            outclk_0                                : out std_logic;        -- outclk0.clk
-            outclk_1                                : out std_logic;        -- outclk1.clk
-            locked                                  : out std_logic         --  locked.export
-        );
-    end component;
+    -- component PLL_main is 
+    --     port (
+    --         refclk                                  : in  std_logic := 'X'; --  refclk.clk
+    --         rst                                     : in  std_logic := 'X'; --   reset.reset
+    --         outclk_0                                : out std_logic;        -- outclk0.clk
+    --         outclk_1                                : out std_logic;        -- outclk1.clk
+    --         reset                                  : out std_logic         --  reset.export
+    --     );
+    -- end component;
 
     component randi
         PORT
@@ -105,12 +115,6 @@ architecture TopWiMax_RTL of TopWiMax is
     end component;
 
     --signals 
-
-    --PLL
-    signal  CLK_50Mhz_sig                         : std_logic;
-    signal  clk_100mhz_sig                        : std_logic;
-    signal  locked                                : std_logic;
-    signal  locked2                               : std_logic;
  
     --RANDI          
     signal  RANDI_out                              : std_logic;
@@ -130,23 +134,36 @@ architecture TopWiMax_RTL of TopWiMax is
     signal  MODU2INTER_Ready                       : std_logic;
 
 begin
+
     --reset for other blocks (blocks' reset is active high)
-    locked2 <= not locked; 
-    
+    -- reset2 <= not reset; 
     --Instantiations
-    pll1: PLL_main port map 
-    (
-        refclk                        => CLK_50Mhz,
-        rst                           => reset,
-        outclk_0                     => CLK_50Mhz_sig,
-        outclk_1                    => clk_100mhz_sig,
-        locked                        => locked
-    );
+    -- pll1: PLL_main port map 
+    -- (
+    --     refclk                        => CLK_50Mhz,
+    --     rst                           => reset,
+    --     outclk_0                     => CLK_50Mhz,
+    --     outclk_1                    => CLK_100Mhz,
+    --     reset                        => reset
+    -- );
+
+    --cont
+
+        RANDI_output_valid                        <= RANDI_out_valid;
+        Randi_output_data                         <= RANDI_out;
+
+        FEC_output_valid                          <= FEC_encoder_out_valid_out;
+        FEC_output_data                           <= fec_out;
+
+        INTER_output_valid                        <= INTER_out_valid;
+        INTER_output_data                         <= INTER_out;
+
+
 
     RANDI1: RANDI port map 
     (
-        clk_50MHz              => CLK_50Mhz_sig, 
-        reset                  => locked2, 
+        clk_50MHz              => CLK_50Mhz, 
+        reset                  => reset, 
         load                   => load, 
 
         randi_input_data       => WiInput, 
@@ -161,9 +178,9 @@ begin
 
     fec1: FEC port map
     (
-        CLK_50Mhz                   => CLK_50Mhz_sig,
-        clk_100mhz                  => clk_100mhz_sig,
-        reset                       => locked2, 
+        CLK_50Mhz                   => CLK_50Mhz,
+        clk_100mhz                  => CLK_100Mhz,
+        reset                       => reset, 
         
         FEC_input_valid              => RANDI_out_valid,
         FEC_input_data               => RANDI_out,
@@ -178,8 +195,8 @@ begin
 
     inter1: INTER port map 
     (
-        clk_100mhz => clk_100mhz_sig,
-        reset => locked2, 
+        clk_100mhz => CLK_100Mhz,
+        reset => reset, 
 
         INTER_Input_data => fec_out,
         INTER_input_valid => FEC_encoder_out_valid_out, 
@@ -194,8 +211,8 @@ begin
     (
      
 
-        clk_100MHz         => clk_100mhz_sig,
-        reset              => locked2,
+        clk_100MHz         => CLK_100Mhz,
+        reset              => reset,
 
         MODU_input_data    => INTER_out,
         MODU_input_valid   => INTER_out_valid,

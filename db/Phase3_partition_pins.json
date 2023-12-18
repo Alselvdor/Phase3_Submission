@@ -1,0 +1,197 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "RANDI_output_valid",
+					"strict" : false
+				},
+				{
+					"name" : "Randi_output_data",
+					"strict" : false
+				},
+				{
+					"name" : "FEC_output_valid",
+					"strict" : false
+				},
+				{
+					"name" : "FEC_output_data",
+					"strict" : false
+				},
+				{
+					"name" : "INTER_output_valid",
+					"strict" : false
+				},
+				{
+					"name" : "INTER_output_data",
+					"strict" : false
+				},
+				{
+					"name" : "TopWiMax_out_valid",
+					"strict" : false
+				},
+				{
+					"name" : "TopWiMax_out_ready",
+					"strict" : false
+				},
+				{
+					"name" : "WiOutput1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "WiOutput1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "WiOutput1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "WiOutput1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "WiOutput1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "WiOutput1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "WiOutput1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "WiOutput1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "WiOutput1[8]",
+					"strict" : false
+				},
+				{
+					"name" : "WiOutput1[9]",
+					"strict" : false
+				},
+				{
+					"name" : "WiOutput1[10]",
+					"strict" : false
+				},
+				{
+					"name" : "WiOutput1[11]",
+					"strict" : false
+				},
+				{
+					"name" : "WiOutput1[12]",
+					"strict" : false
+				},
+				{
+					"name" : "WiOutput1[13]",
+					"strict" : false
+				},
+				{
+					"name" : "WiOutput1[14]",
+					"strict" : false
+				},
+				{
+					"name" : "WiOutput1[15]",
+					"strict" : false
+				},
+				{
+					"name" : "WiOutput2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "WiOutput2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "WiOutput2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "WiOutput2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "WiOutput2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "WiOutput2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "WiOutput2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "WiOutput2[7]",
+					"strict" : false
+				},
+				{
+					"name" : "WiOutput2[8]",
+					"strict" : false
+				},
+				{
+					"name" : "WiOutput2[9]",
+					"strict" : false
+				},
+				{
+					"name" : "WiOutput2[10]",
+					"strict" : false
+				},
+				{
+					"name" : "WiOutput2[11]",
+					"strict" : false
+				},
+				{
+					"name" : "WiOutput2[12]",
+					"strict" : false
+				},
+				{
+					"name" : "WiOutput2[13]",
+					"strict" : false
+				},
+				{
+					"name" : "WiOutput2[14]",
+					"strict" : false
+				},
+				{
+					"name" : "WiOutput2[15]",
+					"strict" : false
+				},
+				{
+					"name" : "TopWiMax_in_valid",
+					"strict" : false
+				},
+				{
+					"name" : "WiInput",
+					"strict" : false
+				},
+				{
+					"name" : "TopWiMax_in_ready",
+					"strict" : false
+				},
+				{
+					"name" : "load",
+					"strict" : false
+				},
+				{
+					"name" : "CLK_50Mhz",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "CLK_100Mhz",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

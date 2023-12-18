@@ -12,6 +12,7 @@ architecture TopWiMax_tb_rtl of TopWiMax_tb is
     component TopWiMax  
     port(
         CLK_50Mhz                            	  : in    std_logic; 
+        CLK_100Mhz                            	  : in    std_logic; 
         reset                 	                  : in    std_logic; 
         load               	                      : in    std_logic; 
 
@@ -19,17 +20,26 @@ architecture TopWiMax_tb_rtl of TopWiMax_tb is
         TopWiMax_in_ready                	      : in    std_logic; 
         WiInput                               	  : in    std_logic; 
         
+        RANDI_output_valid                        : out std_logic;
+        Randi_output_data                         : out std_logic;
+
+        FEC_output_valid                          : out std_logic;
+        FEC_output_data                           : out std_logic;
+
+        INTER_output_valid                        : out std_logic;
+        INTER_output_data                         : out std_logic;
+
         TopWiMax_out_valid                        : out   std_logic;
         TopWiMax_out_ready                        : out   std_logic;
-
-        WiOutput1                              	  : out   std_logic_vector(15 downto 0); 
-        WiOutput2                              	  : out   std_logic_vector(15 downto 0) 
+        WiOutput1                              	  : out   std_logic_vector(15 downto 0);  -- Q
+        WiOutput2                              	  : out   std_logic_vector(15 downto 0)   -- I
     );
 
     end component;
 
     
     signal   clk_50                               : std_logic := '0'; 
+    signal   clk_100                               : std_logic := '0'; 
     signal   reset                                : std_logic; 
     signal   TopWiMax_in_valid                    : std_logic; 
     signal   TopWiMax_in_ready                    : std_logic; 
@@ -98,6 +108,13 @@ architecture TopWiMax_tb_rtl of TopWiMax_tb is
     signal test_pass_MODU_Q                : boolean := true;
 
 
+    signal   RANDI_Output_data_test_signal                   : std_logic;
+    signal   RANDI_Output_valid_test_signal                  : std_logic;
+    signal   FEC_Output_data_test_signal                     : std_logic;
+    signal   FEC_Output_valid_test_signal                    : std_logic;
+    signal   INTER_Output_data_test_signal                   : std_logic;
+    signal   INTER_Output_valid_test_signal                  : std_logic;
+
     -- Auto Streaming Test
     -- constant streamingnumber : integer := 1;
     begin 
@@ -105,11 +122,22 @@ architecture TopWiMax_tb_rtl of TopWiMax_tb is
     twimax : TopWiMax port map 
     (
         CLK_50Mhz             => clk_50,
+        CLK_100Mhz            => clk_100,
         reset                 => reset,   
         load                  => load,    	         
         TopWiMax_in_valid     => TopWiMax_in_valid,    
         TopWiMax_in_ready     => TopWiMax_in_ready, 
-        WiInput               => WiInput    ,        
+        WiInput               => WiInput    ,   
+        
+        RANDI_output_valid   => RANDI_Output_valid_test_signal    ,   
+        Randi_output_data    => RANDI_Output_data_test_signal    ,   
+
+        FEC_output_valid     => FEC_Output_valid_test_signal     ,   
+        FEC_output_data      => FEC_Output_data_test_signal      ,   
+
+        INTER_output_valid   => INTER_Output_valid_test_signal     ,   
+        INTER_output_data    => INTER_Output_data_test_signal      ,   
+
         TopWiMax_out_valid    => TopWiMax_out_valid,    
         TopWiMax_out_ready    => TopWiMax_out_ready,     
         WiOutput1             => test_out1_bit,           
@@ -118,6 +146,7 @@ architecture TopWiMax_tb_rtl of TopWiMax_tb is
 
     --clk process 
     clk_50 <= not clk_50 after CLK_50MHz_Period_HALF; 
+    clk_100 <= not clk_100 after CLK_100MHz_Period_HALF; 
 
     
     --assigning input bits from the vector 
