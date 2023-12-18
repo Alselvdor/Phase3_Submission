@@ -219,14 +219,55 @@ R35
 !i113 1
 R13
 R14
-Erandi
-Z36 w1702716968
+Epll_main
+Z36 w1702631326
 R3
 R4
 R5
 R0
-Z37 8D:/AUC/ASIC/Project/Phase3_Submission/randi.vhd
-Z38 FD:/AUC/ASIC/Project/Phase3_Submission/randi.vhd
+Z37 8D:/AUC/ASIC/Project/Phase3_Submission/PLL_main.vhd
+Z38 FD:/AUC/ASIC/Project/Phase3_Submission/PLL_main.vhd
+l0
+L11
+VZf6g]a_V@GUd:6UKeGQji1
+!s100 ag9l23LCGMVWEW^6hKNRY2
+R8
+33
+Z39 !s110 1702925917
+!i10b 1
+Z40 !s108 1702925917.000000
+Z41 !s90 -reportprogress|300|-work|work|D:/AUC/ASIC/Project/Phase3_Submission/PLL_main.vhd|
+Z42 !s107 D:/AUC/ASIC/Project/Phase3_Submission/PLL_main.vhd|
+!i113 1
+Z43 o-work work
+Z44 tExplicit 1 NoCoverage 1 CvgOpt 0
+Artl
+R3
+R4
+R5
+DEx4 work 8 pll_main 0 22 Zf6g]a_V@GUd:6UKeGQji1
+l32
+L21
+V`;D7@?F^k^27dUF;e:5Ab3
+!s100 EED<5?GH:E22l0c`8maI73
+R8
+33
+R39
+!i10b 1
+R40
+R41
+R42
+!i113 1
+R43
+R44
+Erandi
+Z45 w1702716968
+R3
+R4
+R5
+R0
+Z46 8D:/AUC/ASIC/Project/Phase3_Submission/randi.vhd
+Z47 FD:/AUC/ASIC/Project/Phase3_Submission/randi.vhd
 l0
 L5
 V16eW1Bb7Qg1]]Jk=@BhU^3
@@ -236,8 +277,8 @@ R8
 R9
 !i10b 1
 R10
-Z39 !s90 -reportprogress|300|-2008|-work|work|D:/AUC/ASIC/Project/Phase3_Submission/randi.vhd|
-Z40 !s107 D:/AUC/ASIC/Project/Phase3_Submission/randi.vhd|
+Z48 !s90 -reportprogress|300|-2008|-work|work|D:/AUC/ASIC/Project/Phase3_Submission/randi.vhd|
+Z49 !s107 D:/AUC/ASIC/Project/Phase3_Submission/randi.vhd|
 !i113 1
 R13
 R14
@@ -255,8 +296,8 @@ R8
 R9
 !i10b 1
 R10
-R39
-R40
+R48
+R49
 !i113 1
 R13
 R14
@@ -264,53 +305,53 @@ Ptest_pack
 R3
 R4
 R5
-Z41 w1702719180
+Z50 w1702925426
 R0
-Z42 8D:/AUC/ASIC/Project/Phase3_Submission/Test_Pack.vhd
-Z43 FD:/AUC/ASIC/Project/Phase3_Submission/Test_Pack.vhd
+Z51 8D:/AUC/ASIC/Project/Phase3_Submission/Test_Pack.vhd
+Z52 FD:/AUC/ASIC/Project/Phase3_Submission/Test_Pack.vhd
 l0
 L5
-VGWNU00O_38LVlSePAoRBS2
-!s100 Q]PK18>>i1z:oVUV];55U2
+V0TJ35fnmF54Jj_g1PEIgo1
+!s100 [^D`42DL04i`0=h35LAo60
 R8
-32
+33
 b1
-Z44 !s110 1702923784
+Z53 !s110 1702925501
 !i10b 1
-Z45 !s108 1702923784.000000
-Z46 !s90 -reportprogress|300|-work|work|D:/AUC/ASIC/Project/Phase3_Submission/Test_Pack.vhd|
-Z47 !s107 D:/AUC/ASIC/Project/Phase3_Submission/Test_Pack.vhd|
+Z54 !s108 1702925501.000000
+Z55 !s90 -reportprogress|300|-work|work|D:/AUC/ASIC/Project/Phase3_Submission/Test_Pack.vhd|
+Z56 !s107 D:/AUC/ASIC/Project/Phase3_Submission/Test_Pack.vhd|
 !i113 1
-Z48 o-work work
-R14
+R43
+R44
 Bbody
-Z49 DPx4 work 9 test_pack 0 22 GWNU00O_38LVlSePAoRBS2
+Z57 DPx4 work 9 test_pack 0 22 0TJ35fnmF54Jj_g1PEIgo1
 R3
 R4
 R5
 l0
-L93
-V<ITfXhGHBMKV]`0IdQHK31
-!s100 aV87F92B82^VgiN<TVHAi0
+L95
+V]Dm=Ha`4B2Go3K8;>VAz]0
+!s100 4_MF4XZPT]20]BeI>^O5h1
 R8
-32
-R44
+33
+R53
 !i10b 1
-R45
-R46
-R47
+R54
+R55
+R56
 !i113 1
-R48
-R14
+R43
+R44
 Etopwimax
-Z50 w1702923563
+Z58 w1702923563
 R2
 R3
 R4
 R5
 R0
-Z51 8D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax.vhd
-Z52 FD:/AUC/ASIC/Project/Phase3_Submission/TopWiMax.vhd
+Z59 8D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax.vhd
+Z60 FD:/AUC/ASIC/Project/Phase3_Submission/TopWiMax.vhd
 l0
 L7
 VMVBGe3<1=l=]C^o;7Q1G?3
@@ -320,8 +361,8 @@ R8
 R9
 !i10b 1
 R10
-Z53 !s90 -reportprogress|300|-2008|-work|work|D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax.vhd|
-Z54 !s107 D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax.vhd|
+Z61 !s90 -reportprogress|300|-2008|-work|work|D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax.vhd|
+Z62 !s107 D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax.vhd|
 !i113 1
 R13
 R14
@@ -340,37 +381,37 @@ R8
 R9
 !i10b 1
 R10
-R53
-R54
+R61
+R62
 !i113 1
 R13
 R14
 Etopwimax_tb
-Z55 w1702923939
-R49
+Z63 w1702923939
+Z64 DPx4 work 9 test_pack 0 22 GWNU00O_38LVlSePAoRBS2
 R2
 R3
 R4
 R5
 R0
-Z56 8D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd
-Z57 FD:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd
+Z65 8D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd
+Z66 FD:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd
 l0
 L8
 V@m69TIOL:XZoF2=WdJlF71
 !s100 EYM6o@AQ9`;36VXN@UMRF3
 R8
 33
-Z58 !s110 1702923942
+Z67 !s110 1702923942
 !i10b 1
-Z59 !s108 1702923942.000000
-Z60 !s90 -reportprogress|300|-work|work|D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd|
-Z61 !s107 D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd|
+Z68 !s108 1702923942.000000
+Z69 !s90 -reportprogress|300|-work|work|D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd|
+Z70 !s107 D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_tb.vhd|
 !i113 1
-R48
-Z62 tExplicit 1 NoCoverage 1 CvgOpt 0
+R43
+R44
 Atopwimax_tb_rtl
-R49
+R64
 R2
 R3
 R4
@@ -382,11 +423,35 @@ V?UBcj6MnK13FlM<dO_hLg3
 !s100 PO7hnlRLMY;A3a?3ELE:G1
 R8
 33
-R58
+R67
 !i10b 1
-R59
-R60
-R61
+R68
+R69
+R70
 !i113 1
-R48
-R62
+R43
+R44
+Etopwimax_wrapper
+w1702926177
+R57
+R2
+R3
+R4
+R5
+R0
+8D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd
+FD:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd
+l0
+L9
+V1Az2UdT`ZgQg2FPGm0IeY3
+!s100 I]?hfkh;>16DldZ`k1Y?d0
+R8
+33
+!s110 1702926183
+!i10b 1
+!s108 1702926183.000000
+!s90 -reportprogress|300|-work|work|D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd|
+!s107 D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd|
+!i113 1
+R43
+R44

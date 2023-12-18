@@ -1,0 +1,265 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+LIBRARY altera_mf;
+USE altera_mf.altera_mf_components.all;
+
+entity TopWiMax_wrapper is 
+    port(
+        CLK_50Mhz                            	  : in    std_logic; 
+        reset                 	                  : in    std_logic; 
+        load               	                      : in    std_logic; 
+
+        TopWiMax_wrapper_in_valid                 : in    std_logic; 
+        
+        RANDI_output_valid                        : out std_logic;
+        FEC_Output_data_test_signalput_valid                          : out std_logic;
+        INTER_output_valid                        : out std_logic;
+        MODU_out_valid                            : out   std_logic;
+    );
+end TopWiMax_wrapper;
+
+architecture TopWiMax_wrapper_RTL of TopWiMax_wrapper is
+
+    --components 
+
+    component TopWiMax  
+    port(
+        CLK_50Mhz                            	  : in    std_logic; 
+        CLK_100Mhz                            	  : in    std_logic; 
+        reset                 	                  : in    std_logic; 
+        load               	                      : in    std_logic; 
+
+        TopWiMax_in_valid                 	      : in    std_logic; 
+        TopWiMax_in_ready                	      : in    std_logic; 
+        WiInput                               	  : in    std_logic; 
+        
+        RANDI_output_valid                        : out std_logic;
+        Randi_output_data                         : out std_logic;
+
+        FEC_Output_data_test_signalput_valid                          : out std_logic;
+        FEC_Output_data_test_signalput_data                           : out std_logic;
+
+        INTER_output_valid                        : out std_logic;
+        INTER_output_data                         : out std_logic;
+
+        TopWiMax_out_valid                        : out   std_logic;
+        TopWiMax_out_ready                        : out   std_logic;
+        WiOutput1                              	  : out   std_logic_vector(15 downto 0);  -- Q
+        WiOutput2                              	  : out   std_logic_vector(15 downto 0)   -- I
+    );
+
+    component PLL_main is 
+        port (
+            refclk                                  : in  std_logic := 'X'; --  refclk.clk
+            rst                                     : in  std_logic := 'X'; --   reset.reset
+            outclk_0                                : out std_logic;        -- outclk0.clk
+            outclk_1                                : out std_logic;        -- outclk1.clk
+            locked                                  : out std_logic         --  locked.export
+        );
+    end component;
+
+    --ROMs
+    signal seed_rom                               : std_logic_vector(14 downto 0)   := SEED_KO;
+    signal rand_in_data_rom                       : std_logic_vector(95 downto 0)   := INPUT_RANDOMIZER_VECTOR_CONST; 
+    signal RANDI_Output_data_test_signal_data_rom                      : std_logic_vector(95 downto 0)   := OUTPUT_RANDOMIZER_VECTOR_CONST;
+    signal FEC_Output_data_test_signal_data_rom                       : std_logic_vector(191 downto 0)  := INPUT_INTERLEAVER_VECTOR_CONST;
+    signal INTER_Output_data_test_signal_data_rom                       : std_logic_vector(191 downto 0)  := INPUT_MODULATION_VECTOR_CONST;
+    signal mod_out_data_rom                       : std_logic_vector(191 downto 0)  := INPUT_MODULATION_VECTOR_CONST;
+
+
+    --PLL
+    signal clk_50mhz_sig                          : std_logic;
+    signal clk_100mhz_sig                         : std_logic;
+    signal locked                                 : std_logic;
+    signal locked2                                : std_logic;
+    --General
+    signal WiInput                     : std_logic;     
+    signal TopWiMax_in_valid                              : std_logic;
+    --rand
+    signal RANDI_Output_data_test_signal                               : std_logic;
+    signal RANDI_Output_valid_test_signal                         : std_logic;
+    signal counter_rand, counter2_rand            : integer;
+    signal flag_rand                              : std_logic;     
+    --fec
+    signal FEC_Output_data_test_signal                                : std_logic;
+    signal FEC_Output_data_test_signalput_valid_test_signal                          : std_logic;
+    signal counter_fec                            : integer;
+    signal flag_fec                               : std_logic; 
+    --int
+    signal INTER_Output_data_test_signal                                : std_logic;
+    signal INTER_Output_valid_test_signal                          : std_logic;
+    signal counter_int                            : integer;
+    signal flag_int                               : std_logic; 
+    --mod
+    signal mod_out1                               : std_logic_vector(15 downto 0);
+    signal mod_out2                               : std_logic_vector(15 downto 0);
+    signal TopWiMax_out_valid                          : std_logic;
+    signal counter_mod                            : integer;
+    signal flag_mod                               : std_logic; 
+    
+    -- signal   RANDI_Output_data_test_signal                   : std_logic;
+    -- signal   RANDI_Output_valid_test_signal                  : std_logic;
+    -- signal   FEC_Output_data_test_signalput_data_test_signal                     : std_logic;
+    -- signal   FEC_Output_data_test_signalput_valid_test_signal                    : std_logic;
+    -- signal   INTER_Output_data_test_signal                   : std_logic;
+    -- signal   INTER_Output_valid_test_signal                  : std_logic;
+
+begin
+    --reset for other blocks (blocks' reset is active high)
+    locked2 <= not locked; 
+    
+    --Instantiations
+    pll1_wrap: PLL_main port map 
+    (
+        refclk                        => CLK_50Mhz,
+        rst                           => reset,
+        outclk_0                      => CLK_50Mhz_sig,
+        outclk_1                      => clk_100mhz_sig,
+        locked                        => locked
+    );
+
+    twimax_wrap : TopWiMax port map 
+    (
+        CLK_50Mhz             => CLK_50Mhz_sig,
+        CLK_100Mhz            => clk_100mhz_sig,
+        reset                 => locked2,   
+        load                  => load,    	     
+        TopWiMax_in_valid     => TopWiMax_in_valid,    
+        TopWiMax_in_ready     => TopWiMax_in_ready, 
+        WiInput               => WiInput    ,   
+        
+        RANDI_output_valid   => RANDI_Output_valid_test_signal    ,   
+        Randi_output_data    => RANDI_Output_data_test_signal    ,   
+
+        FEC_Output_data_test_signalput_valid     => FEC_Output_data_test_signalput_valid_test_signal     ,   
+        FEC_Output_data_test_signalput_data      => FEC_Output_data_test_signalput_data_test_signal      ,   
+
+        INTER_output_valid   => INTER_Output_valid_test_signal     ,   
+        INTER_output_data    => INTER_Output_data_test_signal      ,   
+
+        TopWiMax_out_valid    => TopWiMax_out_valid,    
+        TopWiMax_out_ready    => TopWiMax_out_ready,     
+        WiOutput1             => mod_out1,           
+        WiOutput2             => mod_out2         
+    );
+
+    --take input into module 
+    process (clk_50mhz_sig, reset) begin 
+        if (reset = '1') then 
+            counter_rand <= 95;    
+            TopWiMax_in_valid    <= '0'; 
+        elsif (rising_edge(clk_50mhz_sig)) then 
+            if (load = '0' and counter_rand > 0 and counter_rand <= 95 and en = '1') then 
+                TopWiMax_in_valid <= '1';
+                WiInput <= rand_in_data_rom(counter_rand); 
+                counter_rand <= counter_rand - 1; 
+            elsif (load = '0' and counter_rand = 0 and en = '1') then 
+                TopWiMax_in_valid           <= '1';
+                WiInput  <= rand_in_data_rom(counter_rand); 
+                counter_rand        <= 95;
+            end if; 
+        end if; 
+    end process;
+
+    --rand
+    process (clk_50mhz_sig, reset) begin 
+        if (reset = '1') then 
+            counter2_rand <= 95; 
+            flag_rand <= '0';
+            rand_pass <= '0';            
+        elsif (rising_edge(clk_50mhz_sig)) then 
+            if (load = '0' and counter2_rand >= 0 and counter2_rand <= 95 and TopWiMax_in_valid = '1') then
+                if ((RANDI_Output_data_test_signal = RANDI_Output_data_test_signal_data_rom(counter2_rand)) and (flag_rand = '0')) then 
+                    rand_pass <= '1';
+                    counter2_rand <= counter2_rand - 1; 
+                else 
+                    flag_rand       <= '1'; 
+                    rand_pass       <= '0';                     
+                end if;
+            end if; 
+            if(counter2_rand = 0) then 
+                counter2_rand   <= 95;
+            end if;
+        end if; 
+    end process; 
+
+    --fec
+    process (clk_100mhz_sig, reset) begin 
+        if(reset = '1') then 
+            fec_pass    <= '0';
+            counter_fec <= 191;  
+            flag_fec    <= '0';      
+        elsif(rising_edge(clk_100mhz_sig)) then 
+            if(FEC_Output_data_test_signalput_valid_test_signal = '1') then 
+                if(counter_fec >= 0) then 
+                    if(FEC_Output_data_test_signal = FEC_Output_data_test_signal_data_rom(counter_fec) and flag_fec = '0') then 
+                        fec_pass    <= '1';
+                        counter_fec <= counter_fec - 1;
+                    else 
+                        flag_fec    <= '1';
+                        fec_pass    <= '0';
+                    end if;
+                end if;
+                if (counter_fec = 0) then 
+                    counter_fec <= 191;
+                end if;
+            end if;
+        end if;
+    end process;
+
+    --int
+    process (clk_100mhz_sig, reset) begin 
+        if(reset = '1') then 
+            int_pass    <= '0';
+            counter_int <= 191;  
+            flag_int    <= '0';      
+        elsif(rising_edge(clk_100mhz_sig)) then 
+            if(INTER_Output_valid_test_signal = '1') then 
+                if(counter_int >= 0) then 
+                    if(INTER_Output_data_test_signal = INTER_Output_data_test_signal_data_rom(counter_int) and flag_int = '0') then 
+                        int_pass    <= '1';
+                        counter_int <= counter_int - 1;
+                    else 
+                        flag_int    <= '1';
+                        int_pass    <= '0';                        
+                    end if;
+                end if;
+                if (counter_int = 0) then 
+                    counter_int <= 191;
+                end if;
+            end if;
+        end if;
+    end process;
+
+    --mod
+    process (clk_50mhz_sig, reset) begin 
+        if(reset = '1') then 
+            mod_pass    <= '0';
+            counter_mod <= 191;  
+            flag_mod    <= '0';      
+        elsif(rising_edge(clk_50mhz_sig)) then 
+            if(TopWiMax_out_valid = '1') then 
+                if(counter_mod >= 1) then 
+                    if(mod_out1(15) = mod_out_data_rom(counter_mod) and mod_out2(15) = mod_out_data_rom(counter_mod-1) and flag_mod = '0') then 
+                        mod_pass    <= '1';
+                        if(counter_mod > 1) then 
+                            counter_mod <= counter_mod - 2;
+                        end if;
+                        if (counter_mod = 1) then
+                           counter_mod  <= counter_mod - 1;         
+                        end if;
+                    else 
+                        flag_mod    <= '1';
+                        mod_pass    <= '0';
+                    end if;
+                end if;
+                if (counter_mod = 1) then 
+                    counter_mod <= 191;
+                end if;
+            end if;
+        end if;
+    end process;
+
+
+end TopWiMax_wrapper_RTL;

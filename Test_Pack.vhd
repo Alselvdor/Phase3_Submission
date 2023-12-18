@@ -47,6 +47,8 @@ package Test_Pack is
 
     constant MAX_ITERATIONS : integer := 96;  -- Define the maximum number of iterations
     -- constant MODU_VECTOR_INPUT_2      : std_logic_vector(191 downto 0) := x"4B047DFA42F2A5D5F61C021A5851E9A309A24FD58087BD1E";
+    constant Intial_Seed                            : std_logic_vector(14 downto 0)  := "101010001110110";
+
 --====================================================================================================================
 
 

@@ -570,3 +570,340 @@ run 15 us
 #    Time: 11613144 ps  Iteration: 0  Instance: /topwimax_tb
 # ** Note: ===============================================================================================================
 #    Time: 11613144 ps  Iteration: 0  Instance: /topwimax_tb
+vcom -work work D:/AUC/ASIC/Project/Phase3_Submission/Test_Pack.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:51:41 on Dec 18,2023
+# vcom -reportprogress 300 -work work D:/AUC/ASIC/Project/Phase3_Submission/Test_Pack.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package Test_Pack
+# -- Compiling package body Test_Pack
+# -- Loading package Test_Pack
+# End time: 20:51:41 on Dec 18,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:51:45 on Dec 18,2023
+# vcom -reportprogress 300 -work work D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package altera_mf_components
+# -- Compiling entity TopWiMax_wrapper
+# -- Compiling architecture TopWiMax_wrapper_RTL of TopWiMax_wrapper
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(65): (vcom-1136) Unknown identifier "Intial_Seed".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(66): (vcom-1136) Unknown identifier "RANDI_VECTOR_INPUT".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(67): (vcom-1136) Unknown identifier "RANDI_VECTOR_OUTPUT".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(68): (vcom-1136) Unknown identifier "FEC_VECTOR_OUTPUT".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(69): (vcom-1136) Unknown identifier "INTER_VECTOR_OUTPUT".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(70): (vcom-1136) Unknown identifier "MODU_VECTOR_INPUT".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(131): (vcom-1136) Unknown identifier "TopWiMax_in_ready".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(138): (vcom-1136) Unknown identifier "FEC_Output_data_test_signalput_data_test_signal".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(144): (vcom-1136) Unknown identifier "TopWiMax_out_ready".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(155): (vcom-1136) Unknown identifier "en".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(155): ** Error: (vcom-1590) Bad expression in right operand of infix expression 'and'.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(155): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(159): (vcom-1136) Unknown identifier "en".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(159): ** Error: (vcom-1590) Bad expression in right operand of infix expression 'and'.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(159): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(172): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(172): (vcom-1136) Unknown identifier "rand_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(176): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(176): (vcom-1136) Unknown identifier "rand_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(180): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(180): (vcom-1136) Unknown identifier "rand_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(192): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(192): (vcom-1136) Unknown identifier "fec_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(199): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(199): (vcom-1136) Unknown identifier "fec_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(203): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(203): (vcom-1136) Unknown identifier "fec_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(216): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(216): (vcom-1136) Unknown identifier "int_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(223): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(223): (vcom-1136) Unknown identifier "int_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(227): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(227): (vcom-1136) Unknown identifier "int_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(240): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(240): (vcom-1136) Unknown identifier "mod_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(247): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(247): (vcom-1136) Unknown identifier "mod_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(256): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(256): (vcom-1136) Unknown identifier "mod_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(267): VHDL Compiler exiting
+# End time: 20:51:45 on Dec 18,2023, Elapsed time: 0:00:00
+# Errors: 40, Warnings: 0
+vcom -reportprogress 300 -work work D:/AUC/ASIC/Project/Phase3_Submission/PLL_main.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:58:37 on Dec 18,2023
+# vcom -reportprogress 300 -work work D:/AUC/ASIC/Project/Phase3_Submission/PLL_main.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity PLL_main
+# -- Compiling architecture rtl of PLL_main
+# End time: 20:58:37 on Dec 18,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:58:39 on Dec 18,2023
+# vcom -reportprogress 300 -work work D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package altera_mf_components
+# -- Compiling entity TopWiMax_wrapper
+# -- Compiling architecture TopWiMax_wrapper_RTL of TopWiMax_wrapper
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(65): (vcom-1136) Unknown identifier "Intial_Seed".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(66): (vcom-1136) Unknown identifier "RANDI_VECTOR_INPUT".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(67): (vcom-1136) Unknown identifier "RANDI_VECTOR_OUTPUT".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(68): (vcom-1136) Unknown identifier "FEC_VECTOR_OUTPUT".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(69): (vcom-1136) Unknown identifier "INTER_VECTOR_OUTPUT".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(70): (vcom-1136) Unknown identifier "MODU_VECTOR_INPUT".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(131): (vcom-1136) Unknown identifier "TopWiMax_in_ready".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(138): (vcom-1136) Unknown identifier "FEC_Output_data_test_signalput_data_test_signal".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(144): (vcom-1136) Unknown identifier "TopWiMax_out_ready".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(155): (vcom-1136) Unknown identifier "en".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(155): ** Error: (vcom-1590) Bad expression in right operand of infix expression 'and'.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(155): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(159): (vcom-1136) Unknown identifier "en".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(159): ** Error: (vcom-1590) Bad expression in right operand of infix expression 'and'.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(159): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(172): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(172): (vcom-1136) Unknown identifier "rand_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(176): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(176): (vcom-1136) Unknown identifier "rand_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(180): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(180): (vcom-1136) Unknown identifier "rand_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(192): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(192): (vcom-1136) Unknown identifier "fec_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(199): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(199): (vcom-1136) Unknown identifier "fec_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(203): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(203): (vcom-1136) Unknown identifier "fec_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(216): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(216): (vcom-1136) Unknown identifier "int_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(223): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(223): (vcom-1136) Unknown identifier "int_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(227): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(227): (vcom-1136) Unknown identifier "int_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(240): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(240): (vcom-1136) Unknown identifier "mod_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(247): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(247): (vcom-1136) Unknown identifier "mod_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(256): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(256): (vcom-1136) Unknown identifier "mod_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(267): VHDL Compiler exiting
+# End time: 20:58:40 on Dec 18,2023, Elapsed time: 0:00:01
+# Errors: 40, Warnings: 0
+vcom -reportprogress 300 -work work D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:59:12 on Dec 18,2023
+# vcom -reportprogress 300 -work work D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package altera_mf_components
+# -- Loading package Test_Pack
+# -- Compiling entity TopWiMax_wrapper
+# -- Compiling architecture TopWiMax_wrapper_RTL of TopWiMax_wrapper
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(67): near ":": (vcom-1576) expecting IDENTIFIER.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(133): (vcom-1136) Unknown identifier "TopWiMax_in_ready".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(140): (vcom-1136) Unknown identifier "FEC_Output_data_test_signalput_data_test_signal".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(146): (vcom-1136) Unknown identifier "TopWiMax_out_ready".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(157): (vcom-1136) Unknown identifier "en".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(157): ** Error: (vcom-1590) Bad expression in right operand of infix expression 'and'.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(157): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(161): (vcom-1136) Unknown identifier "en".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(161): ** Error: (vcom-1590) Bad expression in right operand of infix expression 'and'.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(161): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(174): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(174): (vcom-1136) Unknown identifier "rand_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(178): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(178): (vcom-1136) Unknown identifier "rand_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(182): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(182): (vcom-1136) Unknown identifier "rand_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(194): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(194): (vcom-1136) Unknown identifier "fec_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(201): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(201): (vcom-1136) Unknown identifier "fec_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(205): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(205): (vcom-1136) Unknown identifier "fec_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(218): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(218): (vcom-1136) Unknown identifier "int_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(225): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(225): (vcom-1136) Unknown identifier "int_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(229): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(229): (vcom-1136) Unknown identifier "int_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(242): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(242): (vcom-1136) Unknown identifier "mod_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(249): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(249): (vcom-1136) Unknown identifier "mod_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(258): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(258): (vcom-1136) Unknown identifier "mod_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(269): VHDL Compiler exiting
+# End time: 20:59:12 on Dec 18,2023, Elapsed time: 0:00:00
+# Errors: 35, Warnings: 0
+vcom -reportprogress 300 -work work D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:00:57 on Dec 18,2023
+# vcom -reportprogress 300 -work work D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package altera_mf_components
+# -- Loading package Test_Pack
+# -- Compiling entity TopWiMax_wrapper
+# -- Compiling architecture TopWiMax_wrapper_RTL of TopWiMax_wrapper
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(143): (vcom-1136) Unknown identifier "FEC_Output_data_test_signalput_data_test_signal".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(161): (vcom-1136) Unknown identifier "en".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(161): ** Error: (vcom-1590) Bad expression in right operand of infix expression 'and'.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(161): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(166): (vcom-1136) Unknown identifier "en".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(166): ** Error: (vcom-1590) Bad expression in right operand of infix expression 'and'.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(166): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(179): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(179): (vcom-1136) Unknown identifier "rand_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(183): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(183): (vcom-1136) Unknown identifier "rand_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(187): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(187): (vcom-1136) Unknown identifier "rand_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(199): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(199): (vcom-1136) Unknown identifier "fec_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(206): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(206): (vcom-1136) Unknown identifier "fec_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(210): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(210): (vcom-1136) Unknown identifier "fec_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(223): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(223): (vcom-1136) Unknown identifier "int_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(230): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(230): (vcom-1136) Unknown identifier "int_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(234): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(234): (vcom-1136) Unknown identifier "int_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(247): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(247): (vcom-1136) Unknown identifier "mod_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(254): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(254): (vcom-1136) Unknown identifier "mod_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(263): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(263): (vcom-1136) Unknown identifier "mod_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(274): VHDL Compiler exiting
+# End time: 21:00:58 on Dec 18,2023, Elapsed time: 0:00:01
+# Errors: 32, Warnings: 0
+vcom -reportprogress 300 -work work D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:02:07 on Dec 18,2023
+# vcom -reportprogress 300 -work work D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package altera_mf_components
+# -- Loading package Test_Pack
+# -- Compiling entity TopWiMax_wrapper
+# -- Compiling architecture TopWiMax_wrapper_RTL of TopWiMax_wrapper
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(143): (vcom-1136) Unknown identifier "FEC_Output_data_test_signalput_data_test_signal".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(161): (vcom-1136) Unknown identifier "en".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(161): ** Error: (vcom-1590) Bad expression in right operand of infix expression 'and'.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(161): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(166): (vcom-1136) Unknown identifier "en".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(166): ** Error: (vcom-1590) Bad expression in right operand of infix expression 'and'.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(166): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(179): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(179): (vcom-1136) Unknown identifier "rand_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(182): (vcom-1136) Unknown identifier "RANDI_Output_data_test_signal_data_rom".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(182): ** Error: (vcom-1590) Bad expression in left operand of infix expression 'and'.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(182): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(183): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(183): (vcom-1136) Unknown identifier "rand_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(187): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(187): (vcom-1136) Unknown identifier "rand_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(199): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(199): (vcom-1136) Unknown identifier "fec_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(205): (vcom-1136) Unknown identifier "FEC_Output_data_test_signal_data_rom".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(205): ** Error: (vcom-1590) Bad expression in left operand of infix expression 'and'.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(205): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(206): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(206): (vcom-1136) Unknown identifier "fec_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(210): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(210): (vcom-1136) Unknown identifier "fec_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(223): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(223): (vcom-1136) Unknown identifier "int_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(229): (vcom-1136) Unknown identifier "INTER_Output_data_test_signal_data_rom".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(229): ** Error: (vcom-1590) Bad expression in left operand of infix expression 'and'.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(229): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(230): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(230): (vcom-1136) Unknown identifier "int_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(234): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(234): (vcom-1136) Unknown identifier "int_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(247): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(247): (vcom-1136) Unknown identifier "mod_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(254): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(254): (vcom-1136) Unknown identifier "mod_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(263): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(263): (vcom-1136) Unknown identifier "mod_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(274): VHDL Compiler exiting
+# End time: 21:02:07 on Dec 18,2023, Elapsed time: 0:00:00
+# Errors: 41, Warnings: 0
+vcom -reportprogress 300 -work work D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:03:03 on Dec 18,2023
+# vcom -reportprogress 300 -work work D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package altera_mf_components
+# -- Loading package Test_Pack
+# -- Compiling entity TopWiMax_wrapper
+# -- Compiling architecture TopWiMax_wrapper_RTL of TopWiMax_wrapper
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(161): (vcom-1136) Unknown identifier "en".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(161): ** Error: (vcom-1590) Bad expression in right operand of infix expression 'and'.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(161): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(166): (vcom-1136) Unknown identifier "en".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(166): ** Error: (vcom-1590) Bad expression in right operand of infix expression 'and'.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(166): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(179): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(179): (vcom-1136) Unknown identifier "rand_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(182): (vcom-1136) Unknown identifier "RANDI_Output_data_test_signal_data_rom".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(182): ** Error: (vcom-1590) Bad expression in left operand of infix expression 'and'.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(182): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(183): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(183): (vcom-1136) Unknown identifier "rand_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(187): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(187): (vcom-1136) Unknown identifier "rand_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(199): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(199): (vcom-1136) Unknown identifier "fec_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(205): (vcom-1136) Unknown identifier "FEC_Output_data_test_signal_data_rom".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(205): ** Error: (vcom-1590) Bad expression in left operand of infix expression 'and'.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(205): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(206): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(206): (vcom-1136) Unknown identifier "fec_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(210): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(210): (vcom-1136) Unknown identifier "fec_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(223): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(223): (vcom-1136) Unknown identifier "int_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(229): (vcom-1136) Unknown identifier "INTER_Output_data_test_signal_data_rom".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(229): ** Error: (vcom-1590) Bad expression in left operand of infix expression 'and'.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(229): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(230): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(230): (vcom-1136) Unknown identifier "int_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(234): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(234): (vcom-1136) Unknown identifier "int_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(247): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(247): (vcom-1136) Unknown identifier "mod_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(254): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(254): (vcom-1136) Unknown identifier "mod_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(263): Illegal target for signal assignment.
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(263): (vcom-1136) Unknown identifier "mod_pass".
+# ** Error: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd(274): VHDL Compiler exiting
+# End time: 21:03:03 on Dec 18,2023, Elapsed time: 0:00:00
+# Errors: 40, Warnings: 0
+# End time: 22:05:23 on Dec 18,2023, Elapsed time: 1:39:38
+# Errors: 233, Warnings: 1
