@@ -10,6 +10,7 @@ entity TopWiMax is
         CLK_100Mhz                            	  : in    std_logic; 
         reset                 	                  : in    std_logic; 
         load               	                      : in    std_logic; 
+
         TopWiMax_input_valid                 	      : in    std_logic; 
         TopWiMax_input_ready                	      : in    std_logic; 
         WiInput                               	  : in    std_logic; 

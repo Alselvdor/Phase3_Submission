@@ -16,8 +16,8 @@ architecture TopWiMax_tb_rtl of TopWiMax_tb is
         reset                 	                  : in    std_logic; 
         load               	                      : in    std_logic; 
 
-        TopWiMax_in_valid                 	      : in    std_logic; 
-        TopWiMax_in_ready                	      : in    std_logic; 
+        TopWiMax_input_valid                 	      : in    std_logic; 
+        TopWiMax_output_ready                	      : in    std_logic; 
         WiInput                               	  : in    std_logic; 
         
         RANDI_output_valid                        : out std_logic;
@@ -41,8 +41,8 @@ architecture TopWiMax_tb_rtl of TopWiMax_tb is
     signal   clk_50                               : std_logic := '0'; 
     signal   clk_100                               : std_logic := '0'; 
     signal   reset                                : std_logic; 
-    signal   TopWiMax_in_valid                    : std_logic; 
-    signal   TopWiMax_in_ready                    : std_logic; 
+    signal   TopWiMax_input_valid                    : std_logic; 
+    signal   TopWiMax_output_ready                    : std_logic; 
 
     signal   load                                 : std_logic; 
     signal   test_in_vector                       : std_logic_vector(95 downto 0) := RANDI_VECTOR_INPUT;
@@ -125,8 +125,8 @@ architecture TopWiMax_tb_rtl of TopWiMax_tb is
         CLK_100Mhz            => clk_100,
         reset                 => reset,   
         load                  => load,    	         
-        TopWiMax_in_valid     => TopWiMax_in_valid,    
-        TopWiMax_in_ready     => TopWiMax_in_ready, 
+        TopWiMax_input_valid     => TopWiMax_input_valid,    
+        TopWiMax_output_ready     => TopWiMax_output_ready, 
         WiInput               => WiInput    ,   
         
         RANDI_output_valid   => RANDI_Output_valid_test_signal    ,   
@@ -152,8 +152,8 @@ architecture TopWiMax_tb_rtl of TopWiMax_tb is
     --assigning input bits from the vector 
     process begin 
         reset <= '1'; --initialize values 
-        TopWiMax_in_valid    <= '0';
-        TopWiMax_in_ready    <= '0';
+        TopWiMax_input_valid    <= '0';
+        TopWiMax_output_ready    <= '0';
         load                 <= '0';
         wait for 3*CLK_50MHz_Period_HALF;     --make sure a pos edge came before changing the reset 
         reset <= '0'; 
@@ -161,8 +161,8 @@ architecture TopWiMax_tb_rtl of TopWiMax_tb is
         load <= '1';    --take seed into module 
         wait for 1.5*CLK_50MHz_Period; --bec of 75 ns edge the next pos edge so make sure a pos edge came 
         load <= '0'; 
-        TopWiMax_in_valid <= '1'; 
-        TopWiMax_in_ready <= '1';
+        TopWiMax_input_valid <= '1'; 
+        TopWiMax_output_ready <= '1';
         --Inputting steams 
         report procedure_Break_Notice;
         report procedure_start_SIMULATION_Notice severity note;
@@ -198,8 +198,8 @@ architecture TopWiMax_tb_rtl of TopWiMax_tb is
        -- procedure_96_inputs(0, 95, test_in_vector, WiInput    );
       --  procedure_96_inputs(0, 95, test_in_vector, WiInput    );     
         WiInput     <= '0';   
-        TopWiMax_in_valid  <= '0';
-        TopWiMax_in_ready  <= '0';
+        TopWiMax_input_valid  <= '0';
+        TopWiMax_output_ready  <= '0';
         wait; --makes process executes once 
     end process;
 

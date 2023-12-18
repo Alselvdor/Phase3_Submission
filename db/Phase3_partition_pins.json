@@ -2,7 +2,40 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "RANDI_output_valid",
+					"strict" : false
+				},
+				{
+					"name" : "FEC_output_valid",
+					"strict" : false
+				},
+				{
+					"name" : "INTER_output_valid",
+					"strict" : false
+				},
+				{
+					"name" : "MODU_out_valid",
+					"strict" : false
+				},
+				{
+					"name" : "load",
+					"strict" : false
+				},
+				{
+					"name" : "TopWiMax_wrapper_in_ready",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "TopWiMax_wrapper_in_valid",
+					"strict" : false
+				}
+			]
 		}
 	]
 }

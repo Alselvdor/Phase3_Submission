@@ -34,9 +34,8 @@ architecture TopWiMax_wrapper_RTL of TopWiMax_wrapper is
         CLK_100Mhz                            	  : in    std_logic; 
         reset                 	                  : in    std_logic; 
         load               	                      : in    std_logic; 
-
-        TopWiMax_in_valid                 	      : in    std_logic; 
-        TopWiMax_in_ready                	      : in    std_logic; 
+        TopWiMax_input_valid                 	      : in    std_logic; 
+        TopWiMax_input_ready                	      : in    std_logic; 
         WiInput                               	  : in    std_logic; 
         
         RANDI_output_valid                        : out std_logic;
@@ -50,6 +49,7 @@ architecture TopWiMax_wrapper_RTL of TopWiMax_wrapper is
 
         TopWiMax_out_valid                        : out   std_logic;
         TopWiMax_out_ready                        : out   std_logic;
+        
         WiOutput1                              	  : out   std_logic_vector(15 downto 0);  -- Q
         WiOutput2                              	  : out   std_logic_vector(15 downto 0)   -- I
     );
@@ -67,12 +67,12 @@ architecture TopWiMax_wrapper_RTL of TopWiMax_wrapper is
     end component;
 
     --ROMs
-    signal seed_rom                                : std_logic_vector(14 downto 0)   := Intial_Seed;
+    signal seed_rom                                 : std_logic_vector(14 downto 0)   := Intial_Seed;
     signal RANDI_VECTOR_INPUT                       : std_logic_vector(95 downto 0)   := RANDI_VECTOR_INPUT; 
     signal RANDI_VECTOR_OUTPUT                      : std_logic_vector(95 downto 0)   := RANDI_VECTOR_OUTPUT;
-    signal FEC_VECTOR_OUTPUT                       : std_logic_vector(191 downto 0)  := FEC_VECTOR_OUTPUT;
-    signal INTER_VECTOR_OUTPUT                       : std_logic_vector(191 downto 0)  := INTER_VECTOR_OUTPUT;
-    signal MODU_VECTOR_INPUT                       : std_logic_vector(191 downto 0)  := MODU_VECTOR_INPUT;
+    signal FEC_VECTOR_OUTPUT                        : std_logic_vector(191 downto 0)  := FEC_VECTOR_OUTPUT;
+    signal INTER_VECTOR_OUTPUT                      : std_logic_vector(191 downto 0)  := INTER_VECTOR_OUTPUT;
+    signal MODU_VECTOR_INPUT                        : std_logic_vector(191 downto 0)  := MODU_VECTOR_INPUT;
 
     --PLL
     signal clk_50mhz_sig                          : std_logic;
@@ -82,8 +82,8 @@ architecture TopWiMax_wrapper_RTL of TopWiMax_wrapper is
 
     --General
     signal WiInput                                : std_logic;     
-    signal TopWiMax_in_valid                      : std_logic;
-    signal TopWiMax_in_ready                      : std_logic;
+    --signal TopWiMax_wrapper_in_valid                      : std_logic;
+    signal TopWiMax_input_ready                      : std_logic;
     signal TopWiMax_out_ready                     : std_logic;
 
     --RADNI
@@ -139,8 +139,8 @@ begin
         CLK_100Mhz            => clk_100mhz_sig,
         reset                 => locked2,   
         load                  => load,    	     
-        TopWiMax_in_valid     => TopWiMax_in_valid,    
-        TopWiMax_in_ready     => TopWiMax_in_ready, 
+        TopWiMax_input_valid     => TopWiMax_wrapper_in_valid,    
+        TopWiMax_input_ready     => TopWiMax_input_ready, 
         WiInput               => WiInput    ,   
         
         RANDI_output_valid   => RANDI_Output_valid_test_signal    ,   
@@ -162,14 +162,14 @@ begin
     process (clk_50mhz_sig, reset) begin 
         if (reset = '1') then 
             RANDI_Counter <= 95;    
-            TopWiMax_in_valid    <= '0'; 
+            TopWiMax_input_ready    <= '0'; 
         elsif (rising_edge(clk_50mhz_sig)) then 
-            if (load = '0' and RANDI_Counter > 0 and RANDI_Counter <= 95 and TopWiMax_in_ready = '1') then 
-                TopWiMax_in_valid <= '1';
+            if (load = '0' and RANDI_Counter > 0 and RANDI_Counter <= 95 and TopWiMax_wrapper_in_ready = '1') then 
+                TopWiMax_input_ready <= '1';
                 WiInput <= RANDI_VECTOR_INPUT(RANDI_Counter); 
                 RANDI_Counter <= RANDI_Counter - 1; 
-            elsif (load = '0' and RANDI_Counter = 0 and TopWiMax_in_ready = '1') then 
-                TopWiMax_in_valid           <= '1';
+            elsif (load = '0' and RANDI_Counter = 0 and TopWiMax_input_ready = '1') then 
+            TopWiMax_input_ready           <= '1';
                 WiInput  <= RANDI_VECTOR_INPUT(RANDI_Counter); 
                 RANDI_Counter        <= 95;
             end if; 
@@ -183,7 +183,7 @@ begin
             RANDI_Flag <= '0';
             RANDI_output_valid <= '0';            
         elsif (rising_edge(clk_50mhz_sig)) then 
-            if (load = '0' and RANDI_Counter2 >= 0 and RANDI_Counter2 <= 95 and TopWiMax_in_valid = '1') then
+            if (load = '0' and RANDI_Counter2 >= 0 and RANDI_Counter2 <= 95 and TopWiMax_wrapper_in_ready = '1') then
                 if ((INTER_Output_data_test_signal = RANDI_VECTOR_OUTPUT(RANDI_Counter2)) and (RANDI_Flag = '0')) then 
                     RANDI_output_valid <= '1';
                     RANDI_Counter2 <= RANDI_Counter2 - 1; 
