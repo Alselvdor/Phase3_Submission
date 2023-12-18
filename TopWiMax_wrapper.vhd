@@ -181,15 +181,15 @@ begin
         if (reset = '1') then 
             RANDI_Counter2 <= 95; 
             RANDI_Flag <= '0';
-            rand_pass <= '0';            
+            RANDI_output_valid <= '0';            
         elsif (rising_edge(clk_50mhz_sig)) then 
             if (load = '0' and RANDI_Counter2 >= 0 and RANDI_Counter2 <= 95 and TopWiMax_in_valid = '1') then
-                if ((RANDI_Output_data_test_signal = RANDI_Output_data_test_signal_data_rom(RANDI_Counter2)) and (RANDI_Flag = '0')) then 
-                    rand_pass <= '1';
+                if ((INTER_Output_data_test_signal = RANDI_VECTOR_OUTPUT(RANDI_Counter2)) and (RANDI_Flag = '0')) then 
+                    RANDI_output_valid <= '1';
                     RANDI_Counter2 <= RANDI_Counter2 - 1; 
                 else 
                     RANDI_Flag       <= '1'; 
-                    rand_pass       <= '0';                     
+                    RANDI_output_valid       <= '0';                     
                 end if;
             end if; 
             if(RANDI_Counter2 = 0) then 
@@ -201,18 +201,18 @@ begin
     --fec
     process (clk_100mhz_sig, reset) begin 
         if(reset = '1') then 
-            fec_pass    <= '0';
+            FEC_output_valid    <= '0';
             FEC_Counter <= 191;  
             FEC_Flag    <= '0';      
         elsif(rising_edge(clk_100mhz_sig)) then 
             if(FEC_output_valid_test_signal = '1') then 
                 if(FEC_Counter >= 0) then 
-                    if(FEC_Output_data_test_signal = FEC_Output_data_test_signal_data_rom(FEC_Counter) and FEC_Flag = '0') then 
-                        fec_pass    <= '1';
+                    if(FEC_Output_data_test_signal = FEC_VECTOR_OUTPUT(FEC_Counter) and FEC_Flag = '0') then 
+                        FEC_output_valid    <= '1';
                         FEC_Counter <= FEC_Counter - 1;
                     else 
                         FEC_Flag    <= '1';
-                        fec_pass    <= '0';
+                        FEC_output_valid    <= '0';
                     end if;
                 end if;
                 if (FEC_Counter = 0) then 
@@ -225,18 +225,18 @@ begin
     --int
     process (clk_100mhz_sig, reset) begin 
         if(reset = '1') then 
-            int_pass    <= '0';
+            INTER_output_valid    <= '0';
             INTER_Counter <= 191;  
             INTER_Flag    <= '0';      
         elsif(rising_edge(clk_100mhz_sig)) then 
             if(INTER_Output_valid_test_signal = '1') then 
                 if(INTER_Counter >= 0) then 
-                    if(INTER_Output_data_test_signal = INTER_Output_data_test_signal_data_rom(INTER_Counter) and INTER_Flag = '0') then 
-                        int_pass    <= '1';
+                    if(INTER_Output_data_test_signal = INTER_VECTOR_OUTPUT(INTER_Counter) and INTER_Flag = '0') then 
+                        INTER_output_valid    <= '1';
                         INTER_Counter <= INTER_Counter - 1;
                     else 
                         INTER_Flag    <= '1';
-                        int_pass    <= '0';                        
+                        INTER_output_valid    <= '0';                        
                     end if;
                 end if;
                 if (INTER_Counter = 0) then 
@@ -249,14 +249,14 @@ begin
     --mod
     process (clk_50mhz_sig, reset) begin 
         if(reset = '1') then 
-            mod_pass    <= '0';
+            MODU_out_valid    <= '0';
             MODU_Counter <= 191;  
             MODU_Flag    <= '0';      
         elsif(rising_edge(clk_50mhz_sig)) then 
             if(TopWiMax_out_valid = '1') then 
                 if(MODU_Counter >= 1) then 
                     if(MODU_Output1_Q(15) = MODU_VECTOR_INPUT(MODU_Counter) and MODU_Output2_I(15) = MODU_VECTOR_INPUT(MODU_Counter-1) and MODU_Flag = '0') then 
-                        mod_pass    <= '1';
+                        MODU_out_valid    <= '1';
                         if(MODU_Counter > 1) then 
                             MODU_Counter <= MODU_Counter - 2;
                         end if;
@@ -265,7 +265,7 @@ begin
                         end if;
                     else 
                         MODU_Flag    <= '1';
-                        mod_pass    <= '0';
+                        MODU_out_valid    <= '0';
                     end if;
                 end if;
                 if (MODU_Counter = 1) then 

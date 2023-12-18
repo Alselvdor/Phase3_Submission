@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Phase3
-Mon Dec 18 20:51:26 2023
+Mon Dec 18 23:59:40 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,7 +10,28 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |TopWiMax_wrapper|TopWiMax:twimax_wrap|INTER:inter1|state_reg
+  9. State Machine - |TopWiMax_wrapper|TopWiMax:twimax_wrap|FEC:fec1|output_state_reg
+ 10. State Machine - |TopWiMax_wrapper|TopWiMax:twimax_wrap|FEC:fec1|input_state_reg
+ 11. Registers Removed During Synthesis
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for TopWiMax:twimax_wrap|FEC:fec1|FEC_RAM_2PORTS:ram1|altsyncram:altsyncram_component|altsyncram_1014:auto_generated
+ 16. Source assignments for TopWiMax:twimax_wrap|INTER:inter1|INTER_RAM_2PORT:ram2|altsyncram:altsyncram_component|altsyncram_9014:auto_generated
+ 17. Parameter Settings for User Entity Instance: PLL_main:pll1_wrap|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i
+ 18. Parameter Settings for User Entity Instance: TopWiMax:twimax_wrap|FEC:fec1|FEC_RAM_2PORTS:ram1|altsyncram:altsyncram_component
+ 19. Parameter Settings for User Entity Instance: TopWiMax:twimax_wrap|INTER:inter1|INTER_RAM_2PORT:ram2|altsyncram:altsyncram_component
+ 20. altsyncram Parameter Settings by Entity Instance
+ 21. Port Connectivity Checks: "TopWiMax:twimax_wrap|INTER:inter1|INTER_RAM_2PORT:ram2"
+ 22. Port Connectivity Checks: "TopWiMax:twimax_wrap|FEC:fec1|FEC_RAM_2PORTS:ram1"
+ 23. Port Connectivity Checks: "TopWiMax:twimax_wrap"
+ 24. Post-Synthesis Netlist Statistics for Top Partition
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
 
 
 
@@ -33,22 +54,27 @@ refer to the applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                              ;
-+-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Mon Dec 18 20:51:26 2023           ;
-; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Revision Name               ; Phase3                                      ;
-; Top-level Entity Name       ; TopWiMax_wrapper                            ;
-; Family                      ; Cyclone V                                   ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon Dec 18 23:59:40 2023       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; Phase3                                      ;
+; Top-level Entity Name           ; TopWiMax_wrapper                            ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 10                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -155,13 +181,844 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                 ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+; Test_Pack.vhd                    ; yes             ; User VHDL File               ; D:/AUC/ASIC/Project/Phase3_Submission/Test_Pack.vhd                          ;         ;
+; TopWiMax_wrapper.vhd             ; yes             ; User VHDL File               ; D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd                   ;         ;
+; RAMs/INTER_RAM_2port.vhd         ; yes             ; User Wizard-Generated File   ; D:/AUC/ASIC/Project/Phase3_Submission/RAMs/INTER_RAM_2port.vhd               ;         ;
+; RAMs/FEC_RAM_2PORTS.vhd          ; yes             ; User Wizard-Generated File   ; D:/AUC/ASIC/Project/Phase3_Submission/RAMs/FEC_RAM_2PORTS.vhd                ;         ;
+; PLL_main/PLL_main_0002.v         ; yes             ; User Verilog HDL File        ; D:/AUC/ASIC/Project/Phase3_Submission/PLL_main/PLL_main_0002.v               ;         ;
+; TopWiMax.vhd                     ; yes             ; User VHDL File               ; D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax.vhd                           ;         ;
+; randi.vhd                        ; yes             ; User VHDL File               ; D:/AUC/ASIC/Project/Phase3_Submission/randi.vhd                              ;         ;
+; PLL_main.vhd                     ; yes             ; User Wizard-Generated File   ; D:/AUC/ASIC/Project/Phase3_Submission/PLL_main.vhd                           ;         ;
+; MODU.vhd                         ; yes             ; User VHDL File               ; D:/AUC/ASIC/Project/Phase3_Submission/MODU.vhd                               ;         ;
+; INTER.vhd                        ; yes             ; User VHDL File               ; D:/AUC/ASIC/Project/Phase3_Submission/INTER.vhd                              ;         ;
+; FEC.vhd                          ; yes             ; User VHDL File               ; D:/AUC/ASIC/Project/Phase3_Submission/FEC.vhd                                ;         ;
+; altera_pll.v                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altera_pll.v          ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_1014.tdf           ; yes             ; Auto-Generated Megafunction  ; D:/AUC/ASIC/Project/Phase3_Submission/db/altsyncram_1014.tdf                 ;         ;
+; db/altsyncram_9014.tdf           ; yes             ; Auto-Generated Megafunction  ; D:/AUC/ASIC/Project/Phase3_Submission/db/altsyncram_9014.tdf                 ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimate of Logic utilization (ALMs needed) ; 0     ;
+;                                             ;       ;
+; Combinational ALUT usage for logic          ; 0     ;
+;     -- 7 input functions                    ; 0     ;
+;     -- 6 input functions                    ; 0     ;
+;     -- 5 input functions                    ; 0     ;
+;     -- 4 input functions                    ; 0     ;
+;     -- <=3 input functions                  ; 0     ;
+;                                             ;       ;
+; Dedicated logic registers                   ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 10    ;
+;                                             ;       ;
+; Total DSP Blocks                            ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; load  ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 10    ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name      ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+------------------+--------------+
+; |TopWiMax_wrapper          ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 10   ; 0            ; |TopWiMax_wrapper   ; TopWiMax_wrapper ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------+
+; State Machine - |TopWiMax_wrapper|TopWiMax:twimax_wrap|INTER:inter1|state_reg                 ;
++--------------------------+--------------------------+------------------------+----------------+
+; Name                     ; state_reg.PingPong_state ; state_reg.input_buffer ; state_reg.idle ;
++--------------------------+--------------------------+------------------------+----------------+
+; state_reg.idle           ; 0                        ; 0                      ; 0              ;
+; state_reg.input_buffer   ; 0                        ; 1                      ; 1              ;
+; state_reg.PingPong_state ; 1                        ; 0                      ; 1              ;
++--------------------------+--------------------------+------------------------+----------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------+
+; State Machine - |TopWiMax_wrapper|TopWiMax:twimax_wrap|FEC:fec1|output_state_reg        ;
++-----------------------+--------------------+--------------------+-----------------------+
+; Name                  ; output_state_reg.y ; output_state_reg.x ; output_state_reg.idle ;
++-----------------------+--------------------+--------------------+-----------------------+
+; output_state_reg.idle ; 0                  ; 0                  ; 0                     ;
+; output_state_reg.x    ; 0                  ; 1                  ; 1                     ;
+; output_state_reg.y    ; 1                  ; 0                  ; 1                     ;
++-----------------------+--------------------+--------------------+-----------------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------+
+; State Machine - |TopWiMax_wrapper|TopWiMax:twimax_wrap|FEC:fec1|input_state_reg                                       ;
++--------------------------------+--------------------------------+------------------------------+----------------------+
+; Name                           ; input_state_reg.PingPong_state ; input_state_reg.input_buffer ; input_state_reg.idle ;
++--------------------------------+--------------------------------+------------------------------+----------------------+
+; input_state_reg.idle           ; 0                              ; 0                            ; 0                    ;
+; input_state_reg.input_buffer   ; 0                              ; 1                            ; 1                    ;
+; input_state_reg.PingPong_state ; 1                              ; 0                            ; 1                    ;
++--------------------------------+--------------------------------+------------------------------+----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                          ;
++---------------------------------------------------------------+---------------------------------------------+
+; Register name                                                 ; Reason for Removal                          ;
++---------------------------------------------------------------+---------------------------------------------+
+; TopWiMax:twimax_wrap|randi:RANDI1|counter_reset_seed[0]       ; Lost fanout                                 ;
+; TopWiMax:twimax_wrap|randi:RANDI1|seed_reg[0..14]             ; Lost fanout                                 ;
+; TopWiMax:twimax_wrap|randi:RANDI1|counter_reset_seed[1..31]   ; Lost fanout                                 ;
+; RANDI_output_valid~reg0                                       ; Stuck at GND due to stuck port data_in      ;
+; TopWiMax:twimax_wrap|FEC:fec1|input_state_reg.idle            ; Lost fanout                                 ;
+; TopWiMax:twimax_wrap|FEC:fec1|input_state_reg.input_buffer    ; Stuck at GND due to stuck port data_in      ;
+; TopWiMax:twimax_wrap|FEC:fec1|finished_tail_flag              ; Stuck at GND due to stuck port clock_enable ;
+; TopWiMax:twimax_wrap|FEC:fec1|output_state_reg.y              ; Stuck at GND due to stuck port data_in      ;
+; TopWiMax:twimax_wrap|FEC:fec1|input_state_reg.PingPong_state  ; Stuck at GND due to stuck port data_in      ;
+; TopWiMax:twimax_wrap|FEC:fec1|shift_reg2[5]                   ; Stuck at GND due to stuck port clock_enable ;
+; TopWiMax:twimax_wrap|FEC:fec1|output_state_reg.idle           ; Lost fanout                                 ;
+; TopWiMax:twimax_wrap|FEC:fec1|output_state_reg.x              ; Stuck at GND due to stuck port data_in      ;
+; TopWiMax:twimax_wrap|FEC:fec1|shift_reg2[2]                   ; Stuck at GND due to stuck port clock_enable ;
+; FEC_output_valid~reg0                                         ; Stuck at GND due to stuck port clock_enable ;
+; FEC_Counter[6]                                                ; Stuck at GND due to stuck port clock        ;
+; TopWiMax:twimax_wrap|FEC:fec1|shift_reg2[0,1,3,4]             ; Stuck at GND due to stuck port clock_enable ;
+; FEC_Flag                                                      ; Stuck at GND due to stuck port clock_enable ;
+; FEC_Counter[8..30]                                            ; Stuck at GND due to stuck port clock        ;
+; TopWiMax:twimax_wrap|FEC:fec1|counter_buffer_input[0..30]     ; Stuck at GND due to stuck port clock        ;
+; TopWiMax:twimax_wrap|FEC:fec1|counter_shift_and_output[0..30] ; Stuck at GND due to stuck port clock        ;
+; TopWiMax:twimax_wrap|FEC:fec1|PingPong_flag                   ; Lost fanout                                 ;
+; TopWiMax:twimax_wrap|FEC:fec1|shift_reg[0..5]                 ; Lost fanout                                 ;
+; TopWiMax:twimax_wrap|INTER:inter1|state_reg.input_buffer      ; Stuck at GND due to stuck port data_in      ;
+; TopWiMax:twimax_wrap|INTER:inter1|state_reg.PingPong_state    ; Stuck at GND due to stuck port data_in      ;
+; TopWiMax:twimax_wrap|INTER:inter1|INTER_Output_valid          ; Stuck at GND due to stuck port data_in      ;
+; TopWiMax:twimax_wrap|MODU:modu1|MODU_output_valid             ; Stuck at GND due to stuck port data_in      ;
+; TopWiMax:twimax_wrap|MODU:modu1|Finished_Flag                 ; Lost fanout                                 ;
+; TopWiMax:twimax_wrap|MODU:modu1|MODU_input_data_buffer        ; Stuck at GND due to stuck port clock_enable ;
+; TopWiMax:twimax_wrap|MODU:modu1|flag                          ; Stuck at GND due to stuck port clock_enable ;
+; INTER_output_valid~reg0                                       ; Stuck at GND due to stuck port clock_enable ;
+; MODU_out_valid~reg0                                           ; Stuck at GND due to stuck port clock_enable ;
+; TopWiMax:twimax_wrap|MODU:modu1|MODU_output_Q[15]             ; Lost fanout                                 ;
+; TopWiMax:twimax_wrap|MODU:modu1|MODU_output_I[15]             ; Lost fanout                                 ;
+; MODU_Flag                                                     ; Lost fanout                                 ;
+; INTER_Counter[6]                                              ; Stuck at GND due to stuck port clock        ;
+; INTER_Flag                                                    ; Stuck at GND due to stuck port clock_enable ;
+; MODU_Counter[6,8..30]                                         ; Stuck at GND due to stuck port clock        ;
+; INTER_Counter[8..30]                                          ; Stuck at GND due to stuck port clock        ;
+; TopWiMax:twimax_wrap|INTER:inter1|PingPong_flag               ; Stuck at GND due to stuck port data_in      ;
+; TopWiMax:twimax_wrap|INTER:inter1|state_reg.idle              ; Stuck at GND due to stuck port data_in      ;
+; TopWiMax:twimax_wrap|INTER:inter1|counter[4,5]                ; Stuck at GND due to stuck port clock        ;
+; TopWiMax:twimax_wrap|INTER:inter1|counter_kmod16[0]           ; Stuck at GND due to stuck port clock        ;
+; TopWiMax:twimax_wrap|INTER:inter1|counter[6,7]                ; Stuck at GND due to stuck port clock        ;
+; TopWiMax:twimax_wrap|INTER:inter1|counter_kmod16[1..3]        ; Stuck at GND due to stuck port clock        ;
+; TopWiMax:twimax_wrap|INTER:inter1|counter_out[0..30]          ; Stuck at GND due to stuck port clock        ;
+; TopWiMax:twimax_wrap|INTER:inter1|counter[0..3]               ; Stuck at GND due to stuck port clock        ;
+; FEC_Counter[0..5,7,31]                                        ; Lost fanout                                 ;
+; INTER_Counter[0..5,7,31]                                      ; Lost fanout                                 ;
+; MODU_Counter[0..5,7,31]                                       ; Lost fanout                                 ;
+; TopWiMax:twimax_wrap|FEC:fec1|counter_buffer_input[31]        ; Lost fanout                                 ;
+; TopWiMax:twimax_wrap|FEC:fec1|counter_shift_and_output[31]    ; Lost fanout                                 ;
+; TopWiMax:twimax_wrap|INTER:inter1|counter_out[31]             ; Lost fanout                                 ;
+; Total Number of Removed Registers = 289                       ;                                             ;
++---------------------------------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                             ;
++------------------------------------------------------------+--------------------------------+-------------------------------------------------------------------------------------------+
+; Register name                                              ; Reason for Removal             ; Registers Removed due to This Register                                                    ;
++------------------------------------------------------------+--------------------------------+-------------------------------------------------------------------------------------------+
+; TopWiMax:twimax_wrap|FEC:fec1|input_state_reg.input_buffer ; Stuck at GND                   ; TopWiMax:twimax_wrap|FEC:fec1|finished_tail_flag,                                         ;
+;                                                            ; due to stuck port data_in      ; TopWiMax:twimax_wrap|FEC:fec1|input_state_reg.PingPong_state,                             ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|output_state_reg.idle,                                      ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|shift_reg2[2], FEC_output_valid~reg0,                       ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|shift_reg2[1], FEC_Flag, FEC_Counter[8], FEC_Counter[9],    ;
+;                                                            ;                                ; FEC_Counter[10], FEC_Counter[11], FEC_Counter[12], FEC_Counter[13], FEC_Counter[14],      ;
+;                                                            ;                                ; FEC_Counter[15], FEC_Counter[16], FEC_Counter[17], FEC_Counter[18], FEC_Counter[19],      ;
+;                                                            ;                                ; FEC_Counter[20], FEC_Counter[21], FEC_Counter[22], FEC_Counter[23], FEC_Counter[24],      ;
+;                                                            ;                                ; FEC_Counter[25], FEC_Counter[26], FEC_Counter[27], FEC_Counter[28], FEC_Counter[29],      ;
+;                                                            ;                                ; FEC_Counter[30], TopWiMax:twimax_wrap|FEC:fec1|counter_buffer_input[12],                  ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_buffer_input[13],                                   ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_buffer_input[28],                                   ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_buffer_input[15],                                   ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_buffer_input[19],                                   ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_buffer_input[20],                                   ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_buffer_input[16],                                   ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_buffer_input[21],                                   ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_buffer_input[22],                                   ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_buffer_input[23],                                   ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_buffer_input[24],                                   ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_buffer_input[25],                                   ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_buffer_input[29],                                   ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_buffer_input[17],                                   ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_buffer_input[27],                                   ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_buffer_input[0],                                    ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_buffer_input[7],                                    ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_buffer_input[26],                                   ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_buffer_input[1],                                    ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_buffer_input[2],                                    ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_buffer_input[14],                                   ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_buffer_input[3],                                    ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_buffer_input[4],                                    ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_buffer_input[30],                                   ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_buffer_input[5],                                    ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_buffer_input[6],                                    ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_buffer_input[18],                                   ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_shift_and_output[7],                                ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_shift_and_output[6],                                ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_shift_and_output[8],                                ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_shift_and_output[9],                                ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_shift_and_output[10],                               ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_shift_and_output[11],                               ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_shift_and_output[12],                               ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_shift_and_output[13],                               ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_shift_and_output[14],                               ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_shift_and_output[15],                               ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_shift_and_output[16],                               ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_shift_and_output[17],                               ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_shift_and_output[18],                               ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_shift_and_output[22],                               ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_shift_and_output[23],                               ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_shift_and_output[24],                               ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_shift_and_output[25],                               ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_shift_and_output[26],                               ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_shift_and_output[27],                               ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_shift_and_output[28],                               ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_shift_and_output[29],                               ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_shift_and_output[5],                                ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_shift_and_output[30],                               ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_shift_and_output[0],                                ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_shift_and_output[1],                                ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_shift_and_output[2],                                ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_shift_and_output[3],                                ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_shift_and_output[4],                                ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|PingPong_flag,                                              ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|shift_reg[0],                                               ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|shift_reg[4],                                               ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|shift_reg[3],                                               ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|shift_reg[1],                                               ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|shift_reg[5],                                               ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|shift_reg[2],                                               ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|state_reg.input_buffer,                                 ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|INTER_Output_valid,                                     ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|MODU:modu1|MODU_output_valid,                                        ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|MODU:modu1|Finished_Flag,                                            ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|MODU:modu1|MODU_input_data_buffer, INTER_output_valid~reg0,          ;
+;                                                            ;                                ; MODU_out_valid~reg0, TopWiMax:twimax_wrap|MODU:modu1|MODU_output_Q[15],                   ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|MODU:modu1|MODU_output_I[15], MODU_Flag, INTER_Flag,                 ;
+;                                                            ;                                ; MODU_Counter[8], MODU_Counter[9], MODU_Counter[10], MODU_Counter[11], MODU_Counter[12],   ;
+;                                                            ;                                ; MODU_Counter[13], MODU_Counter[14], MODU_Counter[15], MODU_Counter[16], MODU_Counter[17], ;
+;                                                            ;                                ; MODU_Counter[18], MODU_Counter[19], MODU_Counter[20], MODU_Counter[21], MODU_Counter[22], ;
+;                                                            ;                                ; MODU_Counter[23], MODU_Counter[24], MODU_Counter[25], MODU_Counter[26],                   ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|PingPong_flag,                                          ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter[4],                                             ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter[5],                                             ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_kmod16[0],                                      ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter[7],                                             ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter[6],                                             ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_kmod16[1],                                      ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_kmod16[2],                                      ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_kmod16[3],                                      ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_out[0],                                         ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_out[1],                                         ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_out[2],                                         ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_out[3],                                         ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_out[4],                                         ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_out[5],                                         ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_out[6],                                         ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_out[7],                                         ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_out[8],                                         ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_out[12],                                        ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_out[15],                                        ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_out[16],                                        ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_out[17],                                        ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_out[18],                                        ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_out[19],                                        ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_out[20],                                        ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_out[21],                                        ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_out[22],                                        ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_out[23],                                        ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_out[24],                                        ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_out[25],                                        ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_out[26],                                        ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_out[27],                                        ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_out[28],                                        ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_out[29],                                        ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_out[30],                                        ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter[1],                                             ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter[0],                                             ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter[2],                                             ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter[3], FEC_Counter[7], FEC_Counter[2],             ;
+;                                                            ;                                ; FEC_Counter[0], FEC_Counter[31], INTER_Counter[7], INTER_Counter[2], INTER_Counter[1],    ;
+;                                                            ;                                ; INTER_Counter[31], MODU_Counter[7], MODU_Counter[5], MODU_Counter[4], MODU_Counter[3],    ;
+;                                                            ;                                ; MODU_Counter[2], MODU_Counter[1], MODU_Counter[0], MODU_Counter[31],                      ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|FEC:fec1|counter_buffer_input[31],                                   ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_out[31]                                         ;
+; TopWiMax:twimax_wrap|FEC:fec1|output_state_reg.y           ; Stuck at GND                   ; INTER_Counter[6], INTER_Counter[8], INTER_Counter[9], INTER_Counter[10],                  ;
+;                                                            ; due to stuck port data_in      ; INTER_Counter[11], INTER_Counter[12], INTER_Counter[13], INTER_Counter[14],               ;
+;                                                            ;                                ; INTER_Counter[15], INTER_Counter[16], INTER_Counter[17], INTER_Counter[18],               ;
+;                                                            ;                                ; INTER_Counter[19], INTER_Counter[20], INTER_Counter[21], INTER_Counter[22],               ;
+;                                                            ;                                ; INTER_Counter[23], INTER_Counter[24], INTER_Counter[25], INTER_Counter[26],               ;
+;                                                            ;                                ; INTER_Counter[27], INTER_Counter[28], INTER_Counter[29], INTER_Counter[30],               ;
+;                                                            ;                                ; INTER_Counter[5], INTER_Counter[4], INTER_Counter[3], INTER_Counter[0]                    ;
+; TopWiMax:twimax_wrap|INTER:inter1|state_reg.PingPong_state ; Stuck at GND                   ; TopWiMax:twimax_wrap|INTER:inter1|state_reg.idle,                                         ;
+;                                                            ; due to stuck port data_in      ; TopWiMax:twimax_wrap|INTER:inter1|counter_out[9],                                         ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_out[10],                                        ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_out[11],                                        ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_out[13],                                        ;
+;                                                            ;                                ; TopWiMax:twimax_wrap|INTER:inter1|counter_out[14]                                         ;
+; FEC_Counter[6]                                             ; Stuck at GND                   ; FEC_Counter[5], FEC_Counter[4], FEC_Counter[3]                                            ;
+;                                                            ; due to stuck port clock        ;                                                                                           ;
+; TopWiMax:twimax_wrap|FEC:fec1|input_state_reg.idle         ; Lost Fanouts                   ; TopWiMax:twimax_wrap|FEC:fec1|counter_shift_and_output[31]                                ;
+; TopWiMax:twimax_wrap|FEC:fec1|output_state_reg.x           ; Stuck at GND                   ; FEC_Counter[1]                                                                            ;
+;                                                            ; due to stuck port data_in      ;                                                                                           ;
+; TopWiMax:twimax_wrap|FEC:fec1|shift_reg2[4]                ; Stuck at GND                   ; TopWiMax:twimax_wrap|FEC:fec1|shift_reg2[3]                                               ;
+;                                                            ; due to stuck port clock_enable ;                                                                                           ;
++------------------------------------------------------------+--------------------------------+-------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------+
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |TopWiMax_wrapper|FEC_Counter[26]                                            ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |TopWiMax_wrapper|INTER_Counter[27]                                          ;
+; 5:1                ; 24 bits   ; 72 LEs        ; 24 LEs               ; 48 LEs                 ; Yes        ; |TopWiMax_wrapper|MODU_Counter[30]                                           ;
+; 6:1                ; 31 bits   ; 124 LEs       ; 0 LEs                ; 124 LEs                ; Yes        ; |TopWiMax_wrapper|TopWiMax:twimax_wrap|INTER:inter1|counter_out[14]          ;
+; 7:1                ; 12 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |TopWiMax_wrapper|TopWiMax:twimax_wrap|INTER:inter1|counter[1]               ;
+; 9:1                ; 31 bits   ; 186 LEs       ; 0 LEs                ; 186 LEs                ; Yes        ; |TopWiMax_wrapper|TopWiMax:twimax_wrap|FEC:fec1|counter_buffer_input[8]      ;
+; 10:1               ; 31 bits   ; 186 LEs       ; 0 LEs                ; 186 LEs                ; Yes        ; |TopWiMax_wrapper|TopWiMax:twimax_wrap|FEC:fec1|counter_shift_and_output[21] ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |TopWiMax_wrapper|FEC_Counter[4]                                             ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |TopWiMax_wrapper|INTER_Counter[1]                                           ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |TopWiMax_wrapper|MODU_Counter[7]                                            ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |TopWiMax_wrapper|TopWiMax:twimax_wrap|FEC:fec1|input_state_reg              ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |TopWiMax_wrapper|TopWiMax:twimax_wrap|FEC:fec1|input_state_reg              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for TopWiMax:twimax_wrap|FEC:fec1|FEC_RAM_2PORTS:ram1|altsyncram:altsyncram_component|altsyncram_1014:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                        ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                         ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for TopWiMax:twimax_wrap|INTER:inter1|INTER_RAM_2PORT:ram2|altsyncram:altsyncram_component|altsyncram_9014:auto_generated ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                             ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                              ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PLL_main:pll1_wrap|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i ;
++--------------------------------------+------------------------+-----------------------------------------------------+
+; Parameter Name                       ; Value                  ; Type                                                ;
++--------------------------------------+------------------------+-----------------------------------------------------+
+; reference_clock_frequency            ; 50.0 MHz               ; String                                              ;
+; fractional_vco_multiplier            ; false                  ; String                                              ;
+; pll_type                             ; General                ; String                                              ;
+; pll_subtype                          ; General                ; String                                              ;
+; number_of_clocks                     ; 2                      ; Signed Integer                                      ;
+; operation_mode                       ; direct                 ; String                                              ;
+; deserialization_factor               ; 4                      ; Signed Integer                                      ;
+; data_rate                            ; 0                      ; Signed Integer                                      ;
+; sim_additional_refclk_cycles_to_lock ; 0                      ; Signed Integer                                      ;
+; output_clock_frequency0              ; 50.000000 MHz          ; String                                              ;
+; phase_shift0                         ; 0 ps                   ; String                                              ;
+; duty_cycle0                          ; 50                     ; Signed Integer                                      ;
+; output_clock_frequency1              ; 100.000000 MHz         ; String                                              ;
+; phase_shift1                         ; 0 ps                   ; String                                              ;
+; duty_cycle1                          ; 50                     ; Signed Integer                                      ;
+; output_clock_frequency2              ; 0 MHz                  ; String                                              ;
+; phase_shift2                         ; 0 ps                   ; String                                              ;
+; duty_cycle2                          ; 50                     ; Signed Integer                                      ;
+; output_clock_frequency3              ; 0 MHz                  ; String                                              ;
+; phase_shift3                         ; 0 ps                   ; String                                              ;
+; duty_cycle3                          ; 50                     ; Signed Integer                                      ;
+; output_clock_frequency4              ; 0 MHz                  ; String                                              ;
+; phase_shift4                         ; 0 ps                   ; String                                              ;
+; duty_cycle4                          ; 50                     ; Signed Integer                                      ;
+; output_clock_frequency5              ; 0 MHz                  ; String                                              ;
+; phase_shift5                         ; 0 ps                   ; String                                              ;
+; duty_cycle5                          ; 50                     ; Signed Integer                                      ;
+; output_clock_frequency6              ; 0 MHz                  ; String                                              ;
+; phase_shift6                         ; 0 ps                   ; String                                              ;
+; duty_cycle6                          ; 50                     ; Signed Integer                                      ;
+; output_clock_frequency7              ; 0 MHz                  ; String                                              ;
+; phase_shift7                         ; 0 ps                   ; String                                              ;
+; duty_cycle7                          ; 50                     ; Signed Integer                                      ;
+; output_clock_frequency8              ; 0 MHz                  ; String                                              ;
+; phase_shift8                         ; 0 ps                   ; String                                              ;
+; duty_cycle8                          ; 50                     ; Signed Integer                                      ;
+; output_clock_frequency9              ; 0 MHz                  ; String                                              ;
+; phase_shift9                         ; 0 ps                   ; String                                              ;
+; duty_cycle9                          ; 50                     ; Signed Integer                                      ;
+; output_clock_frequency10             ; 0 MHz                  ; String                                              ;
+; phase_shift10                        ; 0 ps                   ; String                                              ;
+; duty_cycle10                         ; 50                     ; Signed Integer                                      ;
+; output_clock_frequency11             ; 0 MHz                  ; String                                              ;
+; phase_shift11                        ; 0 ps                   ; String                                              ;
+; duty_cycle11                         ; 50                     ; Signed Integer                                      ;
+; output_clock_frequency12             ; 0 MHz                  ; String                                              ;
+; phase_shift12                        ; 0 ps                   ; String                                              ;
+; duty_cycle12                         ; 50                     ; Signed Integer                                      ;
+; output_clock_frequency13             ; 0 MHz                  ; String                                              ;
+; phase_shift13                        ; 0 ps                   ; String                                              ;
+; duty_cycle13                         ; 50                     ; Signed Integer                                      ;
+; output_clock_frequency14             ; 0 MHz                  ; String                                              ;
+; phase_shift14                        ; 0 ps                   ; String                                              ;
+; duty_cycle14                         ; 50                     ; Signed Integer                                      ;
+; output_clock_frequency15             ; 0 MHz                  ; String                                              ;
+; phase_shift15                        ; 0 ps                   ; String                                              ;
+; duty_cycle15                         ; 50                     ; Signed Integer                                      ;
+; output_clock_frequency16             ; 0 MHz                  ; String                                              ;
+; phase_shift16                        ; 0 ps                   ; String                                              ;
+; duty_cycle16                         ; 50                     ; Signed Integer                                      ;
+; output_clock_frequency17             ; 0 MHz                  ; String                                              ;
+; phase_shift17                        ; 0 ps                   ; String                                              ;
+; duty_cycle17                         ; 50                     ; Signed Integer                                      ;
+; clock_name_0                         ;                        ; String                                              ;
+; clock_name_1                         ;                        ; String                                              ;
+; clock_name_2                         ;                        ; String                                              ;
+; clock_name_3                         ;                        ; String                                              ;
+; clock_name_4                         ;                        ; String                                              ;
+; clock_name_5                         ;                        ; String                                              ;
+; clock_name_6                         ;                        ; String                                              ;
+; clock_name_7                         ;                        ; String                                              ;
+; clock_name_8                         ;                        ; String                                              ;
+; clock_name_global_0                  ; false                  ; String                                              ;
+; clock_name_global_1                  ; false                  ; String                                              ;
+; clock_name_global_2                  ; false                  ; String                                              ;
+; clock_name_global_3                  ; false                  ; String                                              ;
+; clock_name_global_4                  ; false                  ; String                                              ;
+; clock_name_global_5                  ; false                  ; String                                              ;
+; clock_name_global_6                  ; false                  ; String                                              ;
+; clock_name_global_7                  ; false                  ; String                                              ;
+; clock_name_global_8                  ; false                  ; String                                              ;
+; m_cnt_hi_div                         ; 1                      ; Signed Integer                                      ;
+; m_cnt_lo_div                         ; 1                      ; Signed Integer                                      ;
+; m_cnt_bypass_en                      ; false                  ; String                                              ;
+; m_cnt_odd_div_duty_en                ; false                  ; String                                              ;
+; n_cnt_hi_div                         ; 1                      ; Signed Integer                                      ;
+; n_cnt_lo_div                         ; 1                      ; Signed Integer                                      ;
+; n_cnt_bypass_en                      ; false                  ; String                                              ;
+; n_cnt_odd_div_duty_en                ; false                  ; String                                              ;
+; c_cnt_hi_div0                        ; 1                      ; Signed Integer                                      ;
+; c_cnt_lo_div0                        ; 1                      ; Signed Integer                                      ;
+; c_cnt_bypass_en0                     ; false                  ; String                                              ;
+; c_cnt_in_src0                        ; ph_mux_clk             ; String                                              ;
+; c_cnt_odd_div_duty_en0               ; false                  ; String                                              ;
+; c_cnt_prst0                          ; 1                      ; Signed Integer                                      ;
+; c_cnt_ph_mux_prst0                   ; 0                      ; Signed Integer                                      ;
+; c_cnt_hi_div1                        ; 1                      ; Signed Integer                                      ;
+; c_cnt_lo_div1                        ; 1                      ; Signed Integer                                      ;
+; c_cnt_bypass_en1                     ; false                  ; String                                              ;
+; c_cnt_in_src1                        ; ph_mux_clk             ; String                                              ;
+; c_cnt_odd_div_duty_en1               ; false                  ; String                                              ;
+; c_cnt_prst1                          ; 1                      ; Signed Integer                                      ;
+; c_cnt_ph_mux_prst1                   ; 0                      ; Signed Integer                                      ;
+; c_cnt_hi_div2                        ; 1                      ; Signed Integer                                      ;
+; c_cnt_lo_div2                        ; 1                      ; Signed Integer                                      ;
+; c_cnt_bypass_en2                     ; false                  ; String                                              ;
+; c_cnt_in_src2                        ; ph_mux_clk             ; String                                              ;
+; c_cnt_odd_div_duty_en2               ; false                  ; String                                              ;
+; c_cnt_prst2                          ; 1                      ; Signed Integer                                      ;
+; c_cnt_ph_mux_prst2                   ; 0                      ; Signed Integer                                      ;
+; c_cnt_hi_div3                        ; 1                      ; Signed Integer                                      ;
+; c_cnt_lo_div3                        ; 1                      ; Signed Integer                                      ;
+; c_cnt_bypass_en3                     ; false                  ; String                                              ;
+; c_cnt_in_src3                        ; ph_mux_clk             ; String                                              ;
+; c_cnt_odd_div_duty_en3               ; false                  ; String                                              ;
+; c_cnt_prst3                          ; 1                      ; Signed Integer                                      ;
+; c_cnt_ph_mux_prst3                   ; 0                      ; Signed Integer                                      ;
+; c_cnt_hi_div4                        ; 1                      ; Signed Integer                                      ;
+; c_cnt_lo_div4                        ; 1                      ; Signed Integer                                      ;
+; c_cnt_bypass_en4                     ; false                  ; String                                              ;
+; c_cnt_in_src4                        ; ph_mux_clk             ; String                                              ;
+; c_cnt_odd_div_duty_en4               ; false                  ; String                                              ;
+; c_cnt_prst4                          ; 1                      ; Signed Integer                                      ;
+; c_cnt_ph_mux_prst4                   ; 0                      ; Signed Integer                                      ;
+; c_cnt_hi_div5                        ; 1                      ; Signed Integer                                      ;
+; c_cnt_lo_div5                        ; 1                      ; Signed Integer                                      ;
+; c_cnt_bypass_en5                     ; false                  ; String                                              ;
+; c_cnt_in_src5                        ; ph_mux_clk             ; String                                              ;
+; c_cnt_odd_div_duty_en5               ; false                  ; String                                              ;
+; c_cnt_prst5                          ; 1                      ; Signed Integer                                      ;
+; c_cnt_ph_mux_prst5                   ; 0                      ; Signed Integer                                      ;
+; c_cnt_hi_div6                        ; 1                      ; Signed Integer                                      ;
+; c_cnt_lo_div6                        ; 1                      ; Signed Integer                                      ;
+; c_cnt_bypass_en6                     ; false                  ; String                                              ;
+; c_cnt_in_src6                        ; ph_mux_clk             ; String                                              ;
+; c_cnt_odd_div_duty_en6               ; false                  ; String                                              ;
+; c_cnt_prst6                          ; 1                      ; Signed Integer                                      ;
+; c_cnt_ph_mux_prst6                   ; 0                      ; Signed Integer                                      ;
+; c_cnt_hi_div7                        ; 1                      ; Signed Integer                                      ;
+; c_cnt_lo_div7                        ; 1                      ; Signed Integer                                      ;
+; c_cnt_bypass_en7                     ; false                  ; String                                              ;
+; c_cnt_in_src7                        ; ph_mux_clk             ; String                                              ;
+; c_cnt_odd_div_duty_en7               ; false                  ; String                                              ;
+; c_cnt_prst7                          ; 1                      ; Signed Integer                                      ;
+; c_cnt_ph_mux_prst7                   ; 0                      ; Signed Integer                                      ;
+; c_cnt_hi_div8                        ; 1                      ; Signed Integer                                      ;
+; c_cnt_lo_div8                        ; 1                      ; Signed Integer                                      ;
+; c_cnt_bypass_en8                     ; false                  ; String                                              ;
+; c_cnt_in_src8                        ; ph_mux_clk             ; String                                              ;
+; c_cnt_odd_div_duty_en8               ; false                  ; String                                              ;
+; c_cnt_prst8                          ; 1                      ; Signed Integer                                      ;
+; c_cnt_ph_mux_prst8                   ; 0                      ; Signed Integer                                      ;
+; c_cnt_hi_div9                        ; 1                      ; Signed Integer                                      ;
+; c_cnt_lo_div9                        ; 1                      ; Signed Integer                                      ;
+; c_cnt_bypass_en9                     ; false                  ; String                                              ;
+; c_cnt_in_src9                        ; ph_mux_clk             ; String                                              ;
+; c_cnt_odd_div_duty_en9               ; false                  ; String                                              ;
+; c_cnt_prst9                          ; 1                      ; Signed Integer                                      ;
+; c_cnt_ph_mux_prst9                   ; 0                      ; Signed Integer                                      ;
+; c_cnt_hi_div10                       ; 1                      ; Signed Integer                                      ;
+; c_cnt_lo_div10                       ; 1                      ; Signed Integer                                      ;
+; c_cnt_bypass_en10                    ; false                  ; String                                              ;
+; c_cnt_in_src10                       ; ph_mux_clk             ; String                                              ;
+; c_cnt_odd_div_duty_en10              ; false                  ; String                                              ;
+; c_cnt_prst10                         ; 1                      ; Signed Integer                                      ;
+; c_cnt_ph_mux_prst10                  ; 0                      ; Signed Integer                                      ;
+; c_cnt_hi_div11                       ; 1                      ; Signed Integer                                      ;
+; c_cnt_lo_div11                       ; 1                      ; Signed Integer                                      ;
+; c_cnt_bypass_en11                    ; false                  ; String                                              ;
+; c_cnt_in_src11                       ; ph_mux_clk             ; String                                              ;
+; c_cnt_odd_div_duty_en11              ; false                  ; String                                              ;
+; c_cnt_prst11                         ; 1                      ; Signed Integer                                      ;
+; c_cnt_ph_mux_prst11                  ; 0                      ; Signed Integer                                      ;
+; c_cnt_hi_div12                       ; 1                      ; Signed Integer                                      ;
+; c_cnt_lo_div12                       ; 1                      ; Signed Integer                                      ;
+; c_cnt_bypass_en12                    ; false                  ; String                                              ;
+; c_cnt_in_src12                       ; ph_mux_clk             ; String                                              ;
+; c_cnt_odd_div_duty_en12              ; false                  ; String                                              ;
+; c_cnt_prst12                         ; 1                      ; Signed Integer                                      ;
+; c_cnt_ph_mux_prst12                  ; 0                      ; Signed Integer                                      ;
+; c_cnt_hi_div13                       ; 1                      ; Signed Integer                                      ;
+; c_cnt_lo_div13                       ; 1                      ; Signed Integer                                      ;
+; c_cnt_bypass_en13                    ; false                  ; String                                              ;
+; c_cnt_in_src13                       ; ph_mux_clk             ; String                                              ;
+; c_cnt_odd_div_duty_en13              ; false                  ; String                                              ;
+; c_cnt_prst13                         ; 1                      ; Signed Integer                                      ;
+; c_cnt_ph_mux_prst13                  ; 0                      ; Signed Integer                                      ;
+; c_cnt_hi_div14                       ; 1                      ; Signed Integer                                      ;
+; c_cnt_lo_div14                       ; 1                      ; Signed Integer                                      ;
+; c_cnt_bypass_en14                    ; false                  ; String                                              ;
+; c_cnt_in_src14                       ; ph_mux_clk             ; String                                              ;
+; c_cnt_odd_div_duty_en14              ; false                  ; String                                              ;
+; c_cnt_prst14                         ; 1                      ; Signed Integer                                      ;
+; c_cnt_ph_mux_prst14                  ; 0                      ; Signed Integer                                      ;
+; c_cnt_hi_div15                       ; 1                      ; Signed Integer                                      ;
+; c_cnt_lo_div15                       ; 1                      ; Signed Integer                                      ;
+; c_cnt_bypass_en15                    ; false                  ; String                                              ;
+; c_cnt_in_src15                       ; ph_mux_clk             ; String                                              ;
+; c_cnt_odd_div_duty_en15              ; false                  ; String                                              ;
+; c_cnt_prst15                         ; 1                      ; Signed Integer                                      ;
+; c_cnt_ph_mux_prst15                  ; 0                      ; Signed Integer                                      ;
+; c_cnt_hi_div16                       ; 1                      ; Signed Integer                                      ;
+; c_cnt_lo_div16                       ; 1                      ; Signed Integer                                      ;
+; c_cnt_bypass_en16                    ; false                  ; String                                              ;
+; c_cnt_in_src16                       ; ph_mux_clk             ; String                                              ;
+; c_cnt_odd_div_duty_en16              ; false                  ; String                                              ;
+; c_cnt_prst16                         ; 1                      ; Signed Integer                                      ;
+; c_cnt_ph_mux_prst16                  ; 0                      ; Signed Integer                                      ;
+; c_cnt_hi_div17                       ; 1                      ; Signed Integer                                      ;
+; c_cnt_lo_div17                       ; 1                      ; Signed Integer                                      ;
+; c_cnt_bypass_en17                    ; false                  ; String                                              ;
+; c_cnt_in_src17                       ; ph_mux_clk             ; String                                              ;
+; c_cnt_odd_div_duty_en17              ; false                  ; String                                              ;
+; c_cnt_prst17                         ; 1                      ; Signed Integer                                      ;
+; c_cnt_ph_mux_prst17                  ; 0                      ; Signed Integer                                      ;
+; pll_vco_div                          ; 1                      ; Signed Integer                                      ;
+; pll_slf_rst                          ; false                  ; String                                              ;
+; pll_bw_sel                           ; low                    ; String                                              ;
+; pll_output_clk_frequency             ; 0 MHz                  ; String                                              ;
+; pll_cp_current                       ; 0                      ; Signed Integer                                      ;
+; pll_bwctrl                           ; 0                      ; Signed Integer                                      ;
+; pll_fractional_division              ; 1                      ; Signed Integer                                      ;
+; pll_fractional_cout                  ; 24                     ; Signed Integer                                      ;
+; pll_dsm_out_sel                      ; 1st_order              ; String                                              ;
+; mimic_fbclk_type                     ; gclk                   ; String                                              ;
+; pll_fbclk_mux_1                      ; glb                    ; String                                              ;
+; pll_fbclk_mux_2                      ; fb_1                   ; String                                              ;
+; pll_m_cnt_in_src                     ; ph_mux_clk             ; String                                              ;
+; pll_vcoph_div                        ; 1                      ; Signed Integer                                      ;
+; refclk1_frequency                    ; 0 MHz                  ; String                                              ;
+; pll_clkin_0_src                      ; clk_0                  ; String                                              ;
+; pll_clkin_1_src                      ; clk_0                  ; String                                              ;
+; pll_clk_loss_sw_en                   ; false                  ; String                                              ;
+; pll_auto_clk_sw_en                   ; false                  ; String                                              ;
+; pll_manu_clk_sw_en                   ; false                  ; String                                              ;
+; pll_clk_sw_dly                       ; 0                      ; Signed Integer                                      ;
+; pll_extclk_0_cnt_src                 ; pll_extclk_cnt_src_vss ; String                                              ;
+; pll_extclk_1_cnt_src                 ; pll_extclk_cnt_src_vss ; String                                              ;
++--------------------------------------+------------------------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: TopWiMax:twimax_wrap|FEC:fec1|FEC_RAM_2PORTS:ram1|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+--------------------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                               ;
++------------------------------------+----------------------+--------------------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                            ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                                         ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                                       ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                                       ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                                     ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                            ;
+; OPERATION_MODE                     ; BIDIR_DUAL_PORT      ; Untyped                                                            ;
+; WIDTH_A                            ; 1                    ; Signed Integer                                                     ;
+; WIDTHAD_A                          ; 8                    ; Signed Integer                                                     ;
+; NUMWORDS_A                         ; 192                  ; Signed Integer                                                     ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                            ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                            ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                            ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                            ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                            ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                            ;
+; WIDTH_B                            ; 1                    ; Signed Integer                                                     ;
+; WIDTHAD_B                          ; 8                    ; Signed Integer                                                     ;
+; NUMWORDS_B                         ; 192                  ; Signed Integer                                                     ;
+; INDATA_REG_B                       ; CLOCK0               ; Untyped                                                            ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK0               ; Untyped                                                            ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                            ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                                                            ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                            ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                            ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                            ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                            ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                            ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                            ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                            ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                            ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                                     ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Signed Integer                                                     ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                            ;
+; BYTE_SIZE                          ; 8                    ; Signed Integer                                                     ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                            ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                            ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                            ;
+; INIT_FILE                          ; UNUSED               ; Untyped                                                            ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                            ;
+; MAXIMUM_DEPTH                      ; 0                    ; Signed Integer                                                     ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                            ;
+; CLOCK_ENABLE_INPUT_B               ; BYPASS               ; Untyped                                                            ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                                            ;
+; CLOCK_ENABLE_OUTPUT_B              ; BYPASS               ; Untyped                                                            ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                            ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                            ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                            ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                            ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer                                                     ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                                            ;
+; CBXI_PARAMETER                     ; altsyncram_1014      ; Untyped                                                            ;
++------------------------------------+----------------------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: TopWiMax:twimax_wrap|INTER:inter1|INTER_RAM_2PORT:ram2|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-------------------------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                                    ;
++------------------------------------+----------------------+-------------------------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                                 ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                                              ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                                            ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                                            ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                                          ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                                 ;
+; OPERATION_MODE                     ; BIDIR_DUAL_PORT      ; Untyped                                                                 ;
+; WIDTH_A                            ; 1                    ; Signed Integer                                                          ;
+; WIDTHAD_A                          ; 9                    ; Signed Integer                                                          ;
+; NUMWORDS_A                         ; 384                  ; Signed Integer                                                          ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                                 ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                                 ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                                 ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                                 ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                                 ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                                 ;
+; WIDTH_B                            ; 1                    ; Signed Integer                                                          ;
+; WIDTHAD_B                          ; 9                    ; Signed Integer                                                          ;
+; NUMWORDS_B                         ; 384                  ; Signed Integer                                                          ;
+; INDATA_REG_B                       ; CLOCK0               ; Untyped                                                                 ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK0               ; Untyped                                                                 ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                                 ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                                                                 ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                                 ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                                 ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                                 ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                                 ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                                 ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                                 ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                                 ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                                 ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                                          ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Signed Integer                                                          ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                                 ;
+; BYTE_SIZE                          ; 8                    ; Signed Integer                                                          ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                                 ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                 ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                 ;
+; INIT_FILE                          ; UNUSED               ; Untyped                                                                 ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                                 ;
+; MAXIMUM_DEPTH                      ; 0                    ; Signed Integer                                                          ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                                 ;
+; CLOCK_ENABLE_INPUT_B               ; BYPASS               ; Untyped                                                                 ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                                                 ;
+; CLOCK_ENABLE_OUTPUT_B              ; BYPASS               ; Untyped                                                                 ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                                 ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                                 ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                                 ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                                 ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer                                                          ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                                                 ;
+; CBXI_PARAMETER                     ; altsyncram_9014      ; Untyped                                                                 ;
++------------------------------------+----------------------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                                                   ;
++-------------------------------------------+----------------------------------------------------------------------------------------+
+; Name                                      ; Value                                                                                  ;
++-------------------------------------------+----------------------------------------------------------------------------------------+
+; Number of entity instances                ; 2                                                                                      ;
+; Entity Instance                           ; TopWiMax:twimax_wrap|FEC:fec1|FEC_RAM_2PORTS:ram1|altsyncram:altsyncram_component      ;
+;     -- OPERATION_MODE                     ; BIDIR_DUAL_PORT                                                                        ;
+;     -- WIDTH_A                            ; 1                                                                                      ;
+;     -- NUMWORDS_A                         ; 192                                                                                    ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                           ;
+;     -- WIDTH_B                            ; 1                                                                                      ;
+;     -- NUMWORDS_B                         ; 192                                                                                    ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                                                                 ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                           ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                                   ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                              ;
+; Entity Instance                           ; TopWiMax:twimax_wrap|INTER:inter1|INTER_RAM_2PORT:ram2|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; BIDIR_DUAL_PORT                                                                        ;
+;     -- WIDTH_A                            ; 1                                                                                      ;
+;     -- NUMWORDS_A                         ; 384                                                                                    ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                           ;
+;     -- WIDTH_B                            ; 1                                                                                      ;
+;     -- NUMWORDS_B                         ; 384                                                                                    ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                                                                 ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                           ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                                   ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                              ;
++-------------------------------------------+----------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "TopWiMax:twimax_wrap|INTER:inter1|INTER_RAM_2PORT:ram2"                               ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; wren_b ; Input  ; Info     ; Stuck at GND                                                                        ;
+; q_a    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "TopWiMax:twimax_wrap|FEC:fec1|FEC_RAM_2PORTS:ram1"                                    ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; wren_b ; Input  ; Info     ; Stuck at GND                                                                        ;
+; q_a    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "TopWiMax:twimax_wrap"                                                                             ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port               ; Type   ; Severity ; Details                                                                             ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; topwimax_in_valid  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; wiinput            ; Input  ; Info     ; Stuck at GND                                                                        ;
+; randi_output_valid ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; randi_output_data  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; topwimax_out_ready ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; wioutput1[14..0]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; wioutput2[14..0]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
+; boundary_port         ; 10                          ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Dec 18 20:51:16 2023
+    Info: Processing started: Mon Dec 18 23:59:28 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Phase3 -c Phase3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -169,8 +1026,8 @@ Info (12021): Found 2 design units, including 0 entities, in source file test_pa
     Info (12022): Found design unit 1: Test_Pack File: D:/AUC/ASIC/Project/Phase3_Submission/Test_Pack.vhd Line: 5
     Info (12022): Found design unit 2: Test_Pack-body File: D:/AUC/ASIC/Project/Phase3_Submission/Test_Pack.vhd Line: 95
 Info (12021): Found 2 design units, including 1 entities, in source file topwimax_wrapper.vhd
-    Info (12022): Found design unit 1: TopWiMax_wrapper-TopWiMax_wrapper_RTL File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd Line: 22
-    Info (12023): Found entity 1: TopWiMax_wrapper File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd Line: 7
+    Info (12022): Found design unit 1: TopWiMax_wrapper-TopWiMax_wrapper_RTL File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd Line: 27
+    Info (12023): Found entity 1: TopWiMax_wrapper File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file rams/inter_ram_2port.vhd
     Info (12022): Found design unit 1: INTER_RAM_2PORT-SYN File: D:/AUC/ASIC/Project/Phase3_Submission/RAMs/INTER_RAM_2port.vhd Line: 59
     Info (12023): Found entity 1: INTER_RAM_2PORT File: D:/AUC/ASIC/Project/Phase3_Submission/RAMs/INTER_RAM_2port.vhd Line: 43
@@ -197,11 +1054,245 @@ Info (12021): Found 2 design units, including 1 entities, in source file inter.v
 Info (12021): Found 2 design units, including 1 entities, in source file fec.vhd
     Info (12022): Found design unit 1: FEC-FEC_rtl File: D:/AUC/ASIC/Project/Phase3_Submission/FEC.vhd Line: 26
     Info (12023): Found entity 1: FEC File: D:/AUC/ASIC/Project/Phase3_Submission/FEC.vhd Line: 8
-Error (10482): VHDL error at TopWiMax_wrapper.vhd(65): object "Intial_Seed" is used but not declared File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd Line: 65
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 4841 megabytes
-    Error: Processing ended: Mon Dec 18 20:51:27 2023
-    Error: Elapsed time: 00:00:11
-    Error: Total CPU time (on all processors): 00:00:05
+Info (12127): Elaborating entity "TopWiMax_wrapper" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at TopWiMax_wrapper.vhd(22): used implicit default value for signal "TopWiMax_wrapper_out_ready" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd Line: 22
+Warning (10540): VHDL Signal Declaration warning at TopWiMax_wrapper.vhd(71): used explicit default value for signal "RANDI_VECTOR_INPUT" because signal was never assigned a value File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd Line: 71
+Warning (10540): VHDL Signal Declaration warning at TopWiMax_wrapper.vhd(72): used explicit default value for signal "RANDI_VECTOR_OUTPUT" because signal was never assigned a value File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd Line: 72
+Warning (10540): VHDL Signal Declaration warning at TopWiMax_wrapper.vhd(73): used explicit default value for signal "FEC_VECTOR_OUTPUT" because signal was never assigned a value File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd Line: 73
+Warning (10540): VHDL Signal Declaration warning at TopWiMax_wrapper.vhd(74): used explicit default value for signal "INTER_VECTOR_OUTPUT" because signal was never assigned a value File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd Line: 74
+Warning (10540): VHDL Signal Declaration warning at TopWiMax_wrapper.vhd(75): used explicit default value for signal "MODU_VECTOR_INPUT" because signal was never assigned a value File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd Line: 75
+Warning (10541): VHDL Signal Declaration warning at TopWiMax_wrapper.vhd(86): used implicit default value for signal "TopWiMax_in_ready" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd Line: 86
+Warning (10036): Verilog HDL or VHDL warning at TopWiMax_wrapper.vhd(87): object "TopWiMax_out_ready" assigned a value but never read File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd Line: 87
+Warning (10036): Verilog HDL or VHDL warning at TopWiMax_wrapper.vhd(90): object "RANDI_Output_data_test_signal" assigned a value but never read File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd Line: 90
+Warning (10036): Verilog HDL or VHDL warning at TopWiMax_wrapper.vhd(91): object "RANDI_Output_valid_test_signal" assigned a value but never read File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd Line: 91
+Warning (10631): VHDL Process Statement warning at TopWiMax_wrapper.vhd(162): inferring latch(es) for signal or variable "RANDI_Counter", which holds its previous value in one or more paths through the process File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd Line: 162
+Warning (10631): VHDL Process Statement warning at TopWiMax_wrapper.vhd(162): inferring latch(es) for signal or variable "TopWiMax_in_valid", which holds its previous value in one or more paths through the process File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd Line: 162
+Warning (10873): Using initial value X (don't care) for net "WiInput" at TopWiMax_wrapper.vhd(84) File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd Line: 84
+Info (10041): Inferred latch for "TopWiMax_in_valid" at TopWiMax_wrapper.vhd(162) File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd Line: 162
+Info (12128): Elaborating entity "PLL_main" for hierarchy "PLL_main:pll1_wrap" File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd Line: 127
+Info (12128): Elaborating entity "PLL_main_0002" for hierarchy "PLL_main:pll1_wrap|PLL_main_0002:pll_main_inst" File: D:/AUC/ASIC/Project/Phase3_Submission/PLL_main.vhd Line: 34
+Info (12128): Elaborating entity "altera_pll" for hierarchy "PLL_main:pll1_wrap|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i" File: D:/AUC/ASIC/Project/Phase3_Submission/PLL_main/PLL_main_0002.v Line: 88
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
+Info (12130): Elaborated megafunction instantiation "PLL_main:pll1_wrap|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i" File: D:/AUC/ASIC/Project/Phase3_Submission/PLL_main/PLL_main_0002.v Line: 88
+Info (12133): Instantiated megafunction "PLL_main:pll1_wrap|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i" with the following parameter: File: D:/AUC/ASIC/Project/Phase3_Submission/PLL_main/PLL_main_0002.v Line: 88
+    Info (12134): Parameter "fractional_vco_multiplier" = "false"
+    Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
+    Info (12134): Parameter "operation_mode" = "direct"
+    Info (12134): Parameter "number_of_clocks" = "2"
+    Info (12134): Parameter "output_clock_frequency0" = "50.000000 MHz"
+    Info (12134): Parameter "phase_shift0" = "0 ps"
+    Info (12134): Parameter "duty_cycle0" = "50"
+    Info (12134): Parameter "output_clock_frequency1" = "100.000000 MHz"
+    Info (12134): Parameter "phase_shift1" = "0 ps"
+    Info (12134): Parameter "duty_cycle1" = "50"
+    Info (12134): Parameter "output_clock_frequency2" = "0 MHz"
+    Info (12134): Parameter "phase_shift2" = "0 ps"
+    Info (12134): Parameter "duty_cycle2" = "50"
+    Info (12134): Parameter "output_clock_frequency3" = "0 MHz"
+    Info (12134): Parameter "phase_shift3" = "0 ps"
+    Info (12134): Parameter "duty_cycle3" = "50"
+    Info (12134): Parameter "output_clock_frequency4" = "0 MHz"
+    Info (12134): Parameter "phase_shift4" = "0 ps"
+    Info (12134): Parameter "duty_cycle4" = "50"
+    Info (12134): Parameter "output_clock_frequency5" = "0 MHz"
+    Info (12134): Parameter "phase_shift5" = "0 ps"
+    Info (12134): Parameter "duty_cycle5" = "50"
+    Info (12134): Parameter "output_clock_frequency6" = "0 MHz"
+    Info (12134): Parameter "phase_shift6" = "0 ps"
+    Info (12134): Parameter "duty_cycle6" = "50"
+    Info (12134): Parameter "output_clock_frequency7" = "0 MHz"
+    Info (12134): Parameter "phase_shift7" = "0 ps"
+    Info (12134): Parameter "duty_cycle7" = "50"
+    Info (12134): Parameter "output_clock_frequency8" = "0 MHz"
+    Info (12134): Parameter "phase_shift8" = "0 ps"
+    Info (12134): Parameter "duty_cycle8" = "50"
+    Info (12134): Parameter "output_clock_frequency9" = "0 MHz"
+    Info (12134): Parameter "phase_shift9" = "0 ps"
+    Info (12134): Parameter "duty_cycle9" = "50"
+    Info (12134): Parameter "output_clock_frequency10" = "0 MHz"
+    Info (12134): Parameter "phase_shift10" = "0 ps"
+    Info (12134): Parameter "duty_cycle10" = "50"
+    Info (12134): Parameter "output_clock_frequency11" = "0 MHz"
+    Info (12134): Parameter "phase_shift11" = "0 ps"
+    Info (12134): Parameter "duty_cycle11" = "50"
+    Info (12134): Parameter "output_clock_frequency12" = "0 MHz"
+    Info (12134): Parameter "phase_shift12" = "0 ps"
+    Info (12134): Parameter "duty_cycle12" = "50"
+    Info (12134): Parameter "output_clock_frequency13" = "0 MHz"
+    Info (12134): Parameter "phase_shift13" = "0 ps"
+    Info (12134): Parameter "duty_cycle13" = "50"
+    Info (12134): Parameter "output_clock_frequency14" = "0 MHz"
+    Info (12134): Parameter "phase_shift14" = "0 ps"
+    Info (12134): Parameter "duty_cycle14" = "50"
+    Info (12134): Parameter "output_clock_frequency15" = "0 MHz"
+    Info (12134): Parameter "phase_shift15" = "0 ps"
+    Info (12134): Parameter "duty_cycle15" = "50"
+    Info (12134): Parameter "output_clock_frequency16" = "0 MHz"
+    Info (12134): Parameter "phase_shift16" = "0 ps"
+    Info (12134): Parameter "duty_cycle16" = "50"
+    Info (12134): Parameter "output_clock_frequency17" = "0 MHz"
+    Info (12134): Parameter "phase_shift17" = "0 ps"
+    Info (12134): Parameter "duty_cycle17" = "50"
+    Info (12134): Parameter "pll_type" = "General"
+    Info (12134): Parameter "pll_subtype" = "General"
+Info (12128): Elaborating entity "TopWiMax" for hierarchy "TopWiMax:twimax_wrap" File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd Line: 136
+Info (12128): Elaborating entity "randi" for hierarchy "TopWiMax:twimax_wrap|randi:RANDI1" File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax.vhd Line: 163
+Warning (10036): Verilog HDL or VHDL warning at randi.vhd(36): object "FEC_Recieveing_Ready" assigned a value but never read File: D:/AUC/ASIC/Project/Phase3_Submission/randi.vhd Line: 36
+Info (12128): Elaborating entity "FEC" for hierarchy "TopWiMax:twimax_wrap|FEC:fec1" File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax.vhd Line: 179
+Warning (10541): VHDL Signal Declaration warning at FEC.vhd(69): used implicit default value for signal "data_b" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/AUC/ASIC/Project/Phase3_Submission/FEC.vhd Line: 69
+Warning (10540): VHDL Signal Declaration warning at FEC.vhd(71): used explicit default value for signal "wren_b" because signal was never assigned a value File: D:/AUC/ASIC/Project/Phase3_Submission/FEC.vhd Line: 71
+Warning (10036): Verilog HDL or VHDL warning at FEC.vhd(72): object "q_a" assigned a value but never read File: D:/AUC/ASIC/Project/Phase3_Submission/FEC.vhd Line: 72
+Info (12128): Elaborating entity "FEC_RAM_2PORTS" for hierarchy "TopWiMax:twimax_wrap|FEC:fec1|FEC_RAM_2PORTS:ram1" File: D:/AUC/ASIC/Project/Phase3_Submission/FEC.vhd Line: 82
+Info (12128): Elaborating entity "altsyncram" for hierarchy "TopWiMax:twimax_wrap|FEC:fec1|FEC_RAM_2PORTS:ram1|altsyncram:altsyncram_component" File: D:/AUC/ASIC/Project/Phase3_Submission/RAMs/FEC_RAM_2PORTS.vhd Line: 66
+Info (12130): Elaborated megafunction instantiation "TopWiMax:twimax_wrap|FEC:fec1|FEC_RAM_2PORTS:ram1|altsyncram:altsyncram_component" File: D:/AUC/ASIC/Project/Phase3_Submission/RAMs/FEC_RAM_2PORTS.vhd Line: 66
+Info (12133): Instantiated megafunction "TopWiMax:twimax_wrap|FEC:fec1|FEC_RAM_2PORTS:ram1|altsyncram:altsyncram_component" with the following parameter: File: D:/AUC/ASIC/Project/Phase3_Submission/RAMs/FEC_RAM_2PORTS.vhd Line: 66
+    Info (12134): Parameter "address_aclr_a" = "UNUSED"
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "address_reg_b" = "CLOCK0"
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "byteena_aclr_a" = "UNUSED"
+    Info (12134): Parameter "byteena_aclr_b" = "NONE"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK1"
+    Info (12134): Parameter "clock_enable_core_a" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_core_b" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "BYPASS"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "ecc_pipeline_stage_enabled" = "FALSE"
+    Info (12134): Parameter "enable_ecc" = "FALSE"
+    Info (12134): Parameter "implement_in_les" = "OFF"
+    Info (12134): Parameter "indata_aclr_a" = "UNUSED"
+    Info (12134): Parameter "indata_aclr_b" = "NONE"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK0"
+    Info (12134): Parameter "init_file" = "UNUSED"
+    Info (12134): Parameter "init_file_layout" = "PORT_A"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "192"
+    Info (12134): Parameter "numwords_b" = "192"
+    Info (12134): Parameter "operation_mode" = "BIDIR_DUAL_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "rdcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK1"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "stratixiv_m144k_allow_dual_clocks" = "ON"
+    Info (12134): Parameter "width_a" = "1"
+    Info (12134): Parameter "width_b" = "1"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "width_eccstatus" = "3"
+    Info (12134): Parameter "widthad_a" = "8"
+    Info (12134): Parameter "widthad_b" = "8"
+    Info (12134): Parameter "wrcontrol_aclr_a" = "UNUSED"
+    Info (12134): Parameter "wrcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK0"
+    Info (12134): Parameter "lpm_hint" = "UNUSED"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_1014.tdf
+    Info (12023): Found entity 1: altsyncram_1014 File: D:/AUC/ASIC/Project/Phase3_Submission/db/altsyncram_1014.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_1014" for hierarchy "TopWiMax:twimax_wrap|FEC:fec1|FEC_RAM_2PORTS:ram1|altsyncram:altsyncram_component|altsyncram_1014:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "INTER" for hierarchy "TopWiMax:twimax_wrap|INTER:inter1" File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax.vhd Line: 196
+Warning (10036): Verilog HDL or VHDL warning at INTER.vhd(29): object "INTER_Input_data_buffer" assigned a value but never read File: D:/AUC/ASIC/Project/Phase3_Submission/INTER.vhd Line: 29
+Warning (10541): VHDL Signal Declaration warning at INTER.vhd(64): used implicit default value for signal "data_b" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/AUC/ASIC/Project/Phase3_Submission/INTER.vhd Line: 64
+Warning (10540): VHDL Signal Declaration warning at INTER.vhd(66): used explicit default value for signal "wren_b" because signal was never assigned a value File: D:/AUC/ASIC/Project/Phase3_Submission/INTER.vhd Line: 66
+Warning (10036): Verilog HDL or VHDL warning at INTER.vhd(67): object "q_a" assigned a value but never read File: D:/AUC/ASIC/Project/Phase3_Submission/INTER.vhd Line: 67
+Info (12128): Elaborating entity "INTER_RAM_2PORT" for hierarchy "TopWiMax:twimax_wrap|INTER:inter1|INTER_RAM_2PORT:ram2" File: D:/AUC/ASIC/Project/Phase3_Submission/INTER.vhd Line: 73
+Info (12128): Elaborating entity "altsyncram" for hierarchy "TopWiMax:twimax_wrap|INTER:inter1|INTER_RAM_2PORT:ram2|altsyncram:altsyncram_component" File: D:/AUC/ASIC/Project/Phase3_Submission/RAMs/INTER_RAM_2port.vhd Line: 68
+Info (12130): Elaborated megafunction instantiation "TopWiMax:twimax_wrap|INTER:inter1|INTER_RAM_2PORT:ram2|altsyncram:altsyncram_component" File: D:/AUC/ASIC/Project/Phase3_Submission/RAMs/INTER_RAM_2port.vhd Line: 68
+Info (12133): Instantiated megafunction "TopWiMax:twimax_wrap|INTER:inter1|INTER_RAM_2PORT:ram2|altsyncram:altsyncram_component" with the following parameter: File: D:/AUC/ASIC/Project/Phase3_Submission/RAMs/INTER_RAM_2port.vhd Line: 68
+    Info (12134): Parameter "address_aclr_a" = "UNUSED"
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "address_reg_b" = "CLOCK0"
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "byteena_aclr_a" = "UNUSED"
+    Info (12134): Parameter "byteena_aclr_b" = "NONE"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK1"
+    Info (12134): Parameter "clock_enable_core_a" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_core_b" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "BYPASS"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "ecc_pipeline_stage_enabled" = "FALSE"
+    Info (12134): Parameter "enable_ecc" = "FALSE"
+    Info (12134): Parameter "implement_in_les" = "OFF"
+    Info (12134): Parameter "indata_aclr_a" = "UNUSED"
+    Info (12134): Parameter "indata_aclr_b" = "NONE"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK0"
+    Info (12134): Parameter "init_file" = "UNUSED"
+    Info (12134): Parameter "init_file_layout" = "PORT_A"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "384"
+    Info (12134): Parameter "numwords_b" = "384"
+    Info (12134): Parameter "operation_mode" = "BIDIR_DUAL_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "rdcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK1"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "stratixiv_m144k_allow_dual_clocks" = "ON"
+    Info (12134): Parameter "width_a" = "1"
+    Info (12134): Parameter "width_b" = "1"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "width_eccstatus" = "3"
+    Info (12134): Parameter "widthad_a" = "9"
+    Info (12134): Parameter "widthad_b" = "9"
+    Info (12134): Parameter "wrcontrol_aclr_a" = "UNUSED"
+    Info (12134): Parameter "wrcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK0"
+    Info (12134): Parameter "lpm_hint" = "UNUSED"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_9014.tdf
+    Info (12023): Found entity 1: altsyncram_9014 File: D:/AUC/ASIC/Project/Phase3_Submission/db/altsyncram_9014.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_9014" for hierarchy "TopWiMax:twimax_wrap|INTER:inter1|INTER_RAM_2PORT:ram2|altsyncram:altsyncram_component|altsyncram_9014:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "MODU" for hierarchy "TopWiMax:twimax_wrap|MODU:modu1" File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax.vhd Line: 210
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "TopWiMax:twimax_wrap|FEC:fec1|FEC_RAM_2PORTS:ram1|altsyncram:altsyncram_component|altsyncram_1014:auto_generated|q_a[0]" File: D:/AUC/ASIC/Project/Phase3_Submission/db/altsyncram_1014.tdf Line: 40
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "TopWiMax:twimax_wrap|INTER:inter1|INTER_RAM_2PORT:ram2|altsyncram:altsyncram_component|altsyncram_9014:auto_generated|q_a[0]" File: D:/AUC/ASIC/Project/Phase3_Submission/db/altsyncram_9014.tdf Line: 40
+    Warning (14285): Synthesized away the following PLL node(s):
+        Warning (14320): Synthesized away node "PLL_main:pll1_wrap|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|outclk_wire[1]" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altera_pll.v Line: 748
+        Warning (14320): Synthesized away node "PLL_main:pll1_wrap|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i|outclk_wire[0]" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altera_pll.v Line: 748
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "RANDI_output_valid" is stuck at GND File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd Line: 18
+    Warning (13410): Pin "FEC_output_valid" is stuck at GND File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd Line: 19
+    Warning (13410): Pin "INTER_output_valid" is stuck at GND File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd Line: 20
+    Warning (13410): Pin "MODU_out_valid" is stuck at GND File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd Line: 21
+    Warning (13410): Pin "TopWiMax_wrapper_out_ready" is stuck at GND File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd Line: 22
+Info (17049): 87 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 5 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "load" File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd Line: 13
+    Warning (15610): No output dependent on input pin "TopWiMax_wrapper_in_ready" File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd Line: 15
+    Warning (15610): No output dependent on input pin "TopWiMax_wrapper_in_valid" File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd Line: 16
+    Warning (15610): No output dependent on input pin "reset" File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd Line: 12
+    Warning (15610): No output dependent on input pin "CLK_50Mhz" File: D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd Line: 11
+Info (21057): Implemented 10 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 5 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 43 warnings
+    Info: Peak virtual memory: 4877 megabytes
+    Info: Processing ended: Mon Dec 18 23:59:40 2023
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:07
 
 

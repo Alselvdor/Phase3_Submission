@@ -1,4 +1,345 @@
-|TopWiMax
+|TopWiMax_wrapper
+CLK_50Mhz => PLL_main:pll1_wrap.refclk
+reset => PLL_main:pll1_wrap.rst
+reset => MODU_Flag.ACLR
+reset => MODU_Counter[0].PRESET
+reset => MODU_Counter[1].PRESET
+reset => MODU_Counter[2].PRESET
+reset => MODU_Counter[3].PRESET
+reset => MODU_Counter[4].PRESET
+reset => MODU_Counter[5].PRESET
+reset => MODU_Counter[6].ACLR
+reset => MODU_Counter[7].PRESET
+reset => MODU_Counter[8].ACLR
+reset => MODU_Counter[9].ACLR
+reset => MODU_Counter[10].ACLR
+reset => MODU_Counter[11].ACLR
+reset => MODU_Counter[12].ACLR
+reset => MODU_Counter[13].ACLR
+reset => MODU_Counter[14].ACLR
+reset => MODU_Counter[15].ACLR
+reset => MODU_Counter[16].ACLR
+reset => MODU_Counter[17].ACLR
+reset => MODU_Counter[18].ACLR
+reset => MODU_Counter[19].ACLR
+reset => MODU_Counter[20].ACLR
+reset => MODU_Counter[21].ACLR
+reset => MODU_Counter[22].ACLR
+reset => MODU_Counter[23].ACLR
+reset => MODU_Counter[24].ACLR
+reset => MODU_Counter[25].ACLR
+reset => MODU_Counter[26].ACLR
+reset => MODU_Counter[27].ACLR
+reset => MODU_Counter[28].ACLR
+reset => MODU_Counter[29].ACLR
+reset => MODU_Counter[30].ACLR
+reset => MODU_Counter[31].ACLR
+reset => MODU_out_valid~reg0.ACLR
+reset => INTER_Flag.ACLR
+reset => INTER_Counter[0].PRESET
+reset => INTER_Counter[1].PRESET
+reset => INTER_Counter[2].PRESET
+reset => INTER_Counter[3].PRESET
+reset => INTER_Counter[4].PRESET
+reset => INTER_Counter[5].PRESET
+reset => INTER_Counter[6].ACLR
+reset => INTER_Counter[7].PRESET
+reset => INTER_Counter[8].ACLR
+reset => INTER_Counter[9].ACLR
+reset => INTER_Counter[10].ACLR
+reset => INTER_Counter[11].ACLR
+reset => INTER_Counter[12].ACLR
+reset => INTER_Counter[13].ACLR
+reset => INTER_Counter[14].ACLR
+reset => INTER_Counter[15].ACLR
+reset => INTER_Counter[16].ACLR
+reset => INTER_Counter[17].ACLR
+reset => INTER_Counter[18].ACLR
+reset => INTER_Counter[19].ACLR
+reset => INTER_Counter[20].ACLR
+reset => INTER_Counter[21].ACLR
+reset => INTER_Counter[22].ACLR
+reset => INTER_Counter[23].ACLR
+reset => INTER_Counter[24].ACLR
+reset => INTER_Counter[25].ACLR
+reset => INTER_Counter[26].ACLR
+reset => INTER_Counter[27].ACLR
+reset => INTER_Counter[28].ACLR
+reset => INTER_Counter[29].ACLR
+reset => INTER_Counter[30].ACLR
+reset => INTER_Counter[31].ACLR
+reset => INTER_output_valid~reg0.ACLR
+reset => FEC_Flag.ACLR
+reset => FEC_Counter[0].PRESET
+reset => FEC_Counter[1].PRESET
+reset => FEC_Counter[2].PRESET
+reset => FEC_Counter[3].PRESET
+reset => FEC_Counter[4].PRESET
+reset => FEC_Counter[5].PRESET
+reset => FEC_Counter[6].ACLR
+reset => FEC_Counter[7].PRESET
+reset => FEC_Counter[8].ACLR
+reset => FEC_Counter[9].ACLR
+reset => FEC_Counter[10].ACLR
+reset => FEC_Counter[11].ACLR
+reset => FEC_Counter[12].ACLR
+reset => FEC_Counter[13].ACLR
+reset => FEC_Counter[14].ACLR
+reset => FEC_Counter[15].ACLR
+reset => FEC_Counter[16].ACLR
+reset => FEC_Counter[17].ACLR
+reset => FEC_Counter[18].ACLR
+reset => FEC_Counter[19].ACLR
+reset => FEC_Counter[20].ACLR
+reset => FEC_Counter[21].ACLR
+reset => FEC_Counter[22].ACLR
+reset => FEC_Counter[23].ACLR
+reset => FEC_Counter[24].ACLR
+reset => FEC_Counter[25].ACLR
+reset => FEC_Counter[26].ACLR
+reset => FEC_Counter[27].ACLR
+reset => FEC_Counter[28].ACLR
+reset => FEC_Counter[29].ACLR
+reset => FEC_Counter[30].ACLR
+reset => FEC_Counter[31].ACLR
+reset => FEC_output_valid~reg0.ACLR
+reset => RANDI_output_valid~reg0.ACLR
+reset => RANDI_Flag.ACLR
+reset => RANDI_Counter2[0].PRESET
+reset => RANDI_Counter2[1].PRESET
+reset => RANDI_Counter2[2].PRESET
+reset => RANDI_Counter2[3].PRESET
+reset => RANDI_Counter2[4].PRESET
+reset => RANDI_Counter2[5].ACLR
+reset => RANDI_Counter2[6].PRESET
+reset => RANDI_Counter2[7].ACLR
+reset => RANDI_Counter2[8].ACLR
+reset => RANDI_Counter2[9].ACLR
+reset => RANDI_Counter2[10].ACLR
+reset => RANDI_Counter2[11].ACLR
+reset => RANDI_Counter2[12].ACLR
+reset => RANDI_Counter2[13].ACLR
+reset => RANDI_Counter2[14].ACLR
+reset => RANDI_Counter2[15].ACLR
+reset => RANDI_Counter2[16].ACLR
+reset => RANDI_Counter2[17].ACLR
+reset => RANDI_Counter2[18].ACLR
+reset => RANDI_Counter2[19].ACLR
+reset => RANDI_Counter2[20].ACLR
+reset => RANDI_Counter2[21].ACLR
+reset => RANDI_Counter2[22].ACLR
+reset => RANDI_Counter2[23].ACLR
+reset => RANDI_Counter2[24].ACLR
+reset => RANDI_Counter2[25].ACLR
+reset => RANDI_Counter2[26].ACLR
+reset => RANDI_Counter2[27].ACLR
+reset => RANDI_Counter2[28].ACLR
+reset => RANDI_Counter2[29].ACLR
+reset => RANDI_Counter2[30].ACLR
+reset => RANDI_Counter2[31].ACLR
+load => TopWiMax:twimax_wrap.load
+TopWiMax_wrapper_in_ready => ~NO_FANOUT~
+TopWiMax_wrapper_in_valid => ~NO_FANOUT~
+RANDI_output_valid <= RANDI_output_valid~reg0.DB_MAX_OUTPUT_PORT_TYPE
+FEC_output_valid <= FEC_output_valid~reg0.DB_MAX_OUTPUT_PORT_TYPE
+INTER_output_valid <= INTER_output_valid~reg0.DB_MAX_OUTPUT_PORT_TYPE
+MODU_out_valid <= MODU_out_valid~reg0.DB_MAX_OUTPUT_PORT_TYPE
+TopWiMax_wrapper_out_ready <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopWiMax_wrapper|PLL_main:pll1_wrap
+refclk => PLL_main_0002:pll_main_inst.refclk
+rst => PLL_main_0002:pll_main_inst.rst
+outclk_0 <= PLL_main_0002:pll_main_inst.outclk_0
+outclk_1 <= PLL_main_0002:pll_main_inst.outclk_1
+locked <= PLL_main_0002:pll_main_inst.locked
+
+
+|TopWiMax_wrapper|PLL_main:pll1_wrap|PLL_main_0002:pll_main_inst
+refclk => refclk.IN1
+rst => rst.IN1
+outclk_0 <= altera_pll:altera_pll_i.outclk
+outclk_1 <= altera_pll:altera_pll_i.outclk
+locked <= altera_pll:altera_pll_i.locked
+
+
+|TopWiMax_wrapper|PLL_main:pll1_wrap|PLL_main_0002:pll_main_inst|altera_pll:altera_pll_i
+refclk => general[0].gpll.I_REFCLK
+refclk => general[1].gpll.I_REFCLK
+refclk1 => ~NO_FANOUT~
+fbclk => ~NO_FANOUT~
+rst => general[0].gpll.I_RST
+rst => general[1].gpll.I_RST
+phase_en => ~NO_FANOUT~
+updn => ~NO_FANOUT~
+num_phase_shifts[0] => ~NO_FANOUT~
+num_phase_shifts[1] => ~NO_FANOUT~
+num_phase_shifts[2] => ~NO_FANOUT~
+scanclk => ~NO_FANOUT~
+cntsel[0] => ~NO_FANOUT~
+cntsel[1] => ~NO_FANOUT~
+cntsel[2] => ~NO_FANOUT~
+cntsel[3] => ~NO_FANOUT~
+cntsel[4] => ~NO_FANOUT~
+reconfig_to_pll[0] => ~NO_FANOUT~
+reconfig_to_pll[1] => ~NO_FANOUT~
+reconfig_to_pll[2] => ~NO_FANOUT~
+reconfig_to_pll[3] => ~NO_FANOUT~
+reconfig_to_pll[4] => ~NO_FANOUT~
+reconfig_to_pll[5] => ~NO_FANOUT~
+reconfig_to_pll[6] => ~NO_FANOUT~
+reconfig_to_pll[7] => ~NO_FANOUT~
+reconfig_to_pll[8] => ~NO_FANOUT~
+reconfig_to_pll[9] => ~NO_FANOUT~
+reconfig_to_pll[10] => ~NO_FANOUT~
+reconfig_to_pll[11] => ~NO_FANOUT~
+reconfig_to_pll[12] => ~NO_FANOUT~
+reconfig_to_pll[13] => ~NO_FANOUT~
+reconfig_to_pll[14] => ~NO_FANOUT~
+reconfig_to_pll[15] => ~NO_FANOUT~
+reconfig_to_pll[16] => ~NO_FANOUT~
+reconfig_to_pll[17] => ~NO_FANOUT~
+reconfig_to_pll[18] => ~NO_FANOUT~
+reconfig_to_pll[19] => ~NO_FANOUT~
+reconfig_to_pll[20] => ~NO_FANOUT~
+reconfig_to_pll[21] => ~NO_FANOUT~
+reconfig_to_pll[22] => ~NO_FANOUT~
+reconfig_to_pll[23] => ~NO_FANOUT~
+reconfig_to_pll[24] => ~NO_FANOUT~
+reconfig_to_pll[25] => ~NO_FANOUT~
+reconfig_to_pll[26] => ~NO_FANOUT~
+reconfig_to_pll[27] => ~NO_FANOUT~
+reconfig_to_pll[28] => ~NO_FANOUT~
+reconfig_to_pll[29] => ~NO_FANOUT~
+reconfig_to_pll[30] => ~NO_FANOUT~
+reconfig_to_pll[31] => ~NO_FANOUT~
+reconfig_to_pll[32] => ~NO_FANOUT~
+reconfig_to_pll[33] => ~NO_FANOUT~
+reconfig_to_pll[34] => ~NO_FANOUT~
+reconfig_to_pll[35] => ~NO_FANOUT~
+reconfig_to_pll[36] => ~NO_FANOUT~
+reconfig_to_pll[37] => ~NO_FANOUT~
+reconfig_to_pll[38] => ~NO_FANOUT~
+reconfig_to_pll[39] => ~NO_FANOUT~
+reconfig_to_pll[40] => ~NO_FANOUT~
+reconfig_to_pll[41] => ~NO_FANOUT~
+reconfig_to_pll[42] => ~NO_FANOUT~
+reconfig_to_pll[43] => ~NO_FANOUT~
+reconfig_to_pll[44] => ~NO_FANOUT~
+reconfig_to_pll[45] => ~NO_FANOUT~
+reconfig_to_pll[46] => ~NO_FANOUT~
+reconfig_to_pll[47] => ~NO_FANOUT~
+reconfig_to_pll[48] => ~NO_FANOUT~
+reconfig_to_pll[49] => ~NO_FANOUT~
+reconfig_to_pll[50] => ~NO_FANOUT~
+reconfig_to_pll[51] => ~NO_FANOUT~
+reconfig_to_pll[52] => ~NO_FANOUT~
+reconfig_to_pll[53] => ~NO_FANOUT~
+reconfig_to_pll[54] => ~NO_FANOUT~
+reconfig_to_pll[55] => ~NO_FANOUT~
+reconfig_to_pll[56] => ~NO_FANOUT~
+reconfig_to_pll[57] => ~NO_FANOUT~
+reconfig_to_pll[58] => ~NO_FANOUT~
+reconfig_to_pll[59] => ~NO_FANOUT~
+reconfig_to_pll[60] => ~NO_FANOUT~
+reconfig_to_pll[61] => ~NO_FANOUT~
+reconfig_to_pll[62] => ~NO_FANOUT~
+reconfig_to_pll[63] => ~NO_FANOUT~
+extswitch => ~NO_FANOUT~
+adjpllin => ~NO_FANOUT~
+cclk => ~NO_FANOUT~
+outclk[0] <= general[0].gpll.O_OUTCLK
+outclk[1] <= general[1].gpll.O_OUTCLK
+fboutclk <= general[0].gpll.O_FBOUTCLK
+locked <= general[0].gpll.LOCKED
+phase_done <= <GND>
+reconfig_from_pll[0] <= <GND>
+reconfig_from_pll[1] <= <GND>
+reconfig_from_pll[2] <= <GND>
+reconfig_from_pll[3] <= <GND>
+reconfig_from_pll[4] <= <GND>
+reconfig_from_pll[5] <= <GND>
+reconfig_from_pll[6] <= <GND>
+reconfig_from_pll[7] <= <GND>
+reconfig_from_pll[8] <= <GND>
+reconfig_from_pll[9] <= <GND>
+reconfig_from_pll[10] <= <GND>
+reconfig_from_pll[11] <= <GND>
+reconfig_from_pll[12] <= <GND>
+reconfig_from_pll[13] <= <GND>
+reconfig_from_pll[14] <= <GND>
+reconfig_from_pll[15] <= <GND>
+reconfig_from_pll[16] <= <GND>
+reconfig_from_pll[17] <= <GND>
+reconfig_from_pll[18] <= <GND>
+reconfig_from_pll[19] <= <GND>
+reconfig_from_pll[20] <= <GND>
+reconfig_from_pll[21] <= <GND>
+reconfig_from_pll[22] <= <GND>
+reconfig_from_pll[23] <= <GND>
+reconfig_from_pll[24] <= <GND>
+reconfig_from_pll[25] <= <GND>
+reconfig_from_pll[26] <= <GND>
+reconfig_from_pll[27] <= <GND>
+reconfig_from_pll[28] <= <GND>
+reconfig_from_pll[29] <= <GND>
+reconfig_from_pll[30] <= <GND>
+reconfig_from_pll[31] <= <GND>
+reconfig_from_pll[32] <= <GND>
+reconfig_from_pll[33] <= <GND>
+reconfig_from_pll[34] <= <GND>
+reconfig_from_pll[35] <= <GND>
+reconfig_from_pll[36] <= <GND>
+reconfig_from_pll[37] <= <GND>
+reconfig_from_pll[38] <= <GND>
+reconfig_from_pll[39] <= <GND>
+reconfig_from_pll[40] <= <GND>
+reconfig_from_pll[41] <= <GND>
+reconfig_from_pll[42] <= <GND>
+reconfig_from_pll[43] <= <GND>
+reconfig_from_pll[44] <= <GND>
+reconfig_from_pll[45] <= <GND>
+reconfig_from_pll[46] <= <GND>
+reconfig_from_pll[47] <= <GND>
+reconfig_from_pll[48] <= <GND>
+reconfig_from_pll[49] <= <GND>
+reconfig_from_pll[50] <= <GND>
+reconfig_from_pll[51] <= <GND>
+reconfig_from_pll[52] <= <GND>
+reconfig_from_pll[53] <= <GND>
+reconfig_from_pll[54] <= <GND>
+reconfig_from_pll[55] <= <GND>
+reconfig_from_pll[56] <= <GND>
+reconfig_from_pll[57] <= <GND>
+reconfig_from_pll[58] <= <GND>
+reconfig_from_pll[59] <= <GND>
+reconfig_from_pll[60] <= <GND>
+reconfig_from_pll[61] <= <GND>
+reconfig_from_pll[62] <= <GND>
+reconfig_from_pll[63] <= <GND>
+activeclk <= <GND>
+clkbad[0] <= <GND>
+clkbad[1] <= <GND>
+phout[0] <= <GND>
+phout[1] <= <GND>
+phout[2] <= <GND>
+phout[3] <= <GND>
+phout[4] <= <GND>
+phout[5] <= <GND>
+phout[6] <= <GND>
+phout[7] <= <GND>
+lvds_clk[0] <= <GND>
+lvds_clk[1] <= <GND>
+loaden[0] <= <GND>
+loaden[1] <= <GND>
+extclk_out[0] <= <GND>
+extclk_out[1] <= <GND>
+cascade_out[0] <= <GND>
+cascade_out[1] <= <GND>
+zdbfbclk <> <GND>
+
+
+|TopWiMax_wrapper|TopWiMax:twimax_wrap
 CLK_50Mhz => randi:RANDI1.clk_50MHz
 CLK_50Mhz => FEC:fec1.clk_50mhz
 CLK_100Mhz => FEC:fec1.clk_100mhz
@@ -54,7 +395,7 @@ WiOutput2[14] <= MODU:modu1.MODU_output_I[14]
 WiOutput2[15] <= MODU:modu1.MODU_output_I[15]
 
 
-|TopWiMax|randi:RANDI1
+|TopWiMax_wrapper|TopWiMax:twimax_wrap|randi:RANDI1
 clk_50MHz => counter_reset_seed[0].CLK
 clk_50MHz => counter_reset_seed[1].CLK
 clk_50MHz => counter_reset_seed[2].CLK
@@ -253,7 +594,7 @@ randi_output_valid <= randi_input_valid.DB_MAX_OUTPUT_PORT_TYPE
 randi_output_ready <= randi_input_ready.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TopWiMax|FEC:fec1
+|TopWiMax_wrapper|TopWiMax:twimax_wrap|FEC:fec1
 clk_50mhz => PingPong_flag.CLK
 clk_50mhz => finished_tail_flag.CLK
 clk_50mhz => counter_shift_and_output[0].CLK
@@ -470,7 +811,7 @@ FEC_output_valid <= FEC_encoder_out_valid.DB_MAX_OUTPUT_PORT_TYPE
 FEC_output_ready <= FEC_input_ready.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TopWiMax|FEC:fec1|FEC_RAM_2PORTS:ram1
+|TopWiMax_wrapper|TopWiMax:twimax_wrap|FEC:fec1|FEC_RAM_2PORTS:ram1
 address_a[0] => altsyncram:altsyncram_component.address_a[0]
 address_a[1] => altsyncram:altsyncram_component.address_a[1]
 address_a[2] => altsyncram:altsyncram_component.address_a[2]
@@ -496,7 +837,7 @@ q_a[0] <= altsyncram:altsyncram_component.q_a[0]
 q_b[0] <= altsyncram:altsyncram_component.q_b[0]
 
 
-|TopWiMax|FEC:fec1|FEC_RAM_2PORTS:ram1|altsyncram:altsyncram_component
+|TopWiMax_wrapper|TopWiMax:twimax_wrap|FEC:fec1|FEC_RAM_2PORTS:ram1|altsyncram:altsyncram_component
 wren_a => altsyncram_1014:auto_generated.wren_a
 rden_a => ~NO_FANOUT~
 wren_b => altsyncram_1014:auto_generated.wren_b
@@ -538,7 +879,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|TopWiMax|FEC:fec1|FEC_RAM_2PORTS:ram1|altsyncram:altsyncram_component|altsyncram_1014:auto_generated
+|TopWiMax_wrapper|TopWiMax:twimax_wrap|FEC:fec1|FEC_RAM_2PORTS:ram1|altsyncram:altsyncram_component|altsyncram_1014:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[1] => ram_block1a0.PORTAADDR1
 address_a[2] => ram_block1a0.PORTAADDR2
@@ -564,7 +905,7 @@ wren_a => ram_block1a0.PORTAWE
 wren_b => ram_block1a0.PORTBWE
 
 
-|TopWiMax|INTER:inter1
+|TopWiMax_wrapper|TopWiMax:twimax_wrap|INTER:inter1
 clk_100MHz => PingPong_flag.CLK
 clk_100MHz => INTER_Output_valid~reg0.CLK
 clk_100MHz => counter_out[0].CLK
@@ -683,7 +1024,7 @@ INTER_Output_valid <= INTER_Output_valid~reg0.DB_MAX_OUTPUT_PORT_TYPE
 INTER_Output_ready <= INTER_input_ready.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TopWiMax|INTER:inter1|INTER_RAM_2PORT:ram2
+|TopWiMax_wrapper|TopWiMax:twimax_wrap|INTER:inter1|INTER_RAM_2PORT:ram2
 address_a[0] => altsyncram:altsyncram_component.address_a[0]
 address_a[1] => altsyncram:altsyncram_component.address_a[1]
 address_a[2] => altsyncram:altsyncram_component.address_a[2]
@@ -711,7 +1052,7 @@ q_a[0] <= altsyncram:altsyncram_component.q_a[0]
 q_b[0] <= altsyncram:altsyncram_component.q_b[0]
 
 
-|TopWiMax|INTER:inter1|INTER_RAM_2PORT:ram2|altsyncram:altsyncram_component
+|TopWiMax_wrapper|TopWiMax:twimax_wrap|INTER:inter1|INTER_RAM_2PORT:ram2|altsyncram:altsyncram_component
 wren_a => altsyncram_9014:auto_generated.wren_a
 rden_a => ~NO_FANOUT~
 wren_b => altsyncram_9014:auto_generated.wren_b
@@ -755,7 +1096,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|TopWiMax|INTER:inter1|INTER_RAM_2PORT:ram2|altsyncram:altsyncram_component|altsyncram_9014:auto_generated
+|TopWiMax_wrapper|TopWiMax:twimax_wrap|INTER:inter1|INTER_RAM_2PORT:ram2|altsyncram:altsyncram_component|altsyncram_9014:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[1] => ram_block1a0.PORTAADDR1
 address_a[2] => ram_block1a0.PORTAADDR2
@@ -783,7 +1124,7 @@ wren_a => ram_block1a0.PORTAWE
 wren_b => ram_block1a0.PORTBWE
 
 
-|TopWiMax|MODU:modu1
+|TopWiMax_wrapper|TopWiMax:twimax_wrap|MODU:modu1
 clk_100MHz => MODU_output_valid~reg0.CLK
 clk_100MHz => MODU_output_I[0]~reg0.CLK
 clk_100MHz => MODU_output_I[1]~reg0.CLK
