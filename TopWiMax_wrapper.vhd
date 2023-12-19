@@ -34,8 +34,9 @@ architecture TopWiMax_wrapper_RTL of TopWiMax_wrapper is
         CLK_100Mhz                            	  : in    std_logic; 
         reset                 	                  : in    std_logic; 
         load               	                      : in    std_logic; 
-        TopWiMax_input_valid                 	      : in    std_logic; 
-        TopWiMax_input_ready                	      : in    std_logic; 
+
+        TopWiMax_input_valid                 	  : in    std_logic; 
+        TopWiMax_output_ready                	  : in    std_logic; 
         WiInput                               	  : in    std_logic; 
         
         RANDI_output_valid                        : out std_logic;
@@ -49,7 +50,6 @@ architecture TopWiMax_wrapper_RTL of TopWiMax_wrapper is
 
         TopWiMax_out_valid                        : out   std_logic;
         TopWiMax_out_ready                        : out   std_logic;
-        
         WiOutput1                              	  : out   std_logic_vector(15 downto 0);  -- Q
         WiOutput2                              	  : out   std_logic_vector(15 downto 0)   -- I
     );
@@ -67,24 +67,23 @@ architecture TopWiMax_wrapper_RTL of TopWiMax_wrapper is
     end component;
 
     --ROMs
-    signal seed_rom                                 : std_logic_vector(14 downto 0)   := Intial_Seed;
-    signal RANDI_VECTOR_INPUT                       : std_logic_vector(95 downto 0)   := RANDI_VECTOR_INPUT; 
-    signal RANDI_VECTOR_OUTPUT                      : std_logic_vector(95 downto 0)   := RANDI_VECTOR_OUTPUT;
-    signal FEC_VECTOR_OUTPUT                        : std_logic_vector(191 downto 0)  := FEC_VECTOR_OUTPUT;
-    signal INTER_VECTOR_OUTPUT                      : std_logic_vector(191 downto 0)  := INTER_VECTOR_OUTPUT;
-    signal MODU_VECTOR_INPUT                        : std_logic_vector(191 downto 0)  := MODU_VECTOR_INPUT;
+    signal seed_rom                               : std_logic_vector (14 downto 0)   := "101010001110110";
+    signal RANDI_VECTOR_INPUT                     : std_logic_vector (95 downto 0)   := RANDI_VECTOR_INPUT; 
+    signal RANDI_VECTOR_OUTPUT                    : std_logic_vector (95 downto 0)   := RANDI_VECTOR_OUTPUT;
+    signal FEC_VECTOR_OUTPUT                      : std_logic_vector (191 downto 0)  := FEC_VECTOR_OUTPUT;
+    signal INTER_VECTOR_OUTPUT                    : std_logic_vector (191 downto 0)  := INTER_VECTOR_OUTPUT;
+    signal MODU_VECTOR_INPUT                      : std_logic_vector (191 downto 0)  := MODU_VECTOR_INPUT;
 
     --PLL
     signal clk_50mhz_sig                          : std_logic;
     signal clk_100mhz_sig                         : std_logic;
-    signal locked                                 : std_logic;
     signal locked2                                : std_logic;
 
     --General
     signal WiInput                                : std_logic;     
-    --signal TopWiMax_wrapper_in_valid                      : std_logic;
-    signal TopWiMax_input_ready                      : std_logic;
-    signal TopWiMax_out_ready                     : std_logic;
+    --signal TopWiMax_wrapper_in_valid            : std_logic;
+    signal TopWiMax_input_ready                   : std_logic;
+    --signal TopWiMax_out_ready                   : std_logic;
 
     --RADNI
     signal RANDI_Output_data_test_signal          : std_logic;
@@ -112,9 +111,9 @@ architecture TopWiMax_wrapper_RTL of TopWiMax_wrapper is
     signal MODU_Counter                           : integer;
     signal MODU_Flag                              : std_logic; 
     
-    -- signal   RANDI_Output_data_test_signal                   : std_logic;
-    -- signal   RANDI_Output_valid_test_signal                  : std_logic;
-    -- signal   FEC_output_data_test_signal                     : std_logic;
+    -- signal   RANDI_Output_data_test_signal     : std_logic;
+    -- signal   RANDI_Output_valid_test_signal    : std_logic;
+    -- signal   FEC_output_data_test_signal       : std_logic;
     -- signal   FEC_output_valid_test_signal                    : std_logic;
     -- signal   INTER_Output_data_test_signal                   : std_logic;
     -- signal   INTER_Output_valid_test_signal                  : std_logic;
@@ -130,7 +129,7 @@ begin
         rst                           => reset,
         outclk_0                      => CLK_50Mhz_sig,
         outclk_1                      => clk_100mhz_sig,
-        locked                        => locked
+        locked                        => locked2
     );
 
     twimax_wrap : TopWiMax port map 
@@ -153,7 +152,7 @@ begin
         INTER_output_data    => INTER_Output_data_test_signal      ,   
 
         TopWiMax_out_valid    => TopWiMax_out_valid,    
-        TopWiMax_out_ready    => TopWiMax_out_ready,     
+        TopWiMax_out_ready    => TopWiMax_wrapper_out_ready,     
         WiOutput1             => MODU_Output1_Q,           
         WiOutput2             => MODU_Output2_I         
     );
