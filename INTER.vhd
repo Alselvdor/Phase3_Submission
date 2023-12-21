@@ -12,12 +12,10 @@ entity INTER is
         reset                                   : in    std_logic; 
 
         INTER_Input_data                        : in    std_logic; 
-        INTER_input_valid                       : in    std_logic; 
         INTER_input_ready                       : in    std_logic; 
 
         INTER_Output_data                       : out   std_logic;
-        INTER_Output_valid                      : out   std_logic;
-        INTER_Output_ready                      : out   std_logic  
+        INTER_Output_valid                      : out   std_logic
     );
 end INTER;
 
@@ -88,9 +86,8 @@ begin
     address_a   <= std_logic_vector(to_unsigned(mk_pos, address_a'length)); 
     address_b   <= std_logic_vector(to_unsigned(counter_out, address_b'length));
     data_a(0)   <= INTER_Input_data;
-    wren_a      <= INTER_input_valid; 
+    wren_a      <= INTER_input_ready; 
     INTER_Output_data    <= q_b(0);
-    INTER_Output_ready      <= '0' when (INTER_input_ready = '0') else '1';
 
 
     --continous 
@@ -112,7 +109,7 @@ begin
             case state_reg is 
                 when idle =>      
                     INTER_Output_valid   <= '0';               
-                    if (INTER_input_valid = '1') then      
+                    if (INTER_input_ready = '1') then      
                         if (counter < Inter_Buffer-1) then 
                             counter_kmod16          <= counter_kmod16 + 1;
                             counter                 <= counter + 1;
@@ -154,7 +151,7 @@ begin
                         counter_kmod16          <= counter_kmod16 + 1;
                         counter                 <= counter + 1;
                     end if;
-                    if ( (INTER_input_valid = '0') and (counter_out = 191 or counter_out = 383) ) then 
+                    if ( (INTER_input_ready = '0') and (counter_out = 191 or counter_out = 383) ) then 
                         counter_out             <= 0;
                         state_reg               <= idle;
                         -- INTER_Output_valid   <= '0';

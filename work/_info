@@ -1,0 +1,500 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/AUC/ASIC/Project/Phase3_Submission
+Efec
+Z1 w1703154732
+Z2 DPx9 altera_mf 20 altera_mf_components 0 22 gV:l9C^?PSb6]b5V?_jR@3
+Z3 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z6 8D:/AUC/ASIC/Project/Phase3_Submission/FEC.vhd
+Z7 FD:/AUC/ASIC/Project/Phase3_Submission/FEC.vhd
+l0
+L8
+VDAc<;Q0F8k;KV85gLXZDL1
+!s100 mA3C;K^jiAWBa24VN`ciN3
+Z8 OV;C;10.5b;63
+33
+Z9 !s110 1703164174
+!i10b 1
+Z10 !s108 1703164174.000000
+Z11 !s90 -reportprogress|300|-work|work|D:/AUC/ASIC/Project/Phase3_Submission/FEC.vhd|
+Z12 !s107 D:/AUC/ASIC/Project/Phase3_Submission/FEC.vhd|
+!i113 1
+Z13 o-work work
+Z14 tExplicit 1 NoCoverage 1 CvgOpt 0
+Afec_rtl
+R2
+R3
+R4
+R5
+DEx4 work 3 fec 0 22 DAc<;Q0F8k;KV85gLXZDL1
+l73
+L24
+VDlfljeT]_8N<iG[nTWiPZ3
+!s100 Y];D00K@De_efY_ZOE^EH2
+R8
+33
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Efec_ram_2ports
+Z15 w1702498092
+R2
+R4
+R5
+R0
+Z16 8D:/AUC/ASIC/Project/Phase3_Submission/RAMs/FEC_RAM_2PORTS.vhd
+Z17 FD:/AUC/ASIC/Project/Phase3_Submission/RAMs/FEC_RAM_2PORTS.vhd
+l0
+L41
+V<D]UaU8F9^^;X<GA=A?:P0
+!s100 EQikIa2hB5bfRGG[^iT=d1
+R8
+33
+Z18 !s110 1703157257
+!i10b 1
+Z19 !s108 1703157257.000000
+Z20 !s90 -reportprogress|300|-work|work|D:/AUC/ASIC/Project/Phase3_Submission/RAMs/FEC_RAM_2PORTS.vhd|
+Z21 !s107 D:/AUC/ASIC/Project/Phase3_Submission/RAMs/FEC_RAM_2PORTS.vhd|
+!i113 1
+R13
+R14
+Asyn
+R2
+R4
+R5
+DEx4 work 14 fec_ram_2ports 0 22 <D]UaU8F9^^;X<GA=A?:P0
+l62
+L57
+Vgg:PJ]VY]eVVL0?W0EoC@1
+!s100 F<HZU:C19_e;[86c6D]Mj1
+R8
+33
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R13
+R14
+Einter
+Z22 w1703154878
+R2
+R3
+R4
+R5
+R0
+Z23 8D:/AUC/ASIC/Project/Phase3_Submission/INTER.vhd
+Z24 FD:/AUC/ASIC/Project/Phase3_Submission/INTER.vhd
+l0
+L8
+V6KnQ^FW2`KUXD8<TQ2j^F0
+!s100 0>0E7O6BadGCJSE;K^KEW3
+R8
+33
+Z25 !s110 1703164175
+!i10b 1
+Z26 !s108 1703164175.000000
+Z27 !s90 -reportprogress|300|-work|work|D:/AUC/ASIC/Project/Phase3_Submission/INTER.vhd|
+Z28 !s107 D:/AUC/ASIC/Project/Phase3_Submission/INTER.vhd|
+!i113 1
+R13
+R14
+Ainter_rtl
+R2
+R3
+R4
+R5
+DEx4 work 5 inter 0 22 6KnQ^FW2`KUXD8<TQ2j^F0
+l68
+L22
+VN4[;_FAMh5HXd:NORXnn30
+!s100 OEn[P8IPh?WEK0L2>hRZU0
+R8
+33
+R25
+!i10b 1
+R26
+R27
+R28
+!i113 1
+R13
+R14
+Einter_ram_2port
+Z29 w1702576677
+R2
+R4
+R5
+R0
+Z30 8D:/AUC/ASIC/Project/Phase3_Submission/RAMs/INTER_RAM_2port.vhd
+Z31 FD:/AUC/ASIC/Project/Phase3_Submission/RAMs/INTER_RAM_2port.vhd
+l0
+L43
+VaXU`PXJ[G9[ebgzAeO=^T3
+!s100 cN9DkFOUi24Gk?dXNz4H31
+R8
+33
+Z32 !s110 1703157260
+!i10b 1
+Z33 !s108 1703157260.000000
+Z34 !s90 -reportprogress|300|-work|work|D:/AUC/ASIC/Project/Phase3_Submission/RAMs/INTER_RAM_2port.vhd|
+Z35 !s107 D:/AUC/ASIC/Project/Phase3_Submission/RAMs/INTER_RAM_2port.vhd|
+!i113 1
+R13
+R14
+Asyn
+R2
+R4
+R5
+DEx4 work 15 inter_ram_2port 0 22 aXU`PXJ[G9[ebgzAeO=^T3
+l64
+L59
+V[ZGLbU96<TdHl7]X=16T01
+!s100 UT:Wl0Il7HF2RO_`IVJcF1
+R8
+33
+R32
+!i10b 1
+R33
+R34
+R35
+!i113 1
+R13
+R14
+Emodu
+Z36 w1703154963
+R2
+R3
+R4
+R5
+R0
+Z37 8D:/AUC/ASIC/Project/Phase3_Submission/MODU.vhd
+Z38 FD:/AUC/ASIC/Project/Phase3_Submission/MODU.vhd
+l0
+L8
+V5:gnl?jCOe4>NG7>=]d7G0
+!s100 QMNMEV1Toe36gl@1dGmO]2
+R8
+33
+R25
+!i10b 1
+R26
+Z39 !s90 -reportprogress|300|-work|work|D:/AUC/ASIC/Project/Phase3_Submission/MODU.vhd|
+Z40 !s107 D:/AUC/ASIC/Project/Phase3_Submission/MODU.vhd|
+!i113 1
+R13
+R14
+Amodu_rtl
+R2
+R3
+R4
+R5
+DEx4 work 4 modu 0 22 5:gnl?jCOe4>NG7>=]d7G0
+l34
+L22
+V>ec`F3YVdZm0O0k>0F[7T0
+!s100 5[TeNVUKn[:@6Adi1fgoj2
+R8
+33
+R25
+!i10b 1
+R26
+R39
+R40
+!i113 1
+R13
+R14
+Epll_main
+Z41 w1702631321
+R4
+R5
+Z42 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 QZo1Vh6en2ZO3=hNmAfQ>0
+R0
+Z43 8D:/AUC/ASIC/Project/Phase3_Submission/PLL_main_sim/PLL_main.vho
+Z44 FD:/AUC/ASIC/Project/Phase3_Submission/PLL_main_sim/PLL_main.vho
+l0
+L33
+Vc^3hFZBO5L^`9=ZgEefld3
+!s100 `56T@kV9_:[YRgcie_fQH1
+R8
+33
+Z45 !s110 1703162537
+!i10b 1
+Z46 !s108 1703162537.000000
+Z47 !s90 -reportprogress|300|-work|work|D:/AUC/ASIC/Project/Phase3_Submission/PLL_main_sim/PLL_main.vho|
+Z48 !s107 D:/AUC/ASIC/Project/Phase3_Submission/PLL_main_sim/PLL_main.vho|
+!i113 1
+R13
+R14
+Artl
+R4
+R5
+R42
+DEx4 work 8 pll_main 0 22 c^3hFZBO5L^`9=ZgEefld3
+l51
+L44
+Vlab<1^[K2UWm;o5Gb5Xm=2
+!s100 fh;VfG43mE=>`iQmD_9o]3
+R8
+33
+R45
+!i10b 1
+R46
+R47
+R48
+!i113 1
+R13
+R14
+vPLL_main_0002
+!s110 1703162530
+!i10b 1
+!s100 9bS2?H4Yhmh8IWbVgmU8[3
+IL48:cH;WkRf[V?UgS:GWH3
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1702631306
+8D:/AUC/ASIC/Project/Phase3_Submission/PLL_main/PLL_main_0002.v
+FD:/AUC/ASIC/Project/Phase3_Submission/PLL_main/PLL_main_0002.v
+L0 2
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1703162530.000000
+!s107 D:/AUC/ASIC/Project/Phase3_Submission/PLL_main/PLL_main_0002.v|
+!s90 -##implicit##push_minusfile_path##|D:/AUC/ASIC/Project/Phase3_Submission/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-work|work|D:/AUC/ASIC/Project/Phase3_Submission/PLL_main/PLL_main_0002.v|
+!i113 1
+R13
+tCvgOpt 0
+n@p@l@l_main_0002
+Erandi
+Z49 w1703154502
+R3
+R4
+R5
+R0
+Z50 8D:/AUC/ASIC/Project/Phase3_Submission/randi.vhd
+Z51 FD:/AUC/ASIC/Project/Phase3_Submission/randi.vhd
+l0
+L5
+VokX2iDCl>j7Vd@Eii1i573
+!s100 eFokKf`:V:VoGM260:eBc0
+R8
+33
+Z52 !s110 1703164176
+!i10b 1
+Z53 !s108 1703164176.000000
+Z54 !s90 -reportprogress|300|-work|work|D:/AUC/ASIC/Project/Phase3_Submission/randi.vhd|
+Z55 !s107 D:/AUC/ASIC/Project/Phase3_Submission/randi.vhd|
+!i113 1
+R13
+R14
+Arandi_rtl
+R3
+R4
+R5
+DEx4 work 5 randi 0 22 okX2iDCl>j7Vd@Eii1i573
+l35
+L23
+VNdlV<`I];^?G2oMn<JddJ2
+!s100 JGH`YZd>cQzWJA:XPC<C@2
+R8
+33
+R52
+!i10b 1
+R53
+R54
+R55
+!i113 1
+R13
+R14
+Ptest_pack
+R3
+R4
+R5
+Z56 w1702925426
+R0
+Z57 8D:/AUC/ASIC/Project/Phase3_Submission/Test_Pack.vhd
+Z58 FD:/AUC/ASIC/Project/Phase3_Submission/Test_Pack.vhd
+l0
+L5
+V0TJ35fnmF54Jj_g1PEIgo1
+!s100 [^D`42DL04i`0=h35LAo60
+R8
+33
+b1
+Z59 !s110 1703164177
+!i10b 1
+Z60 !s108 1703164177.000000
+Z61 !s90 -reportprogress|300|-work|work|D:/AUC/ASIC/Project/Phase3_Submission/Test_Pack.vhd|
+Z62 !s107 D:/AUC/ASIC/Project/Phase3_Submission/Test_Pack.vhd|
+!i113 1
+R13
+R14
+Bbody
+Z63 DPx4 work 9 test_pack 0 22 0TJ35fnmF54Jj_g1PEIgo1
+R3
+R4
+R5
+l0
+L95
+V]Dm=Ha`4B2Go3K8;>VAz]0
+!s100 4_MF4XZPT]20]BeI>^O5h1
+R8
+33
+R59
+!i10b 1
+R60
+R61
+R62
+!i113 1
+R13
+R14
+Etopwimax_3
+Z64 w1703162279
+R2
+R3
+R4
+R5
+R0
+Z65 8D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_3.vhd
+Z66 FD:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_3.vhd
+l0
+L7
+VR2;P@OZGhHDNZIE`heGSl0
+!s100 jj=07CkgeaQ1JdHFG8UmB3
+R8
+33
+Z67 !s110 1703164178
+!i10b 1
+Z68 !s108 1703164178.000000
+Z69 !s90 -reportprogress|300|-work|work|D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_3.vhd|
+Z70 !s107 D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_3.vhd|
+!i113 1
+R13
+R14
+Atopwimax_rtl
+R2
+R3
+R4
+R5
+DEx4 work 10 topwimax_3 0 22 R2;P@OZGhHDNZIE`heGSl0
+l128
+L33
+VV;eNi33GMZ6=DcoM^nTdI0
+!s100 DWFH^56l9gbSU<0PLRn9j3
+R8
+33
+R67
+!i10b 1
+R68
+R69
+R70
+!i113 1
+R13
+R14
+Etopwimax_wrapper
+Z71 w1703164430
+R63
+R2
+R3
+R4
+R5
+R0
+Z72 8D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd
+Z73 FD:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd
+l0
+L9
+VG0QA<Zj;gWKI9WIg9KPO^3
+!s100 G[F]kWcO?BKA8WTd;0PNe2
+R8
+33
+Z74 !s110 1703164448
+!i10b 1
+Z75 !s108 1703164448.000000
+Z76 !s90 -reportprogress|300|-work|work|D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd|
+Z77 !s107 D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper.vhd|
+!i113 1
+R13
+R14
+Atopwimax_wrapper_rtl
+R63
+R2
+R3
+R4
+R5
+DEx4 work 16 topwimax_wrapper 0 22 G0QA<Zj;gWKI9WIg9KPO^3
+l130
+L25
+Vzl^z9kkM^ECbC:[X<XbUN1
+!s100 CjcPWg4F2WUV^gJABO@EI1
+R8
+33
+R74
+!i10b 1
+R75
+R76
+R77
+!i113 1
+R13
+R14
+Etopwimax_wrapper_tb
+Z78 w1703164159
+R63
+R2
+R3
+R4
+R5
+R0
+Z79 8D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper_tb.vhd
+Z80 FD:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper_tb.vhd
+l0
+L8
+VK;M0BA99TLo`kjC[UQ3ah3
+!s100 ZmFJhdASNocib8879=LWN1
+R8
+33
+Z81 !s110 1703164450
+!i10b 1
+Z82 !s108 1703164450.000000
+Z83 !s90 -reportprogress|300|-work|work|D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper_tb.vhd|
+Z84 !s107 D:/AUC/ASIC/Project/Phase3_Submission/TopWiMax_wrapper_tb.vhd|
+!i113 1
+R13
+R14
+Atopwimax_wrapper_tb_rtl
+R63
+R2
+R3
+R4
+R5
+Z85 DEx4 work 19 topwimax_wrapper_tb 0 22 K;M0BA99TLo`kjC[UQ3ah3
+l42
+L11
+Z86 VDYk5X75=5R;BZe0FHS3=f3
+Z87 !s100 ceG]hEZ37lAM?z9cBn`7e1
+R8
+33
+R81
+!i10b 1
+R82
+R83
+R84
+!i113 1
+R13
+R14

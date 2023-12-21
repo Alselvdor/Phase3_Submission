@@ -12,12 +12,10 @@ architecture TopWiMax_tb_rtl of TopWiMax_tb is
     component TopWiMax  
     port(
         CLK_50Mhz                            	  : in    std_logic; 
-        CLK_100Mhz                            	  : in    std_logic; 
         reset                 	                  : in    std_logic; 
         load               	                      : in    std_logic; 
 
-        TopWiMax_input_valid                 	      : in    std_logic; 
-        TopWiMax_output_ready                	      : in    std_logic; 
+        TopWiMax_input_ready                	  : in    std_logic; 
         WiInput                               	  : in    std_logic; 
         
         RANDI_output_valid                        : out std_logic;
@@ -29,8 +27,7 @@ architecture TopWiMax_tb_rtl of TopWiMax_tb is
         INTER_output_valid                        : out std_logic;
         INTER_output_data                         : out std_logic;
 
-        TopWiMax_out_valid                        : out   std_logic;
-        TopWiMax_out_ready                        : out   std_logic;
+        TopWiMax_output_valid                        : out   std_logic;
         WiOutput1                              	  : out   std_logic_vector(15 downto 0);  -- Q
         WiOutput2                              	  : out   std_logic_vector(15 downto 0)   -- I
     );
@@ -38,11 +35,11 @@ architecture TopWiMax_tb_rtl of TopWiMax_tb is
     end component;
 
     
-    signal   clk_50                               : std_logic := '0'; 
-    signal   clk_100                               : std_logic := '0'; 
-    signal   reset                                : std_logic; 
-    signal   TopWiMax_input_valid                    : std_logic; 
-    signal   TopWiMax_output_ready                    : std_logic; 
+    signal   clk_50                                : std_logic := '0'; 
+    --signal   clk_100                               : std_logic := '0'; 
+    signal   reset                                 : std_logic; 
+    signal   TopWiMax_input_valid                  : std_logic; 
+    signal   TopWiMax_input_ready                  : std_logic; 
 
     signal   load                                 : std_logic; 
     signal   test_in_vector                       : std_logic_vector(95 downto 0) := RANDI_VECTOR_INPUT;
@@ -50,33 +47,25 @@ architecture TopWiMax_tb_rtl of TopWiMax_tb is
     signal   WiInput                              : std_logic;
     signal   test_out1_bit                        : std_logic_vector(15 downto 0) ;
     signal   test_out2_bit                        : std_logic_vector(15 downto 0) ;
-    signal   TopWiMax_out_valid                   : std_logic;
-    signal   TopWiMax_out_ready                   : std_logic;
+    signal   TopWiMax_output_valid                   : std_logic;
 
     
     --alias signals Randi
     signal  signal_alias_RANDI_output_data                 : std_logic;
     signal  signal_alias_RANDI_output_valid                : std_logic;
-    signal  signal_alias_RANDI_input_valid                 : std_logic;
-    signal  signal_alias_RANDI_output_ready                : std_logic;
     signal  signal_alias_RANDI_input_ready                 : std_logic;
 
     -- alias signals FEC
     signal  signal_alias_fec_output_data                  : std_logic;
     signal  signal_alias_fec_output_valid                 : std_logic;
-    signal  signal_alias_fec_input_valid                  : std_logic;
-    signal  signal_alias_fec_output_ready                 : std_logic;
     signal  signal_alias_fec_input_ready                  : std_logic;
 
     -- alias signals INTER
     signal  signal_alias_INTER_Output_data                  : std_logic;
     signal  signal_alias_INTER_Output_valid                 : std_logic;
-    signal  signal_alias_INTER_input_valid                  : std_logic;
-    signal  signal_alias_INTER_Output_ready                 : std_logic;
     signal  signal_alias_INTER_input_ready                  : std_logic;
     
     -- alias signals INTER
-    signal signal_alias_MODU_Output_ready                   : std_logic; 
 
     -- Randi Self Checker Signals
     signal RANDI_Output_Expected                        : std_logic_vector(95 downto 0) := RANDI_VECTOR_OUTPUT;
@@ -122,11 +111,9 @@ architecture TopWiMax_tb_rtl of TopWiMax_tb is
     twimax : TopWiMax port map 
     (
         CLK_50Mhz             => clk_50,
-        CLK_100Mhz            => clk_100,
         reset                 => reset,   
         load                  => load,    	         
-        TopWiMax_input_valid     => TopWiMax_input_valid,    
-        TopWiMax_output_ready     => TopWiMax_output_ready, 
+        TopWiMax_input_ready     => TopWiMax_input_ready, 
         WiInput               => WiInput    ,   
         
         RANDI_output_valid   => RANDI_Output_valid_test_signal    ,   
@@ -138,22 +125,21 @@ architecture TopWiMax_tb_rtl of TopWiMax_tb is
         INTER_output_valid   => INTER_Output_valid_test_signal     ,   
         INTER_output_data    => INTER_Output_data_test_signal      ,   
 
-        TopWiMax_out_valid    => TopWiMax_out_valid,    
-        TopWiMax_out_ready    => TopWiMax_out_ready,     
+        TopWiMax_output_valid    => TopWiMax_output_valid,    
+
         WiOutput1             => test_out1_bit,           
         WiOutput2             => test_out2_bit         
     );
 
     --clk process 
     clk_50 <= not clk_50 after CLK_50MHz_Period_HALF; 
-    clk_100 <= not clk_100 after CLK_100MHz_Period_HALF; 
+    --clk_100 <= not clk_100 after CLK_100MHz_Period_HALF; 
 
     
     --assigning input bits from the vector 
     process begin 
         reset <= '1'; --initialize values 
-        TopWiMax_input_valid    <= '0';
-        TopWiMax_output_ready    <= '0';
+        TopWiMax_input_ready    <= '0';
         load                 <= '0';
         wait for 3*CLK_50MHz_Period_HALF;     --make sure a pos edge came before changing the reset 
         reset <= '0'; 
@@ -161,8 +147,7 @@ architecture TopWiMax_tb_rtl of TopWiMax_tb is
         load <= '1';    --take seed into module 
         wait for 1.5*CLK_50MHz_Period; --bec of 75 ns edge the next pos edge so make sure a pos edge came 
         load <= '0'; 
-        TopWiMax_input_valid <= '1'; 
-        TopWiMax_output_ready <= '1';
+        TopWiMax_input_ready <= '1';
         --Inputting steams 
         report procedure_Break_Notice;
         report procedure_start_SIMULATION_Notice severity note;
@@ -199,7 +184,7 @@ architecture TopWiMax_tb_rtl of TopWiMax_tb is
       --  procedure_96_inputs(0, 95, test_in_vector, WiInput    );     
         WiInput     <= '0';   
         TopWiMax_input_valid  <= '0';
-        TopWiMax_output_ready  <= '0';
+        TopWiMax_input_ready  <= '0';
         wait; --makes process executes once 
     end process;
 
@@ -479,7 +464,7 @@ architecture TopWiMax_tb_rtl of TopWiMax_tb is
     --         end loop;
     --     end demodulation_procedure;
     begin         
-        wait until TopWiMax_out_valid = '1'; 
+        wait until TopWiMax_output_valid = '1'; 
         wait for 2 ns; 
 
         report "========================================================================================================";
@@ -615,25 +600,17 @@ architecture TopWiMax_tb_rtl of TopWiMax_tb is
         -- Alias signals RADNI
         signal_alias_RANDI_output_data     <=  <<signal .topwimax_tb.twimax.RANDI1.RANDI_output_data         : std_logic >>; 
         signal_alias_RANDI_output_valid    <=  <<signal .topwimax_tb.twimax.RANDI1.RANDI_output_valid        : std_logic >>; 
-        signal_alias_RANDI_input_valid     <=  <<signal .topwimax_tb.twimax.RANDI1.RANDI_input_valid         : std_logic >>; 
-        signal_alias_RANDI_output_ready    <=  <<signal .topwimax_tb.twimax.RANDI1.RANDI_output_ready        : std_logic >>; 
         signal_alias_RANDI_input_ready     <=  <<signal .topwimax_tb.twimax.RANDI1.RANDI_input_ready         : std_logic >>; 
 
         -- Alias signals FEC
         signal_alias_fec_output_data       <=  <<signal .topwimax_tb.twimax.fec1.fec_output_data             : std_logic >>;  
         signal_alias_fec_output_valid      <=  <<signal .topwimax_tb.twimax.fec1.fec_output_valid            : std_logic >>;
-        signal_alias_fec_input_valid       <=  <<signal .topwimax_tb.twimax.fec1.fec_input_valid             : std_logic >>;
-        signal_alias_fec_output_ready      <=  <<signal .topwimax_tb.twimax.fec1.fec_output_ready            : std_logic >>;
         signal_alias_fec_input_ready       <=  <<signal .topwimax_tb.twimax.fec1.fec_input_ready             : std_logic >>;
 
         -- Alias signals INTER
         signal_alias_INTER_Output_data     <=  <<signal .topwimax_tb.twimax.inter1.INTER_Output_data         : std_logic >>; 
         signal_alias_INTER_Output_valid    <=  <<signal .topwimax_tb.twimax.inter1.INTER_Output_valid        : std_logic >>;
-        signal_alias_INTER_input_valid     <=  <<signal .topwimax_tb.twimax.inter1.INTER_input_valid         : std_logic >>;
-        signal_alias_INTER_Output_ready    <=  <<signal .topwimax_tb.twimax.inter1.INTER_Output_ready        : std_logic >>;
         signal_alias_INTER_input_ready     <=  <<signal .topwimax_tb.twimax.inter1.INTER_input_ready         : std_logic >>;
 
-        -- Alias signals MODU
-        signal_alias_MODU_Output_ready     <=  <<signal .topwimax_tb.twimax.modu1.MODU_Output_ready          : std_logic >>;
 
 end TopWiMax_tb_rtl;

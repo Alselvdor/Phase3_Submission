@@ -1,17 +1,17 @@
 
-State Machine - |TopWiMax_wrapper|TopWiMax:twimax_wrap|INTER:inter1|state_reg
+State Machine - |TopWiMax_wrapper|TopWiMax_3:twimax_wrap|INTER:inter1|state_reg
 Name state_reg.PingPong_state state_reg.input_buffer state_reg.idle 
 state_reg.idle 0 0 0 
 state_reg.input_buffer 0 1 1 
 state_reg.PingPong_state 1 0 1 
 
-State Machine - |TopWiMax_wrapper|TopWiMax:twimax_wrap|FEC:fec1|output_state_reg
+State Machine - |TopWiMax_wrapper|TopWiMax_3:twimax_wrap|FEC:fec1|output_state_reg
 Name output_state_reg.y output_state_reg.x output_state_reg.idle 
 output_state_reg.idle 0 0 0 
 output_state_reg.x 0 1 1 
 output_state_reg.y 1 0 1 
 
-State Machine - |TopWiMax_wrapper|TopWiMax:twimax_wrap|FEC:fec1|input_state_reg
+State Machine - |TopWiMax_wrapper|TopWiMax_3:twimax_wrap|FEC:fec1|input_state_reg
 Name input_state_reg.PingPong_state input_state_reg.input_buffer input_state_reg.idle 
 input_state_reg.idle 0 0 0 
 input_state_reg.input_buffer 0 1 1 

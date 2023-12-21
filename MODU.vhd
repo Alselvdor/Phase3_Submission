@@ -11,14 +11,11 @@ entity MODU is
             reset                 :IN  std_logic;
 
             MODU_input_data       :IN  std_logic; 
-            MODU_input_valid      :IN  std_logic;
             MODU_input_ready      :IN  std_logic;
-
 
             MODU_output_Q         :OUT std_logic_vector(15 DOWNTO 0);
             MODU_output_I         :OUT std_logic_vector(15 DOWNTO 0);
-            MODU_output_valid     :OUT std_logic;
-            MODU_output_ready     :OUT std_logic
+            MODU_output_valid     :OUT std_logic
     );
 end MODU;
 
@@ -36,9 +33,6 @@ architecture MODU_rtl of MODU is
     
 begin
 
-    MODU_output_ready      <= '0' when (MODU_input_ready = '0') else '1';
-
-
     MODU_input_data_fuse    <= MODU_input_data & MODU_input_data_buffer when (flag = '1') else "00"; 
     process (clk_100MHz, reset) begin 
         if (reset = '1') then
@@ -46,13 +40,13 @@ begin
             flag            <= '0';
             Finished_Flag       <= '0';
         elsif (rising_edge(clk_100MHz)) then 
-            if (MODU_input_valid = '1') then 
+            if (MODU_input_ready = '1') then 
                 MODU_input_data_buffer  <= MODU_input_data;
                 flag            <= '1';
                 if (flag = '1') then 
                     flag  <= '0';       
                 end if;
-            elsif(MODU_input_valid = '0') then 
+            elsif(MODU_input_ready = '0') then 
                 Finished_Flag   <= '1'; 
             end if;
         end if; 
@@ -64,7 +58,7 @@ begin
             MODU_output_I                 <= (others => '0');
             MODU_output_valid    <= '0'; 
         elsif(rising_edge(clk_100MHz)) then 
-            if (MODU_input_valid = '1') then 
+            if (MODU_input_ready = '1') then 
                 if (flag = '1') then 
                     case (MODU_input_data_fuse) is 
                         when "00" => 

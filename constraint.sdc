@@ -39,7 +39,7 @@ set_time_format -unit ns -decimal_places 3
 # Create Clock
 #**************************************************************
 
-create_clock -name {clk_50mhz} -period 20.000 -waveform { 0.000 10.000 } [get_ports {clk_50mhz}]
+create_clock -name {CLK_50Mhzs} -period 20.000 -waveform { 0.000 10.000 } [get_ports {CLK_50Mhzs}]
 
 
 
@@ -48,9 +48,9 @@ create_clock -name {clk_50mhz} -period 20.000 -waveform { 0.000 10.000 } [get_po
 # Create Generated Clock
 #**************************************************************
 
-create_generated_clock -source [get_ports {clk_50mhz}] -multiply_by 1 -name clk_50mhz_sig
+create_generated_clock -source [get_ports {CLK_50Mhzs}] -multiply_by 1 -name CLK_50Mhz_sig
 
-create_generated_clock -source [get_ports {clk_50mhz}] -multiply_by 2 -name clk_100mhz_sig
+create_generated_clock -source [get_ports {CLK_50Mhzs}] -multiply_by 2 -name clk_100mhz_sig
 
 #**************************************************************
 # Set Clock Latency
@@ -62,14 +62,14 @@ create_generated_clock -source [get_ports {clk_50mhz}] -multiply_by 2 -name clk_
 # Set Clock Uncertainty
 #**************************************************************
 
-set_clock_uncertainty -rise_from [get_clocks {clk_50mhz}] -rise_to [get_clocks {clk_50mhz}] -setup 0.100  
-set_clock_uncertainty -rise_from [get_clocks {clk_50mhz}] -rise_to [get_clocks {clk_50mhz}] -hold 0.060  
-set_clock_uncertainty -rise_from [get_clocks {clk_50mhz}] -fall_to [get_clocks {clk_50mhz}] -setup 0.100  
-set_clock_uncertainty -rise_from [get_clocks {clk_50mhz}] -fall_to [get_clocks {clk_50mhz}] -hold 0.060  
-set_clock_uncertainty -fall_from [get_clocks {clk_50mhz}] -rise_to [get_clocks {clk_50mhz}] -setup 0.100  
-set_clock_uncertainty -fall_from [get_clocks {clk_50mhz}] -rise_to [get_clocks {clk_50mhz}] -hold 0.060  
-set_clock_uncertainty -fall_from [get_clocks {clk_50mhz}] -fall_to [get_clocks {clk_50mhz}] -setup 0.100  
-set_clock_uncertainty -fall_from [get_clocks {clk_50mhz}] -fall_to [get_clocks {clk_50mhz}] -hold 0.060  
+#set_clock_uncertainty -rise_from [get_clocks {clk_50mhz}] -rise_to [get_clocks {clk_50mhz}] -setup 0.100  
+#set_clock_uncertainty -rise_from [get_clocks {clk_50mhz}] -rise_to [get_clocks {clk_50mhz}] -hold 0.060  
+#set_clock_uncertainty -rise_from [get_clocks {clk_50mhz}] -fall_to [get_clocks {clk_50mhz}] -setup 0.100  
+#set_clock_uncertainty -rise_from [get_clocks {clk_50mhz}] -fall_to [get_clocks {clk_50mhz}] -hold 0.060  
+#set_clock_uncertainty -fall_from [get_clocks {clk_50mhz}] -rise_to [get_clocks {clk_50mhz}] -setup 0.100  
+#set_clock_uncertainty -fall_from [get_clocks {clk_50mhz}] -rise_to [get_clocks {clk_50mhz}] -hold 0.060  
+#set_clock_uncertainty -fall_from [get_clocks {clk_50mhz}] -fall_to [get_clocks {clk_50mhz}] -setup 0.100  
+#set_clock_uncertainty -fall_from [get_clocks {clk_50mhz}] -fall_to [get_clocks {clk_50mhz}] -hold 0.060  
 
 
 #**************************************************************
